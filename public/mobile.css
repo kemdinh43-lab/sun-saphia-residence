@@ -1,0 +1,128 @@
+/* Phone and small-tablet layout, independent of the desktop reference canvas. */
+@media(max-width:800px){
+ html{scroll-padding-top:100px}
+ body{width:100%;overflow-x:hidden;-webkit-text-size-adjust:100%}
+ .header,.hero,.section,.wide-photo,.image-title{width:100%;max-width:100%}
+ .header{height:calc(76px + env(safe-area-inset-top));padding:env(safe-area-inset-top) max(20px,env(safe-area-inset-right)) 0 max(20px,env(safe-area-inset-left));gap:16px}
+ .brand{position:static;flex:none;transform:none}.brand img{width:76px;height:60px}
+ .nav-right{flex:0 0 auto;gap:12px}.nav-right>*{flex-shrink:0}
+ .consult{display:none}.language{}
+ .pill{min-height:44px;height:44px;padding:0 20px;}
+ .menu-toggle{width:44px;height:44px;min-width:44px;padding:11px;gap:6px}
+ .menu-toggle[aria-expanded=true] span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+ .menu-toggle[aria-expanded=true] span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+ .mobile-menu{inset:calc(76px + env(safe-area-inset-top)) 0 0;padding:24px 24px calc(32px + env(safe-area-inset-bottom));overscroll-behavior:contain}
+ .mobile-menu a{min-height:56px;padding:12px 0;border-bottom:1px solid #ffedd526}
+ .hero{height:90svh;min-height:520px;max-height:860px;margin-bottom:0}
+ .hero-copy{padding:calc(76px + env(safe-area-inset-top)) 20px 52px;transform:none}
+ .hero h1{max-width:100%;width:100%}
+ .hero-copy p{margin-top:28px}
+ .leaf-top{height:40%;top:-15%}.leaf-left,.leaf-right{height:57%;bottom:-20%;width:65%}.leaf-left{left:-37%}.leaf-right{right:-37%}
+ .section{padding:64px 24px}
+ .section h2{max-width:600px;margin:0 auto 28px;overflow-wrap:normal;text-wrap:balance}
+ .section h3{max-width:600px;margin:0 auto 24px;text-wrap:pretty}
+ .section .eyebrow{margin-bottom:24px}
+ .body-copy,.intro-detail p,.location-copy p,.wellness-grid p,.carousel-card p{max-width:100%}
+ .intro-detail{display:grid;grid-template-columns:1fr 1fr;width:100%;max-width:560px;gap:24px;margin:32px auto 0}
+ .intro-detail video{width:100%;height:auto;aspect-ratio:1;object-fit:cover;margin:0}
+ .intro-detail p{margin:0 0 18px}
+ .intro-decoration{height:55%;opacity:.65}
+ .wide-photo{height:auto;aspect-ratio:4/3;margin:0;max-height:560px}
+ .wide-photo img{width:100%;height:100%;object-fit:cover}
+ .concept{margin-top:0;padding-bottom:0}
+ .four-columns{grid-template-columns:1fr 1fr;gap:0 24px;border:0;margin-top:24px}
+ .four-columns article,.four-columns article:last-child,.four-columns article:nth-child(2){margin:0;padding:24px 0;border-top:1px solid #a3a3a3}
+ .four-columns article:after{display:none}
+ .four-columns h4{margin-bottom:12px;text-wrap:balance}
+ .four-columns p{}
+ .triptych{height:calc(clamp(220px,53vw,380px) + 48px);margin-top:32px}
+ .triptych figure,.triptych figure:nth-child(2),.triptych figure:nth-child(3){height:clamp(220px,53vw,380px)}
+ .triptych figure:nth-child(2){top:24px}.triptych figure:nth-child(3){top:48px}
+ .carousel{margin-top:28px;min-width:0}
+ .carousel-track{gap:16px;scroll-padding-inline:0;scroll-snap-type:x mandatory;touch-action:pan-x pan-y}
+ .carousel-card,.amenities .carousel-card{flex:0 0 76%;min-width:0}
+ .carousel-image,.amenities .carousel-image{height:auto;aspect-ratio:4/3;margin-bottom:20px}
+ .carousel-card h4,.amenities .carousel-card h4{margin-bottom:14px;white-space:normal;overflow-wrap:break-word}
+ .amenities .carousel-card{text-align:left}.amenities .carousel-card p{max-width:100%;}
+ .carousel-card a,.amenities .carousel-card a{min-height:44px;display:inline-flex;align-items:center;margin-top:12px;padding:8px 0}
+ .carousel-controls{margin-top:24px}.arrow,.amenities .arrow{width:48px;height:48px;min-width:48px;}
+ .outline-button{min-height:52px;padding:13px 22px;gap:14px;max-width:100%;white-space:normal;text-align:center}
+ .outline-button span{flex:none}
+ .video-shell,.experience .video-shell,.progress .video-shell{width:100%;height:auto;aspect-ratio:16/9;margin:28px auto}
+ .experience .outline-button{margin-top:0}
+ .location{padding-top:16px;padding-bottom:48px;overflow:hidden}
+ .location-map{height:380px;width:125%;max-width:none;left:-15%;opacity:.5}
+ .location-grid{width:100%;max-width:560px;display:flex;gap:0}
+ .location-grid>div:first-child{width:100%;height:auto;aspect-ratio:1.5;margin:8px auto 28px}
+ .location-grid>div:first-child img{width:100%;height:100%;object-fit:contain}
+ .location-copy{width:100%;max-width:100%;text-align:left}
+ .location-copy article,.location-copy article+article{margin:0;padding:24px 0;border-top:1px solid #a3a3a3}
+ .location-copy h4,.location-copy article+article h4{max-width:none;margin:0 0 14px;}
+ .location-copy p{margin:0}
+ .image-title{height:clamp(380px,82vw,560px);margin:0;isolation:isolate}
+ .image-title:after{content:'';position:absolute;inset:0;background:linear-gradient(#123e4259,transparent 60%);pointer-events:none;z-index:1}
+ .image-title h2{top:44px;padding:0 20px;text-wrap:balance;text-shadow:0 2px 14px #123e4240}
+ .image-title-main img,.image-title-side{object-position:center center}
+ .lifestyle{padding-top:24px;padding-bottom:40px}
+ .ownership-cards{grid-template-columns:1fr;gap:16px;margin:28px 0}
+ .numbered{min-height:0;padding:28px;gap:0}
+ .numbered h4{margin:0 0 18px}.numbered p{}
+ .numbered span{padding-top:24px}
+ .delivery-panel{display:block;padding:16px;margin-top:24px}
+ .delivery-panel>img{width:100%;height:auto;aspect-ratio:4/3}
+ .delivery-copy{padding:28px 8px 12px}
+ .delivery-copy h4{margin:0 0 18px}.delivery-copy .body-copy{margin-bottom:24px}
+ .delivery-copy .outline-button{padding:12px 18px;align-self:flex-start}
+ .wellness-grid{grid-template-columns:1fr 1fr;max-width:100%;gap:32px;margin-top:40px}
+ .wellness-grid article{width:100%;max-width:none;margin:0}
+ .wellness-grid img{width:40px;height:40px;margin:0 0 24px}
+ .wellness-grid h4,.wellness-grid article:nth-child(2) h4{max-width:none;margin:0 0 16px}
+ .gallery-caption{margin:32px 0 22px;text-align:left}
+ .gallery .carousel-track{height:auto;align-items:stretch;padding:0 0 6px;gap:16px}
+ .gallery .carousel-card,.gallery .carousel-card.is-active{flex:0 0 76%;transform:none!important;margin:0!important;opacity:1}
+ .gallery .carousel-image{width:100%;height:auto;aspect-ratio:4/3;margin-bottom:18px}
+ .gallery .carousel-card h4{white-space:normal;text-align:left;overflow-wrap:break-word}
+ .gallery .carousel-controls{margin-top:24px}
+ .project-photos{gap:10px;margin:28px 0}
+ .project-photos img,.project-photos img:nth-child(2){width:calc((100% - 20px)/3);height:auto;aspect-ratio:1;object-fit:cover}
+ .project .outline-button{margin:0}
+ .contact form{max-width:100%;margin:32px auto 20px}
+ .contact label:not(.consent){margin:20px 0;padding:10px 0}
+ .contact input:not([type=checkbox]){min-height:44px;padding:8px 0}
+ .consent{align-items:flex-start;gap:12px;margin:26px 0}
+ .consent input{min-width:22px;width:22px;height:22px;margin:1px 0 0}
+ .consent .text-button{min-height:0;display:inline;}
+ .contact .outline-button{min-height:56px;padding:14px 18px}
+ .form-status{}.social-icons a{width:48px;height:48px}
+ .footer{padding:36px 24px calc(100px + env(safe-area-inset-bottom))}
+ .footer>nav{display:grid;grid-template-columns:1fr 1fr;gap:4px 24px;padding-bottom:24px}
+ .footer>nav a{min-height:44px;display:flex;align-items:center;}
+ .footer-grid{grid-template-columns:1fr 1fr;gap:24px;margin:32px 0;}
+ .footer-grid p{margin:16px 0 12px}.footer-grid a{margin-bottom:10px}.footer-logo{width:110px;height:110px}
+ .footer .social-icons{flex-wrap:wrap;gap:10px}.footer .social-icons a{width:44px;height:44px}
+ .footer>.text-button{min-height:44px;text-align:left;}
+ .cookie-banner{left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));border-radius:20px;padding:18px 20px;max-height:40svh;overflow:auto;box-shadow:-4px 4px 0 #bad5d0b3}
+ .cookie-banner p{}.cookie-accept{min-height:44px;min-width:132px;margin:14px auto 0;padding:10px 24px}
+ dialog{width:calc(100% - 24px);max-width:600px;max-height:calc(100dvh - 32px);padding:64px 24px 28px;overscroll-behavior:contain}
+ dialog h2{}.dialog-close{min-width:44px;min-height:44px}
+ .apartment-grid{grid-template-columns:1fr;gap:12px}.apartment-grid h3{}.apartment-grid p{}.apartment-grid a{display:inline-flex;align-items:center;min-height:44px}
+}
+@media(max-width:600px){
+ .four-columns{grid-template-columns:1fr;gap:0}
+ .four-columns article{padding:24px 0}
+ .four-columns h4{text-align:left;text-wrap:initial;}
+ .intro-detail{display:flex;flex-direction:column;gap:24px;max-width:100%}
+ .intro-detail video{aspect-ratio:4/3;height:auto;max-height:340px}
+ .intro-detail p{}
+ .wellness-grid{grid-template-columns:1fr;gap:32px}
+ .wellness-grid article{padding-top:28px;border-top:1px solid #a3a3a3}
+ .carousel-card,.amenities .carousel-card,.gallery .carousel-card,.gallery .carousel-card.is-active{flex-basis:88%}
+ .footer-grid{grid-template-columns:1fr;gap:20px}
+ .social-text{gap:20px}
+}
+@media(max-width:359px){
+ .header{padding-right:16px;padding-left:16px;gap:12px}.brand img{width:68px;height:56px}.nav-right{gap:8px}.language{display:none}.pill{padding:0 16px}
+ .section{padding-right:20px;padding-left:20px}.section h2{}.hero h1{}.hero-copy p{}
+ .image-title h2{}.outline-button{padding:12px 16px}
+}
+@media(max-width:600px){.section{padding-top:48px;padding-bottom:48px}.concept{padding-bottom:0}.location{padding-top:16px}.lifestyle{padding-top:24px;padding-bottom:32px}.wellness-grid{margin-top:32px}}

@@ -1,0 +1,67 @@
+/* Single source of truth: one font and size per content role. */
+:root{
+ --heading:'Cormorant Garamond',Georgia,serif;
+ --sans:'Be Vietnam Pro',Arial,sans-serif;
+ --type-hero:clamp(72px,7vw,112px);
+ --type-scene:clamp(72px,9vw,144px);
+ --type-section:56px;
+ --type-lead:28px;
+ --type-card:28px;
+ --type-body:16px;
+ --type-label:14px;
+ --type-control:13px;
+ --type-dialog:40px;
+ --leading-heading:1.15;
+ --leading-lead:1.5;
+ --leading-body:1.65;
+ --tracking-heading:0em;
+}
+html{font-size:16px}
+body{font-family:var(--sans);font-size:var(--type-body);font-weight:400;line-height:var(--leading-body);letter-spacing:normal;font-synthesis:none;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+button,input,select,textarea{font:inherit}
+h1,h2,h3,h4{font-weight:400;letter-spacing:var(--tracking-heading)}
+h1,h2,h4{font-family:var(--heading)}
+h2,.section h2{font-size:var(--type-section);line-height:var(--leading-heading)}
+h3,.section h3{font-family:var(--sans);font-size:var(--type-lead);line-height:var(--leading-lead);letter-spacing:normal}
+h4,.four-columns h4,.carousel-card h4,.amenities .carousel-card h4,.numbered h4,.delivery-copy h4,.wellness-grid h4,.location-copy h4{font-family:var(--heading);font-size:var(--type-card);font-weight:400;line-height:1.2;letter-spacing:0}
+p,.body-copy,.intro-detail p,.four-columns p,.carousel-card p,.amenities .carousel-card p,.location-copy p,.numbered p,.delivery-copy .body-copy,.wellness-grid p,.apartment-grid p{font-family:var(--sans);font-size:var(--type-body);font-weight:400;line-height:var(--leading-body);letter-spacing:normal}
+.hero h1{font-family:var(--heading);font-size:var(--type-hero);font-weight:400;line-height:.98;letter-spacing:-.02em}
+.hero-copy p{font-size:var(--type-label);line-height:1.65;letter-spacing:0}
+.image-title h2{font-family:var(--heading);font-size:var(--type-scene);font-weight:400;line-height:1.02;letter-spacing:0}
+.image-title h2::first-line{letter-spacing:0}
+.eyebrow,.section .eyebrow{font-family:var(--sans);font-size:var(--type-label);font-style:normal;line-height:1.5;letter-spacing:0}
+.nav-left,.nav-right,.language,.footer>nav,.social-text,.footer-grid{font-family:var(--sans);font-size:var(--type-label);font-weight:400;line-height:1.5;letter-spacing:0}
+.nav-left a,.pill,.outline-button,.contact .outline-button,.delivery-copy .outline-button,.carousel-card a,.amenities .carousel-card a,.cookie-accept{font-family:var(--sans);font-size:var(--type-control);font-weight:500;line-height:1.5;letter-spacing:.035em}
+.consult,.language{font-size:var(--type-label);line-height:1.5}
+.carousel-count,.numbered span,.gallery-caption,.form-status,.consent,.footer>.text-button{font-family:var(--sans);font-size:var(--type-label);font-weight:400;line-height:1.6;letter-spacing:0}
+.carousel-count{font-variant-numeric:tabular-nums;letter-spacing:.06em}
+.gallery .carousel-card h4{font-size:var(--type-label);line-height:1.3}
+.footer-grid p,.footer-grid a,.social-text{font-size:var(--type-label);line-height:1.65}
+.contact label:not(.consent){font-size:var(--type-label);font-weight:400;line-height:1.5}
+.contact input:not([type=checkbox]){font-family:var(--sans);font-size:var(--type-body);font-weight:400;line-height:1.5;letter-spacing:normal}
+.cookie-banner,.cookie-banner p,.cookie-banner .text-button{font-family:var(--sans);font-size:var(--type-label);font-weight:400;line-height:1.5}
+.consent .text-button{font:inherit;letter-spacing:normal}
+.outline-button span{font-family:Arial,sans-serif;font-size:22px;font-weight:400;line-height:1}
+.arrow,.amenities .arrow{font-family:Arial,sans-serif;font-size:26px;font-weight:400;line-height:1}
+dialog h2{font-family:var(--heading);font-size:var(--type-dialog);line-height:var(--leading-heading)}
+dialog .dialog-close{font-family:Arial,sans-serif;font-size:32px;font-weight:400;line-height:1}
+.mobile-menu a{font-family:var(--heading);font-size:32px;line-height:1.2;letter-spacing:0}
+.apartment-grid h3{font-family:var(--heading);font-size:var(--type-card);line-height:1.2}
+@media(min-width:801px) and (max-width:1100px){
+ .consult{font-size:var(--type-control)}
+}
+@media(max-width:800px){
+ :root{--type-hero:clamp(48px,10vw,76px);--type-scene:clamp(40px,8vw,64px);--type-section:40px;--type-lead:24px;--type-card:26px;--type-dialog:36px}
+ .gallery .carousel-card h4{font-size:var(--type-card);line-height:1.2}
+ .mobile-menu a{font-size:var(--type-dialog)}
+}
+@media(max-width:600px){
+ :root{--type-hero:clamp(44px,12.3vw,60px);--type-scene:clamp(36px,9.5vw,48px);--type-section:32px;--type-lead:20px;--type-card:24px;--type-dialog:32px}
+}
+@media(min-width:801px){
+ .gallery .carousel-track{height:300px;padding-top:80px;padding-bottom:30px;align-items:flex-start}
+ .gallery .carousel-card.is-active{transform:none}
+ .gallery .carousel-image{transform-origin:center bottom;transition:transform .65s;margin-bottom:12px}
+ .gallery .carousel-card.is-active .carousel-image{transform:scale(1.5)}
+ .gallery .carousel-card h4{white-space:normal;overflow-wrap:normal;text-wrap:balance;min-height:54px}
+}

@@ -1,0 +1,6 @@
+GSAP and ScrollTrigger 3.15.1
+Copyright GreenSock, Inc.
+Downloaded from https://registry.npmjs.org/gsap/-/gsap-3.15.1.tgz
+Library distribution headers retain copyright and license references.
+License terms: https://gsap.com/standard-license/
+Four Apsara ribbon SVG assets were supplied by the user.

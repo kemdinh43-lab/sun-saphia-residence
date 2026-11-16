@@ -1,0 +1,40 @@
+/* Supplied Apsara SVG artwork, integrated with the site's existing type system. */
+.brand{display:flex;flex-direction:column;align-items:center;justify-content:center;width:132px;height:56px;top:12px;color:var(--cream)}
+.wordmark-name{font-family:var(--heading);font-size:20px;line-height:1.1;letter-spacing:.08em;white-space:nowrap}
+.wordmark-detail{font-family:var(--sans);font-size:10px;line-height:1.5;letter-spacing:.22em;margin-top:5px}
+.footer-wordmark{display:block;font-family:var(--heading);font-size:32px;line-height:1.1;letter-spacing:.04em;padding:18px 0;color:var(--cream)}
+.footer-wordmark span{font-family:var(--sans);font-size:12px;line-height:1.8;letter-spacing:.2em}
+.hero.apsara-hero{position:relative;width:100%;height:100svh;min-height:620px;max-height:none;margin:0;overflow:hidden;isolation:isolate;background:#45566d;color:#f5efe4}
+.apsara-hero__stage{position:relative;width:100%;height:100%;overflow:hidden;isolation:isolate}
+.apsara-hero__photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:54% 48%;transform:scale(1.07);transform-origin:center;z-index:0}
+.apsara-hero__shade{position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.75;background:linear-gradient(90deg,#172634b3,transparent 62%),linear-gradient(0deg,#13223170,transparent 58%)}
+.apsara-hero__ribbons{position:absolute;inset:0;z-index:2;pointer-events:none}
+.apsara-ribbon{position:absolute;width:clamp(280px,35vw,530px);max-width:none;height:auto;user-select:none;pointer-events:none;transform-origin:center;opacity:.46}
+.apsara-ribbon--tl{top:62px;left:-8%;transform:rotate(-4deg)}
+.apsara-ribbon--tr{top:54px;right:-9%;transform:rotate(5deg)}
+.apsara-ribbon--bl{bottom:-42px;left:-8%;transform:rotate(3deg)}
+.apsara-ribbon--br{bottom:-50px;right:-9%;transform:rotate(-4deg)}
+.apsara-hero__copy{position:absolute;inset:auto;left:clamp(24px,7vw,130px);bottom:clamp(85px,12vh,140px);display:block;width:44%;max-width:660px;text-align:left;padding:0;transform:none;z-index:3;pointer-events:none}
+.apsara-hero h1{max-width:100%;width:100%;margin:0 0 24px;animation:none;text-shadow:0 2px 14px #12253526}
+.apsara-hero__copy p{animation:none}
+.apsara-hero__copy .apsara-hero__eyebrow{font-family:var(--sans);font-size:var(--type-control);font-weight:500;line-height:1.5;letter-spacing:.2em;margin:0 0 24px}
+.apsara-hero__copy .apsara-hero__subtitle{font-family:var(--sans);font-size:var(--type-body);font-weight:400;line-height:1.6;letter-spacing:0;margin:0}
+.apsara-hero__scroll-hint{position:absolute;z-index:3;right:5vw;bottom:40px;font-family:var(--sans);font-size:var(--type-control);font-weight:500;line-height:1.5;letter-spacing:.12em;pointer-events:none}
+.apsara-hero.has-scroll-pin .apsara-ribbon,.apsara-hero.has-scroll-pin .apsara-hero__photo,.apsara-hero.has-scroll-pin .apsara-hero__copy{will-change:transform,opacity}
+@media(max-width:1100px) and (min-width:801px){.apsara-hero__copy{left:40px;width:48%}.brand{width:120px}}
+@media(max-width:800px){
+ .brand{position:static;width:92px;height:56px;transform:none}
+ .wordmark-name{font-size:17px}.wordmark-detail{font-size:9px;margin-top:4px}
+ .hero.apsara-hero{height:100svh;min-height:560px;max-height:960px}
+ .apsara-hero__photo{object-position:60% center;transform:scale(1)}
+ .apsara-ribbon{width:clamp(145px,48vw,265px);opacity:.29}
+ .apsara-ribbon--tl{top:calc(68px + env(safe-area-inset-top));left:-17%}.apsara-ribbon--tr{top:calc(66px + env(safe-area-inset-top));right:-17%}
+ .apsara-ribbon--bl{bottom:-15px;left:-18%}.apsara-ribbon--br{bottom:-20px;right:-18%}
+ .apsara-hero__copy{inset:auto 24px 100px;width:auto;max-width:none;display:block;padding:0;text-align:left}
+ .apsara-hero h1{margin-bottom:20px}
+ .apsara-hero__copy .apsara-hero__eyebrow{font-size:12px;margin-bottom:18px}
+ .apsara-hero__copy .apsara-hero__subtitle{font-size:15px}
+ .apsara-hero__scroll-hint{right:24px;bottom:34px;font-size:11px}
+}
+@media(max-width:359px){.brand{width:86px}.wordmark-name{font-size:15px}.wordmark-detail{font-size:8px}.apsara-hero__copy{left:20px;right:20px;bottom:90px}}
+@media(prefers-reduced-motion:reduce){.apsara-ribbon,.apsara-hero__photo,.apsara-hero__copy{will-change:auto!important}.apsara-hero__photo{transform:none!important}}
