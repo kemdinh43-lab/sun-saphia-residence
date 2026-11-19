@@ -1,5 +1,6 @@
 'use strict';
-const asset = name => `assets/${name}`;
+const siteContent = JSON.parse(document.getElementById('site-content')?.textContent || '{}');
+const asset = name => /^(assets\/|\/|https:\/\/)/.test(name) ? name : `assets/${name}`;
 // Editable copy and visual assets. All layout and interaction code is independently authored.
 const featureCards = [
  ['VỊ TRÍ VEN BIỂN','Nằm tại giao lộ Nguyễn Đức Thuận – Trường Sa, gần bãi tắm Sơn Thủy và công viên công cộng phía trước.','669394ccd9f34f3a2f9b8179_Photo.webp'],
@@ -29,6 +30,11 @@ const points = {
  'concept-points':[['DI SẢN VĂN HÓA','Dấu ấn văn hóa Chăm Pa.'],['KIẾN TRÚC UYỂN CHUYỂN','Những đường cong kiến trúc Apsara.'],['GÓC NHÌN RỘNG MỞ','Kết nối cảnh quan biển và đô thị.'],['KHÔNG GIAN KHOÁNG ĐẠT','Không gian trần cao 3,5 m.']],
  'lifestyle-points':[['BUỔI SÁNG BÊN BIỂN','Đón ngày mới bên bãi biển Sơn Thủy.'],['KHOẢNH KHẮC CÂN BẰNG','Vận động với gym, yoga, pilates và bể bơi.'],['KHÁM PHÁ ĐIỂM ĐẾN','Khám phá Ngũ Hành Sơn, ẩm thực và các điểm đến du lịch Đà Nẵng.'],['CHÂN TRỜI RỘNG MỞ','Góc nhìn hướng biển, công viên hoặc thành phố tùy vị trí căn hộ. Công viên và bãi biển là không gian công cộng.']]
 };
+// Values are embedded by the Worker from one published revision (or an authenticated preview).
+for (const [name, cards] of Object.entries({ features:featureCards, amenities:amenityCards, gallery:galleryCards })) {
+ cards.forEach((row,i)=>['title','copy','image'].forEach((field,j)=>{ const value=siteContent[`cards.${name}.${i}.${field}`]; if(typeof value==='string')row[j]=value; }));
+}
+for (const [name, rows] of Object.entries(points)) rows.forEach((row,i)=>['title','copy'].forEach((field,j)=>{const value=siteContent[`points.${name}.${i}.${field}`];if(typeof value==='string')row[j]=value;}));
 Object.entries(points).forEach(([id,rows])=>{
  const root=document.getElementById(id);
  rows.forEach(([title,copy])=>{const el=document.createElement('article');el.className='reveal';const h=document.createElement('h4');h.textContent=title;const p=document.createElement('p');p.textContent=copy;el.append(h,p);root.append(el);});
@@ -70,8 +76,19 @@ document.querySelectorAll('a[href="#apartments"]').forEach(a=>a.addEventListener
 apartmentDialog.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>apartmentDialog.close()));
 document.querySelectorAll('.privacy-trigger').forEach(b=>b.addEventListener('click',()=>document.getElementById('privacy').showModal()));
 document.querySelectorAll('dialog').forEach(dialog=>{dialog.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});});
-// No backend destination was supplied. Validate without sending or persisting personal data.
-document.getElementById('consultation-form').addEventListener('submit',e=>{e.preventDefault();document.querySelector('.form-status').textContent='Thông tin đã hợp lệ. Biểu mẫu hiện chưa kết nối hệ thống tiếp nhận nên chưa gửi đăng ký.';});
+// Persist the inquiry before acknowledging receipt. No personal data goes into browser storage.
+document.getElementById('consultation-form').addEventListener('submit',async event=>{
+ event.preventDefault();const form=event.currentTarget,button=form.querySelector('[type=submit]'),status=form.querySelector('.form-status');
+ if(document.body.dataset.preview==='true'){status.textContent='Đây là bản xem trước. Biểu mẫu không gửi dữ liệu.';return;}
+ if(button.disabled)return;button.disabled=true;status.textContent='Đang gửi đăng ký…';
+ try {
+  const data=new FormData(form);
+  const response=await fetch('/api/leads',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({name:data.get('name'),phone:data.get('phone'),email:data.get('email'),consent:data.get('consent')==='on',website:data.get('website')||''})});
+  const result=await response.json();if(!response.ok)throw new Error(result.error||'Chưa gửi được đăng ký. Vui lòng thử lại.');
+  status.textContent=result.message;form.reset();
+ }catch(error){status.textContent=error instanceof SyntaxError?'Chưa kết nối được hệ thống tiếp nhận. Vui lòng thử lại sau.':error.message;}
+ finally{button.disabled=false;}
+});
 
 // Reference gallery: a larger selected image among smaller square thumbnails.
 const galleryTrack=document.getElementById('track-gallery');
@@ -86,11 +103,17 @@ if(galleryTrack){
 }
 
 // Defer the YouTube player until the visitor chooses to watch the project film.
+let projectVideoId='dU6ceuNIdXI';
+if(siteContent['film.youtube']){
+ const link=new URL(siteContent['film.youtube']);
+ projectVideoId=link.hostname==='youtu.be'?link.pathname.slice(1):link.searchParams.get('v')||link.pathname.split('/').pop();
+ document.querySelectorAll('[data-project-film],.project-film__external a').forEach(a=>a.href=`https://www.youtube.com/watch?v=${projectVideoId}`);
+}
 const projectFilmLink=document.querySelector('[data-project-film]');
 projectFilmLink?.addEventListener('click',event=>{
  event.preventDefault();
  const frame=document.createElement('iframe');
- frame.src='https://www.youtube-nocookie.com/embed/dU6ceuNIdXI?autoplay=1&playsinline=1&rel=0&hl=vi';
+ frame.src=`https://www.youtube-nocookie.com/embed/${projectVideoId}?autoplay=1&playsinline=1&rel=0&hl=vi`;
  frame.title='Video giới thiệu Sun Saphia Residence';
  frame.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';
  frame.allowFullscreen=true;

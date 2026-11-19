@@ -1,69 +1,106 @@
-# Sun Saphia Residence
+# Sun Saphia Residence · Cloudflare Content Studio
 
-Website tĩnh. Vercel phục vụ thư mục `public/` theo cấu hình trong `vercel.json`.
+Landing page HTML/CSS/JS cùng dashboard quản trị, Cloudflare Worker, D1 và R2. Mã nguồn giao diện và animation được giữ riêng với nội dung biên tập. Không cần Vercel hoặc WordPress.
 
-1. Đưa toàn bộ nội dung gói ZIP vào thư mục gốc repo GitHub.
-2. Trên Vercel chọn **Add New → Project**, rồi import repo.
-3. Giữ **Root Directory** ở thư mục gốc và dùng preset **Other**. Nếu màn hình yêu cầu điền cấu hình, để **Build Command** trống và chọn **Output Directory** là `public`.
-4. Chọn **Deploy**. Trang chủ nằm ở `/`.
+## Những gì đã có
 
-Để xem cục bộ, chạy `python3 -m http.server 8765 --bind 127.0.0.1 --directory public`.
+- Đăng nhập một tài khoản quản trị; mật khẩu băm PBKDF2 có salt, cookie HttpOnly, phiên 8 giờ và giới hạn thử đăng nhập.
+- Biên tập 197 trường nội dung của landing page: tiêu đề, đoạn văn, ảnh/alt, loại căn hiện có, thẻ dấu ấn/tiện ích, thư viện, video YouTube, tiến độ và SEO.
+- Lưu bản nháp riêng, xem trước có xác thực/noindex, xuất bản một phiên bản hoàn chỉnh.
+- Lịch sử tối đa 60 phiên bản gần nhất trên giao diện; khôi phục tạo bản nháp mới, không tự xuất bản.
+- Kiểm tra phiên bản khi lưu và xuất bản để tránh ghi đè giữa các cửa sổ.
+- Ảnh upload lưu trong R2, PNG/JPEG/WebP tối đa 8 MB; kiểm tra chữ ký file, không nhận SVG/HTML tải lên.
+- Form tư vấn lưu trong D1; dashboard xem 200 yêu cầu gần nhất và cập nhật trạng thái. Chưa có gửi email tự động.
+- HTML và SEO được render từ cùng bản công khai ở server; ảnh R2 dùng URL bất biến. Bản công khai dự phòng được cache ở từng edge đã phục vụ trang.
+- Không cần deploy lại code khi lưu nội dung hoặc xuất bản.
 
-Biểu mẫu chưa kết nối nơi nhận. Video YouTube vẫn cần Internet.
+## Chạy cục bộ
 
-## Nội dung
+Cần Node.js 22 trở lên.
 
-- Trang chủ: hero lá, giới thiệu, kiến trúc, dấu ấn dự án, video, vị trí, phong cách sống, giá trị sở hữu, tiện ích, tiến độ, thông tin dự án, liên hệ và footer.
-- Bố cục thích ứng màn hình; menu điện thoại, 3 carousel, hiệu ứng xuất hiện ảnh và nội dung khi cuộn, chuyển động lá hero.
-- Hỗ trợ bàn phím, reduced motion, cookie lưu lựa chọn trên trình duyệt.
-- `index.html`: cấu trúc và phần lớn nội dung.
-- `styles.css`: bảng màu, font và các quy tắc nền.
-- `layout-refinement.css`: bố cục đã hiệu chỉnh theo số đo bản tham khảo; cần giữ file này khi triển khai.
-- `app.js`: dữ liệu carousel, menu, hộp thoại, hiệu ứng và xử lý form.
-- `assets/sources.json`: nguồn các tài nguyên hình ảnh được quan sát trong bản xem trước.
+```sh
+npm ci
+npm run setup:local
+npm run db:local
+npm run dev
+```
 
-## Giới hạn cần biết
+- Website: `http://127.0.0.1:8787/`
+- Dashboard: `http://127.0.0.1:8787/admin/`
+- Xem trước bản nháp: `http://127.0.0.1:8787/preview` (cần đăng nhập).
 
-1. Bản này tái tạo trang chủ. Các liên kết Vị trí/Tiện ích/Dự án/Tiến độ dẫn đến các section trên trang. Chưa tái tạo các trang con `/location`, `/about-us`, `/news`, `/apartments-layout` của bản tham khảo. Nút Căn hộ mở hộp thoại mới với danh mục cơ bản; đây là phần bổ sung, không phải bản sao trang căn hộ gốc.
-2. Chuyển động hero và hiệu ứng cuộn được viết lại, chưa đối chiếu được mọi trạng thái với bản gốc. Không có mã nguồn animation gốc.
-3. Form chỉ kiểm tra dữ liệu và hiển thị rõ chưa gửi. Không lưu họ tên, email hoặc số điện thoại và không có backend/CRM. Cần kết nối hệ thống tiếp nhận trước khi dùng chính thức.
-4. Chính sách quyền riêng tư là nội dung dành cho bản cục bộ này, không phải chính sách gốc của dự án.
-5. Video dùng iframe YouTube và cần Internet; không đóng gói nội dung video YouTube.
-6. Logo, ảnh và video Dukley được giữ để bám giao diện tham khảo, không phải ảnh minh họa đã xác minh của Sun Saphia. Quyền sử dụng các tài nguyên bên thứ ba thuộc chủ sở hữu tương ứng; thay bằng tài nguyên được cấp quyền khi triển khai.
-7. Nội dung và các số liệu dự án được chép theo bản xem trước, chưa xác minh độc lập; không có cập nhật giá tự động.
+`setup:local` tạo mật khẩu ngẫu nhiên dành riêng cho máy. Xem thông tin đăng nhập trong `.local-login.json`. Băm mật khẩu và email nằm trong `.dev.vars`; hai file không được commit hoặc đóng gói. Chạy lại setup không ghi đè tài khoản đang có. Không dùng tài khoản này cho production.
 
-## Font
+D1/R2 cục bộ lưu tại `.wrangler/state`; chưa đồng bộ lên tài khoản Cloudflare. Bản nội dung gốc nằm trong `server/content-schema.json`, được dùng làm phiên bản khởi đầu được duyệt của website. Khi đã có bản xuất bản, lỗi nguồn không được thay bằng dữ liệu mẫu.
 
-Cormorant Garamond và Be Vietnam Pro được lưu cục bộ từ Google Fonts. `assets/fonts.css` khai báo font; `font-*.ttf` chứa font chữ. Lá hero dùng ảnh Unsplash đã hiển thị trong bản tham khảo.
+## Cách sử dụng
 
-## Bản hiệu chỉnh bố cục
+1. Đăng nhập Studio, chọn phần nội dung và chỉnh các trường.
+2. Bấm **Lưu nháp**. Trường chưa lưu sẽ giữ trạng thái riêng trong cửa sổ đang mở.
+3. Bấm **Xem trước** để mở bản đã lưu, chỉ quản trị viên đăng nhập mới đọc được.
+4. Bấm **Xuất bản** để chọn bản nháp hiện tại làm nội dung công khai. Chỉ báo thành công sau khi D1 xác nhận thay đổi phiên bản.
+5. Trong **Lịch sử phiên bản**, khôi phục một phiên bản thành bản nháp rồi xem trước/xuất bản lại nếu cần.
 
-Đã sửa ảnh kiến trúc thành ba lớp chồng nhau (80% / 90% / 100%, cách nhau 48px trên máy tính), thu hẹp tiêu đề và nội dung, bổ sung video sóng biển nhỏ, xếp dọc phần vị trí, đưa ba ô sở hữu lên trên khối ảnh, sửa ảnh nền toàn chiều ngang và vị trí ảnh nhỏ cuối phần dự án. Đã cập nhật gallery với ảnh được chọn phóng lớn.
+Ảnh mới có thể được chọn từ thư viện hoặc tải trực tiếp trong trường ảnh. Tải ảnh lên không tự xuất bản ảnh vào nội dung. Chữ là plain text để giữ thiết kế và tránh HTML tùy ý; chưa có trình viết bài rich text hoặc trang blog ở giai đoạn này.
 
-## Tối ưu mobile
+## Chuẩn bị Cloudflare thật
 
-`mobile.css` được tải cuối cùng và chỉ áp dụng dưới 801px. Bản điện thoại dùng header gọn, ảnh giữ tỷ lệ, nội dung một cột dưới 601px, gallery vuốt với nhãn xuống dòng, font nhập liệu tối thiểu 16px, nút thao tác tối thiểu 44px và khoảng cách hỗ trợ safe area. Đã kiểm tra tràn ngang và tràn chữ tại 320, 360, 390, 430, 768px.
+Hiện chưa cấu hình tài khoản Cloudflare, database production hoặc tên miền. `database_id` trong `wrangler.jsonc` là placeholder; lệnh deploy có kiểm tra để không triển khai nhầm cấu hình này.
 
-## Hệ thống chữ thống nhất
+1. Đăng nhập Wrangler đúng tài khoản và kiểm tra bằng `npx wrangler whoami`.
+2. Tạo D1: `npx wrangler d1 create sun-saphia-cms`.
+3. Điền ID thật vào `d1_databases[0].database_id` trong `wrangler.jsonc`.
+4. Tạo bucket: `npx wrangler r2 bucket create sun-saphia-media`. Kiểm tra hạn mức/billing trên tài khoản trước khi bật dịch vụ.
+5. Điền `ADMIN_EMAIL` cho người quản trị và `SITE_ORIGIN` cho tên miền HTTPS đã chọn. Cloudflare account email và website admin email không bắt buộc giống nhau.
+6. Chạy migration production: `npm run db:remote`.
+7. Đặt secret `ADMIN_PASSWORD_HASH` riêng cho production, theo bước bên dưới.
+8. Chạy `npm run check`, `npm test`, `npm run deploy:check`, sau đó `npm run deploy`.
+9. Thêm Custom Domain cho Worker trên Cloudflare. Tên miền cần ở một Cloudflare zone hoạt động. Đối chiếu DNS hiện có trước khi thay đổi.
 
-`typography.css` quản lý toàn bộ font, cỡ chữ, độ đậm và khoảng cách dòng; đã loại bỏ các khai báo chữ trùng lặp khỏi ba file bố cục. Giữ file này cuối danh sách CSS.
+Đặt mật khẩu trong zsh, không ghi mật khẩu vào code hoặc đối số dòng lệnh:
 
-| Vai trò | Desktop | Tablet | Điện thoại |
-| --- | --- | --- | --- |
-| Tiêu đề section | 56px | 40px | 32px |
-| Đoạn dẫn | 28px | 24px | 20px |
-| Tiêu đề thẻ | 28px | 26px | 24px |
-| Nội dung | 16px | 16px | 16px |
-| Nhãn/chú thích | 14px | 14px | 14px |
-| Chữ nút | 13px | 13px | 13px |
+```sh
+read -s "saphia_admin_password?Mật khẩu mới (ít nhất 14 ký tự): "
+printf '%s' "$saphia_admin_password" | node scripts/password.mjs | npx wrangler secret put ADMIN_PASSWORD_HASH
+unset saphia_admin_password
+```
 
-Tiêu đề dùng Cormorant Garamond; nội dung và điều khiển dùng Be Vietnam Pro. Chỉ hero và tiêu đề trên ảnh nền có cỡ riêng. Gallery desktop phóng ảnh, không phóng chữ.
+Nếu Worker chưa tồn tại, Wrangler có thể hỏi tạo Worker khi đặt secret. Không đưa `.dev.vars` lên production. Chưa có secret/email hợp lệ thì đăng nhập bị từ chối; không có tài khoản mặc định công khai.
 
-## Chuyển động khi cuộn
+Tên miền chưa cấu hình hoặc hostname không phải `SITE_ORIGIN` sẽ nhận noindex. Sau khi gắn domain, kiểm tra HTML ban đầu, canonical, `/robots.txt`, `/sitemap.xml` và HTTPS. Preview/admin/API luôn có no-store và noindex.
 
-- `motion.js` và `motion.css` quản lý chuyển động, được tải sau phần giao diện.
-- Phần ảnh kiến trúc dùng một khung sticky. Ảnh trước và ảnh giữa trượt xuống theo vị trí cuộn, để lộ ảnh phía sau; cuộn lên đảo ngược chuyển động. Khung được thả khi kết thúc đoạn cuộn.
-- Tiêu đề xuất hiện theo từ, nội dung xuất hiện nhẹ một lần khi đi vào màn hình, ảnh mở dần và các ảnh lớn có parallax nhẹ.
-- Cuộn bánh xe và cảm ứng giữ hành vi trình duyệt. Link điều hướng chuyển êm đến section.
-- Chế độ giảm chuyển động của thiết bị hiển thị bản tĩnh, không giấu nội dung hoặc kéo dài đoạn cuộn. Khi JavaScript không chạy, toàn bộ nội dung vẫn đọc được.
-- Cuộn từ phần “Ý tưởng kiến trúc” xuống hết ba lớp ảnh để xem hiệu ứng.
+## Cấu trúc
+
+```text
+public/                  Giao diện, tài nguyên và Studio
+server/worker.js         Router, API quản trị, upload, form tư vấn
+server/auth.js           Mật khẩu, phiên, giới hạn request
+server/content.js        Phiên bản nội dung, xuất bản và render HTML
+server/content-schema.json Các trường được phép biên tập và nội dung gốc
+migrations/              Schema D1
+tests/                  Kiểm thử validation, XSS và tích hợp Worker/D1/R2
+wrangler.jsonc           Cấu hình Cloudflare
+```
+
+## Kiểm tra
+
+```sh
+npm run check
+npm test
+npm run deploy:check
+```
+
+Integration test chạy Worker riêng ở port 8790, D1/R2 riêng dưới `.wrangler/integration`, tự dừng server test sau khi xong. Không gửi dữ liệu/email hoặc tạo tài nguyên production. `.wrangler/` chứa dữ liệu máy, không được đưa vào Git/ZIP.
+
+## Giới hạn hiện tại
+
+- Một quản trị viên, chưa có nhiều vai trò, MFA riêng, đặt lại mật khẩu qua email hoặc lịch xuất bản. Có thể bổ sung Cloudflare Access trước khi mở quản trị cho nhiều người.
+- Quản lý các trường/nhóm thẻ hiện có; chưa có thêm/xóa/sắp xếp khối tùy ý hay page builder.
+- Chưa có module blog, lịch đăng hoặc hệ thống đa ngôn ngữ. Các nội dung này thuộc giai đoạn sau.
+- Không có thông báo email tự động. Nhân viên kiểm tra yêu cầu trong dashboard.
+- Giới hạn form theo IP và honeypot đã có; chưa tích hợp Turnstile. Cần theo dõi spam thực tế trước khi chạy chiến dịch lớn.
+- Cache dự phòng là best effort tại edge, không thay thế backup D1. Nếu edge chưa có snapshot và D1 không đọc được, trang trả lỗi thay vì thông tin mẫu.
+- Khi deploy thay cấu trúc schema, cần lên kế hoạch nâng cấp các revision đang lưu; không sửa/xóa key tùy tiện.
+- Các ảnh tham khảo cũ còn trên landing page chưa được thay hết bằng bộ ảnh dự án. Xem `ASSET-SOURCES.json` trước khi xuất bản chính thức.
+
+Tài liệu Cloudflare: https://developers.cloudflare.com/workers/static-assets/ · https://developers.cloudflare.com/d1/ · https://developers.cloudflare.com/r2/

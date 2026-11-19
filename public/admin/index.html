@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Sun Saphia · Studio</title>
+<link rel="stylesheet" href="/assets/fonts.css"><link rel="stylesheet" href="/admin/studio.css">
+<script defer src="/admin/studio.js"></script>
+</head>
+<body>
+<section id="login-view" class="login-shell">
+  <form id="login-form" class="login-card">
+    <p class="eyebrow">SUN SAPHIA RESIDENCE</p><h1>Content Studio</h1>
+    <p class="muted">Đăng nhập để quản lý nội dung website.</p>
+    <label>Email quản trị<input name="email" type="email" autocomplete="username" required></label>
+    <label>Mật khẩu<input name="password" type="password" autocomplete="current-password" required maxlength="256"></label>
+    <button class="primary" type="submit">Đăng nhập</button><p id="login-status" role="status"></p>
+    <a href="/">Về website</a>
+  </form>
+</section>
+<div id="studio-view" hidden>
+  <header class="studio-header"><a class="brand" href="/admin/"><span class="eyebrow">SUN SAPHIA RESIDENCE</span><strong>Content Studio</strong></a><div class="header-actions"><a class="button" href="/" target="_blank" rel="noopener">Xem website</a><button id="logout" type="button">Đăng xuất</button></div></header>
+  <div class="studio-layout">
+    <aside class="sidebar"><p class="eyebrow">QUẢN TRỊ WEBSITE</p><nav aria-label="Quản trị"><button class="nav-button active" data-tab="content" type="button">Nội dung landing page</button><button class="nav-button" data-tab="media" type="button">Thư viện ảnh</button><button class="nav-button" data-tab="history" type="button">Lịch sử phiên bản</button><button class="nav-button" data-tab="leads" type="button">Yêu cầu tư vấn</button></nav><div class="sidebar-note"><span id="admin-email"></span><p>Chỉnh nội dung tại đây.<br>Bố cục và chuyển động được giữ theo thiết kế.</p></div></aside>
+    <main>
+      <div class="page-heading"><div><p class="eyebrow" id="page-eyebrow">BIÊN TẬP NỘI DUNG</p><h1 id="page-title">Nội dung landing page</h1></div><span id="draft-badge" class="badge">Bản nháp</span></div>
+      <p id="studio-status" class="status" role="status" aria-live="polite">Đang tải nội dung…</p>
+      <section id="content-panel">
+        <div class="editor-toolbar"><span id="save-state">Đang tải…</span><div class="toolbar-actions"><button id="preview" type="button" disabled>Xem trước</button><button id="save" type="button" disabled>Lưu nháp</button><button id="publish" class="primary" type="button" disabled>Xuất bản</button></div></div>
+        <div class="editor-filter"><label>Phần nội dung<select id="section-select"></select></label><label>Tìm trường nội dung<input id="field-search" type="search" placeholder="Tiêu đề, mô tả, ảnh…"></label></div>
+        <form id="content-form" class="content-form"></form>
+      </section>
+      <section id="media-panel" hidden><div class="panel-intro"><div><h2>Ảnh của dự án</h2><p class="muted">PNG, JPEG hoặc WebP · Tối đa 8 MB mỗi ảnh.</p></div><label class="button upload-button">Tải ảnh lên<input id="media-upload" type="file" accept="image/png,image/jpeg,image/webp"></label></div><div id="media-grid" class="media-grid"></div></section>
+      <section id="history-panel" hidden><p class="muted">Khôi phục tạo một bản nháp mới. Website chỉ thay đổi sau khi bạn xuất bản.</p><div id="history-list" class="history-list"></div></section>
+      <section id="leads-panel" hidden><p class="muted">Yêu cầu được lưu tại đây. Bản này chưa gửi thông báo email tự động.</p><div class="table-wrap"><table><thead><tr><th>Khách hàng</th><th>Liên hệ</th><th>Thời gian</th><th>Trạng thái</th></tr></thead><tbody id="lead-list"></tbody></table></div></section>
+    </main>
+  </div>
+</div>
+<dialog id="media-picker"><div class="dialog-heading"><h2>Chọn ảnh</h2><button id="close-picker" type="button">Đóng</button></div><p class="muted">Ảnh được chọn chỉ thay đổi bản nháp.</p><div id="picker-grid" class="media-grid"></div></dialog>
+</body></html>

@@ -23,3 +23,7 @@
 .project-film__external a{text-decoration:underline;text-underline-offset:5px}
 @media(max-width:600px){.project-film__icon{width:52px;height:52px}.project-film__label{gap:12px;letter-spacing:.06em}.project-film__label small{font-size:10px}.project-film__external{margin-top:0}}
 @media(prefers-reduced-motion:reduce){.project-film__play>img{transition:none}.project-film__play:hover>img{transform:none}}
+
+[data-cms]{white-space:pre-line}
+[hidden]{display:none!important}
+.cms-preview-bar{position:fixed;bottom:12px;left:12px;z-index:100;background:#123e48;color:#fff;padding:12px 18px;border-radius:8px;font-family:var(--sans);font-size:14px;box-shadow:0 2px 12px #123e4833}.cms-preview-bar a{color:#fff;text-decoration:underline;text-underline-offset:3px}

@@ -2,3 +2,8 @@
 .vercel/
 node_modules/
 .env*
+.dev.vars*
+.wrangler/
+.deploy-check/
+test-results/
+.local-login.json
