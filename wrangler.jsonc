@@ -13,10 +13,9 @@
   "d1_databases": [{
     "binding": "DB",
     "database_name": "sun-saphia-cms",
-    "database_id": "00000000-0000-0000-0000-000000000000",
+    "database_id": "23f14d39-7644-41b7-af3f-e5ef858f36cb",
     "migrations_dir": "migrations"
   }],
-  "r2_buckets": [{ "binding": "MEDIA", "bucket_name": "sun-saphia-media" }],
-  "vars": { "SITE_ORIGIN": "", "ADMIN_EMAIL": "" },
+  "vars": { "SITE_ORIGIN": "", "ADMIN_EMAIL": "kemdinh43@gmail.com" },
   "observability": { "enabled": true }
 }

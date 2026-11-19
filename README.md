@@ -53,17 +53,19 @@ Nội dung bài viết và nội dung landing page có luồng xuất bản riê
 
 ## Chuẩn bị Cloudflare thật
 
-Hiện chưa cấu hình tài khoản Cloudflare, database production hoặc tên miền. `database_id` trong `wrangler.jsonc` là placeholder; lệnh deploy có kiểm tra để không triển khai nhầm cấu hình này.
+Cấu hình hiện trỏ tới D1 `sun-saphia-cms` của tài khoản triển khai. Tên miền riêng chưa được chọn. Khi dùng lại dự án ở tài khoản khác, tạo D1/R2 riêng và thay ID/email trong `wrangler.jsonc`; không dùng tài nguyên của tài khoản cũ.
 
 1. Đăng nhập Wrangler đúng tài khoản và kiểm tra bằng `npx wrangler whoami`.
 2. Tạo D1: `npx wrangler d1 create sun-saphia-cms`.
 3. Điền ID thật vào `d1_databases[0].database_id` trong `wrangler.jsonc`.
-4. Tạo bucket: `npx wrangler r2 bucket create sun-saphia-media`. Kiểm tra hạn mức/billing trên tài khoản trước khi bật dịch vụ.
+4. Hiện R2 được hoãn: cấu hình không có `r2_buckets`, tải ảnh mới tạm tắt; ảnh có sẵn và đường dẫn HTTPS vẫn dùng được. Khi muốn bật, kích hoạt R2 trên tài khoản, chạy `npx wrangler r2 bucket create sun-saphia-media`, thêm `"r2_buckets": [{ "binding": "MEDIA", "bucket_name": "sun-saphia-media" }]` vào `wrangler.jsonc` rồi triển khai lại. Không cần chuyển dữ liệu bài viết/D1.
 5. Điền `ADMIN_EMAIL` cho người quản trị và `SITE_ORIGIN` cho tên miền HTTPS đã chọn. Cloudflare account email và website admin email không bắt buộc giống nhau.
 6. Chạy migration production: `npm run db:remote`.
 7. Đặt secret `ADMIN_PASSWORD_HASH` riêng cho production, theo bước bên dưới.
 8. Chạy `npm run check`, `npm test`, `npm run deploy:check`, sau đó `npm run deploy`.
 9. Thêm Custom Domain cho Worker trên Cloudflare. Tên miền cần ở một Cloudflare zone hoạt động. Đối chiếu DNS hiện có trước khi thay đổi.
+
+Khi chưa chọn tên miền, dùng `npm run deploy -- --preview` và để `SITE_ORIGIN` trống. Website dùng địa chỉ `workers.dev` với `noindex`; dashboard và backend vẫn hoạt động. Sau khi chọn tên miền, điền `SITE_ORIGIN`, thêm Custom Domain và chạy lại `npm run deploy`.
 
 Đặt mật khẩu trong zsh, không ghi mật khẩu vào code hoặc đối số dòng lệnh:
 

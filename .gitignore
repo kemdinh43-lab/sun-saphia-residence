@@ -7,3 +7,4 @@ node_modules/
 .deploy-check/
 test-results/
 .local-login.json
+.production-login.json

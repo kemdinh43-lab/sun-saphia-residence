@@ -14,7 +14,7 @@ async function adminApi(request, env, path) {
   if (!readOnly(request)) await limited(env, 'admin:' + user.email, 120, 60);
   if (path === '/api/admin/content' && request.method === 'GET') {
     await initialize(env);
-    return json({ ...(await state(env)), schema, sections, email: user.email });
+    return json({ ...(await state(env)), schema, sections, email: user.email, mediaEnabled: Boolean(env.MEDIA) });
   }
   if(path==='/api/admin/posts'&&request.method==='GET')return json({posts:await listPosts(env)});
   if(path==='/api/admin/posts'&&request.method==='POST')return json(await savePost(env,await bodyJson(request,350000),user.email),201);
@@ -66,6 +66,7 @@ async function adminApi(request, env, path) {
     return json({ media: result.results.map(item => ({ ...item, url: '/media/' + item.id })) });
   }
   if (path === '/api/admin/media' && request.method === 'POST') {
+    if (!env.MEDIA) throw new HttpError(503, 'Tải ảnh mới đang tạm tắt. Bạn vẫn có thể dùng đường dẫn ảnh hiện có; kho ảnh sẽ được bật sau.');
     const data = await bytes(request, 8 * 1024 * 1024);
     const type = request.headers.get('content-type')?.split(';')[0];
     const signature = [...data.slice(0, 12)].map(n => String.fromCharCode(n)).join('');
@@ -132,6 +133,7 @@ async function route(request, env, ctx) {
   }
   if (path === '/admin' || path === '/admin/') return env.ASSETS.fetch(new Request(new URL('/admin/index.html', request.url)));
   if (path.startsWith('/media/')) {
+    if (!env.MEDIA) throw new HttpError(404, 'Không tìm thấy ảnh.');
     const id = path.slice(7);
     if (!/^[a-f0-9-]{36}\.(png|jpg|webp)$/.test(id)) throw new HttpError(404, 'Không tìm thấy ảnh.');
     const object = await env.MEDIA.get(id);

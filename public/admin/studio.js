@@ -79,7 +79,7 @@ function renderFields() {
       choose.addEventListener('click', () => openPicker(field.key));
       const upload = el('label', 'Tải ảnh mới', 'button upload-button'); const file = el('input'); file.type = 'file'; file.accept = 'image/png,image/jpeg,image/webp';
       file.addEventListener('change', () => { if (file.files[0]) task(async () => { const uploaded = await uploadImage(file.files[0]); updateField(field.key, uploaded.url); renderFields(); message('Đã tải ảnh. Lưu nháp để giữ lựa chọn.'); }); });
-      upload.append(file); buttons.append(choose, upload); actions.append(buttons); row.append(image, actions); wrapper.append(row);
+      upload.append(file); upload.hidden=model.mediaEnabled===false; buttons.append(choose, upload); actions.append(buttons); row.append(image, actions); wrapper.append(row);
       input.addEventListener('change', () => { image.src = new URL(input.value, location.origin + '/').href; });
     }
     const meta = el('small', search ? field.section : field.type === 'youtube' ? 'Dùng link youtube.com/watch hoặc youtu.be.' : `Tối đa ${field.maxLength.toLocaleString('vi')} ký tự.`, 'field-meta'); wrapper.append(meta);
@@ -94,6 +94,10 @@ async function loadModel() {
 }
 async function openStudio() {
   await loadModel(); $('#login-view').hidden = true; $('#studio-view').hidden = false;
+  for(const id of ['media-upload','post-cover-upload','post-inline-upload']) {
+    const file=$('#'+id);file.disabled=model.mediaEnabled===false;
+    file.closest('label').hidden=model.mediaEnabled===false;
+  }
   message(model.draftId === model.publishedId ? 'Bạn đang biên tập từ nội dung đã xuất bản. Thay đổi sẽ được lưu thành bản nháp riêng.' : 'Có bản nháp chưa xuất bản. Website công khai vẫn giữ phiên bản trước.');
 }
 async function save() {
@@ -102,6 +106,7 @@ async function save() {
   Object.assign(model, result); saved = JSON.stringify(snapshot); message('Đã lưu bản nháp. Bạn có thể xem trước hoặc xuất bản.');
 }
 async function uploadImage(file) {
+  if(model?.mediaEnabled===false)throw new Error('Tải ảnh mới đang tạm tắt. Hãy dùng đường dẫn ảnh hiện có; kho ảnh sẽ được bật sau.');
   if (!['image/png','image/jpeg','image/webp'].includes(file.type) || file.size > 8*1024*1024) throw new Error('Chọn PNG, JPEG hoặc WebP tối đa 8 MB.');
   return api('media', { method: 'POST', body: file, headers: { 'content-type': file.type, 'x-file-name': encodeURIComponent(file.name) } });
 }
@@ -116,7 +121,7 @@ function mediaCard(item, choose) {
 }
 async function renderMedia(container, choose = false) {
   const data = await api('media'); container.replaceChildren();
-  if (!data.media.length) container.append(el('p', 'Chưa có ảnh tải lên. Bạn có thể tải ảnh mới từ trường ảnh trong phần Nội dung.', 'empty-state'));
+  if (!data.media.length) container.append(el('p', model?.mediaEnabled===false?'Kho ảnh chưa được kích hoạt. Bạn vẫn có thể dùng đường dẫn ảnh hiện có trong nội dung và bài viết.':'Chưa có ảnh tải lên. Bạn có thể tải ảnh mới từ trường ảnh trong phần Nội dung.', 'empty-state'));
   data.media.forEach(item => container.append(mediaCard(item, choose)));
 }
 async function openPicker(key) {
