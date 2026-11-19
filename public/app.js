@@ -84,3 +84,17 @@ if(galleryTrack){
  let framePending=false;galleryTrack.addEventListener('scroll',()=>{if(framePending)return;framePending=true;requestAnimationFrame(()=>{const midpoint=galleryTrack.scrollLeft+galleryTrack.clientWidth/2;let best=0,distance=Infinity;cards.forEach((card,i)=>{const d=Math.abs(card.offsetLeft+card.offsetWidth/2-midpoint);if(d<distance){distance=d;best=i;}});highlight(best);framePending=false;});},{passive:true});
  requestAnimationFrame(()=>{const card=cards[selected];galleryTrack.scrollLeft=card.offsetLeft+card.offsetWidth/2-galleryTrack.clientWidth/2;});
 }
+
+// Defer the YouTube player until the visitor chooses to watch the project film.
+const projectFilmLink=document.querySelector('[data-project-film]');
+projectFilmLink?.addEventListener('click',event=>{
+ event.preventDefault();
+ const frame=document.createElement('iframe');
+ frame.src='https://www.youtube-nocookie.com/embed/dU6ceuNIdXI?autoplay=1&playsinline=1&rel=0&hl=vi';
+ frame.title='Video giới thiệu Sun Saphia Residence';
+ frame.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';
+ frame.allowFullscreen=true;
+ frame.referrerPolicy='strict-origin-when-cross-origin';
+ projectFilmLink.replaceWith(frame);
+ frame.focus();
+});
