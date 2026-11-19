@@ -12,7 +12,7 @@
  .menu-toggle[aria-expanded=true] span:nth-child(1){transform:translateY(8px) rotate(45deg)}
  .menu-toggle[aria-expanded=true] span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
  .mobile-menu{inset:calc(76px + env(safe-area-inset-top)) 0 0;padding:24px 24px calc(32px + env(safe-area-inset-bottom));overscroll-behavior:contain}
- .mobile-menu a{min-height:56px;padding:12px 0;border-bottom:1px solid #ffedd526}
+ .mobile-menu a{min-height:56px;padding:12px 0;border-bottom:1px solid #f8f1e526}
  .hero{height:90svh;min-height:520px;max-height:860px;margin-bottom:0}
  .hero-copy{padding:calc(76px + env(safe-area-inset-top)) 20px 52px;transform:none}
  .hero h1{max-width:100%;width:100%}
@@ -31,7 +31,7 @@
  .wide-photo img{width:100%;height:100%;object-fit:cover}
  .concept{margin-top:0;padding-bottom:0}
  .four-columns{grid-template-columns:1fr 1fr;gap:0 24px;border:0;margin-top:24px}
- .four-columns article,.four-columns article:last-child,.four-columns article:nth-child(2){margin:0;padding:24px 0;border-top:1px solid #a3a3a3}
+ .four-columns article,.four-columns article:last-child,.four-columns article:nth-child(2){margin:0;padding:24px 0;border-top:1px solid #b7cdd2}
  .four-columns article:after{display:none}
  .four-columns h4{margin-bottom:12px;text-wrap:balance}
  .four-columns p{}
@@ -56,7 +56,7 @@
  .location-grid>div:first-child{width:100%;height:auto;aspect-ratio:1.5;margin:8px auto 28px}
  .location-grid>div:first-child img{width:100%;height:100%;object-fit:contain}
  .location-copy{width:100%;max-width:100%;text-align:left}
- .location-copy article,.location-copy article+article{margin:0;padding:24px 0;border-top:1px solid #a3a3a3}
+ .location-copy article,.location-copy article+article{margin:0;padding:24px 0;border-top:1px solid #b7cdd2}
  .location-copy h4,.location-copy article+article h4{max-width:none;margin:0 0 14px;}
  .location-copy p{margin:0}
  .image-title{height:clamp(380px,82vw,560px);margin:0;isolation:isolate}
@@ -101,7 +101,7 @@
  .footer-grid p{margin:16px 0 12px}.footer-grid a{margin-bottom:10px}.footer-logo{width:110px;height:110px}
  .footer .social-icons{flex-wrap:wrap;gap:10px}.footer .social-icons a{width:44px;height:44px}
  .footer>.text-button{min-height:44px;text-align:left;}
- .cookie-banner{left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));border-radius:20px;padding:18px 20px;max-height:40svh;overflow:auto;box-shadow:-4px 4px 0 #bad5d0b3}
+ .cookie-banner{left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));border-radius:20px;padding:18px 20px;max-height:40svh;overflow:auto;box-shadow:-4px 4px 0 #a3c9d2b3}
  .cookie-banner p{}.cookie-accept{min-height:44px;min-width:132px;margin:14px auto 0;padding:10px 24px}
  dialog{width:calc(100% - 24px);max-width:600px;max-height:calc(100dvh - 32px);padding:64px 24px 28px;overscroll-behavior:contain}
  dialog h2{}.dialog-close{min-width:44px;min-height:44px}
@@ -115,7 +115,7 @@
  .intro-detail video{aspect-ratio:4/3;height:auto;max-height:340px}
  .intro-detail p{}
  .wellness-grid{grid-template-columns:1fr;gap:32px}
- .wellness-grid article{padding-top:28px;border-top:1px solid #a3a3a3}
+ .wellness-grid article{padding-top:28px;border-top:1px solid #b7cdd2}
  .carousel-card,.amenities .carousel-card,.gallery .carousel-card,.gallery .carousel-card.is-active{flex-basis:88%}
  .footer-grid{grid-template-columns:1fr;gap:20px}
  .social-text{gap:20px}

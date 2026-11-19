@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" fill="none">
 <defs>
-<linearGradient id="silk" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F4EADB" stop-opacity=".58"/><stop offset=".4" stop-color="#BCD1D3" stop-opacity=".35"/><stop offset=".76" stop-color="#839CA5" stop-opacity=".21"/><stop offset="1" stop-color="#F0D7B7" stop-opacity=".05"/></linearGradient>
+<linearGradient id="silk" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F4EADB" stop-opacity=".58"/><stop offset=".4" stop-color="#B5D0D7" stop-opacity=".35"/><stop offset=".76" stop-color="#6192A1" stop-opacity=".21"/><stop offset="1" stop-color="#F0D7B7" stop-opacity=".05"/></linearGradient>
 <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#F4EADA" stop-opacity=".12"/><stop offset=".6" stop-color="#E6CBA6" stop-opacity=".76"/><stop offset="1" stop-color="#E6CBA6" stop-opacity=".03"/></linearGradient>
 </defs>
 <path d="M-30 12C190-65 300 35 454 116S748 254 1010 82C778 326 590 315 394 218S135 111-30 184Z" fill="url(#silk)"/>
