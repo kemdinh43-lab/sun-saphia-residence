@@ -2,6 +2,14 @@
 
 Landing page HTML/CSS/JS cùng dashboard quản trị, Cloudflare Worker, D1 và R2. Mã nguồn giao diện và animation được giữ riêng với nội dung biên tập. Không cần Vercel hoặc WordPress.
 
+## Địa chỉ triển khai
+
+- Website: https://sun-saphia-residence.kemdinh43.workers.dev
+- Quản trị: https://sun-saphia-residence.kemdinh43.workers.dev/admin/
+- Chưa chọn tên miền riêng; bản workers.dev được đặt noindex.
+- Chưa kích hoạt R2. Sửa nội dung, viết bài, xuất bản và quản lý yêu cầu tư vấn dùng D1; tải ảnh mới đang tạm tắt.
+- Thông tin đăng nhập được bàn giao riêng, không nằm trong repository hoặc gói source.
+
 ## Những gì đã có
 
 - Đăng nhập một tài khoản quản trị; mật khẩu băm PBKDF2 có salt, cookie HttpOnly, phiên 8 giờ và giới hạn thử đăng nhập.
