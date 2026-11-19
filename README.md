@@ -5,8 +5,12 @@ Landing page HTML/CSS/JS cùng dashboard quản trị, Cloudflare Worker, D1 và
 ## Những gì đã có
 
 - Đăng nhập một tài khoản quản trị; mật khẩu băm PBKDF2 có salt, cookie HttpOnly, phiên 8 giờ và giới hạn thử đăng nhập.
-- Biên tập 197 trường nội dung của landing page: tiêu đề, đoạn văn, ảnh/alt, loại căn hiện có, thẻ dấu ấn/tiện ích, thư viện, video YouTube, tiến độ và SEO.
+- Biên tập 199 trường nội dung của landing page: tiêu đề, đoạn văn, ảnh/alt, loại căn hiện có, thẻ dấu ấn/tiện ích, thư viện, video YouTube, tiến độ và SEO.
+- Chọn theo 17 section thực tế trên trang (16 section cũ + mục tin tức bổ sung), gom tiêu đề, nội dung, ảnh, thẻ và thư viện vào đúng khu vực. SEO chung và popup căn hộ là thiết lập riêng.
 - Lưu bản nháp riêng, xem trước có xác thực/noindex, xuất bản một phiên bản hoàn chỉnh.
+- Module Bài viết: trình soạn trực quan tự host bằng Tiptap, H2/H3, đậm/nghiêng/gạch chân, danh sách, căn lề, trích dẫn, liên kết, ảnh/chú thích, bảng, hoàn tác/làm lại.
+- Mỗi bài có ảnh bìa/alt, slug, tác giả, danh mục, mô tả ngắn, SEO riêng, nháp/xem trước/xuất bản/gỡ bài và lịch sử khôi phục. Bản sửa không làm thay đổi bài công khai.
+- Bài đã đăng có trang riêng tại `/bai-viet/:slug`, trang danh sách `/bai-viet`, xuất hiện trong mục tin tức landing page và sitemap. Không có bài công khai thì mục tin tức trên landing page được ẩn.
 - Lịch sử tối đa 60 phiên bản gần nhất trên giao diện; khôi phục tạo bản nháp mới, không tự xuất bản.
 - Kiểm tra phiên bản khi lưu và xuất bản để tránh ghi đè giữa các cửa sổ.
 - Ảnh upload lưu trong R2, PNG/JPEG/WebP tối đa 8 MB; kiểm tra chữ ký file, không nhận SVG/HTML tải lên.
@@ -41,7 +45,11 @@ D1/R2 cục bộ lưu tại `.wrangler/state`; chưa đồng bộ lên tài kho�
 4. Bấm **Xuất bản** để chọn bản nháp hiện tại làm nội dung công khai. Chỉ báo thành công sau khi D1 xác nhận thay đổi phiên bản.
 5. Trong **Lịch sử phiên bản**, khôi phục một phiên bản thành bản nháp rồi xem trước/xuất bản lại nếu cần.
 
-Ảnh mới có thể được chọn từ thư viện hoặc tải trực tiếp trong trường ảnh. Tải ảnh lên không tự xuất bản ảnh vào nội dung. Chữ là plain text để giữ thiết kế và tránh HTML tùy ý; chưa có trình viết bài rich text hoặc trang blog ở giai đoạn này.
+Ảnh mới có thể được chọn từ thư viện hoặc tải trực tiếp trong trường ảnh. Tải ảnh lên không tự xuất bản ảnh vào nội dung. Chữ trên landing page là plain text để giữ thiết kế; phần Bài viết dùng trình soạn trực quan và lưu cấu trúc JSON. Backend kiểm tra các khối/định dạng được hỗ trợ, rồi tạo HTML đã escape để tránh cho HTML tùy ý đi vào bài công khai.
+
+Trong mục Bài viết, bấm **Viết bài mới**, nhập tiêu đề (slug được gợi ý), ảnh bìa/alt và nội dung. Lưu nháp trước khi xem trước/xuất bản. Trước khi xuất bản cần đủ tiêu đề, mô tả, ảnh bìa/alt và nội dung. Slug cố định sau lần xuất bản đầu để giữ URL. **Gỡ khỏi website** giữ bài và lịch sử, chỉ ngừng công khai. Khôi phục phiên bản cũ tạo nháp mới; cần xuất bản lại nếu muốn thay bài công khai.
+
+Nội dung bài viết và nội dung landing page có luồng xuất bản riêng. Không cần xuất bản lại landing page để một bài mới xuất hiện trong mục tin tức. Trình soạn bài chỉ được tải khi mở mục Bài viết; landing page không tải thư viện editor.
 
 ## Chuẩn bị Cloudflare thật
 
@@ -76,6 +84,10 @@ public/                  Giao diện, tài nguyên và Studio
 server/worker.js         Router, API quản trị, upload, form tư vấn
 server/auth.js           Mật khẩu, phiên, giới hạn request
 server/content.js        Phiên bản nội dung, xuất bản và render HTML
+server/sections.json     Bản đồ section và vị trí trên trang
+server/posts.js          Bài viết, revision và render rich text an toàn
+admin/posts-editor.js    Mã nguồn trình soạn bài
+scripts/build-admin.mjs  Bundle editor tự host bằng esbuild
 server/content-schema.json Các trường được phép biên tập và nội dung gốc
 migrations/              Schema D1
 tests/                  Kiểm thử validation, XSS và tích hợp Worker/D1/R2
@@ -96,11 +108,13 @@ Integration test chạy Worker riêng ở port 8790, D1/R2 riêng dưới `.wran
 
 - Một quản trị viên, chưa có nhiều vai trò, MFA riêng, đặt lại mật khẩu qua email hoặc lịch xuất bản. Có thể bổ sung Cloudflare Access trước khi mở quản trị cho nhiều người.
 - Quản lý các trường/nhóm thẻ hiện có; chưa có thêm/xóa/sắp xếp khối tùy ý hay page builder.
-- Chưa có module blog, lịch đăng hoặc hệ thống đa ngôn ngữ. Các nội dung này thuộc giai đoạn sau.
+- Chưa có lịch đăng tự động, đa ngôn ngữ hoặc page builder.
+- Danh sách quản trị hiện lấy 200 bài gần nhất, danh sách công khai 100 bài, landing page 3 bài mới nhất; có thể bổ sung phân trang khi nội dung tăng.
+- Trình soạn hỗ trợ định dạng đã liệt kê, không có chế độ nhập HTML tùy ý hoặc font/cỡ chữ tùy ý để giữ nhất quán thiết kế.
 - Không có thông báo email tự động. Nhân viên kiểm tra yêu cầu trong dashboard.
 - Giới hạn form theo IP và honeypot đã có; chưa tích hợp Turnstile. Cần theo dõi spam thực tế trước khi chạy chiến dịch lớn.
 - Cache dự phòng là best effort tại edge, không thay thế backup D1. Nếu edge chưa có snapshot và D1 không đọc được, trang trả lỗi thay vì thông tin mẫu.
-- Khi deploy thay cấu trúc schema, cần lên kế hoạch nâng cấp các revision đang lưu; không sửa/xóa key tùy tiện.
+- Các key dữ liệu cũ được giữ nguyên khi sắp xếp lại section. Hai trường tiêu đề tin tức mới nhận mặc định từ code nếu đọc revision cũ. Các thay đổi schema khác vẫn cần kế hoạch nâng cấp; không đổi/xóa key tùy tiện.
 - Các ảnh tham khảo cũ còn trên landing page chưa được thay hết bằng bộ ảnh dự án. Xem `ASSET-SOURCES.json` trước khi xuất bản chính thức.
 
 Tài liệu Cloudflare: https://developers.cloudflare.com/workers/static-assets/ · https://developers.cloudflare.com/d1/ · https://developers.cloudflare.com/r2/

@@ -1,0 +1,137 @@
+[
+  {
+    "id": "0",
+    "title": "Hero · Mở đầu",
+    "anchor": "cms-section-0",
+    "imageKey": "section.0.image.0.src",
+    "description": "Tên dự án, địa điểm, thông điệp mở đầu và ảnh nền hero."
+  },
+  {
+    "id": "1",
+    "title": "Giới thiệu dự án",
+    "anchor": "residence",
+    "imageKey": null,
+    "description": "Tiêu đề giới thiệu và các đoạn mô tả dự án."
+  },
+  {
+    "id": "2",
+    "title": "Ảnh toàn cảnh",
+    "anchor": "cms-section-2",
+    "imageKey": "section.2.image.0.src",
+    "description": "Ảnh toàn cảnh ngay sau phần giới thiệu."
+  },
+  {
+    "id": "3",
+    "title": "Ý tưởng kiến trúc",
+    "anchor": "cms-section-3",
+    "imageKey": "section.3.image.0.src",
+    "description": "Nội dung kiến trúc, các điểm nhấn và bộ ba ảnh chuyển động khi cuộn."
+  },
+  {
+    "id": "4",
+    "title": "Dấu ấn dự án",
+    "anchor": "features",
+    "imageKey": null,
+    "description": "Tiêu đề và toàn bộ các thẻ dấu ấn của dự án."
+  },
+  {
+    "id": "5",
+    "title": "Phim dự án",
+    "anchor": "cms-section-5",
+    "imageKey": "section.5.image.0.src",
+    "description": "Tiêu đề, video YouTube, ảnh bìa và mô tả ảnh."
+  },
+  {
+    "id": "6",
+    "title": "Vị trí & kết nối",
+    "anchor": "location",
+    "imageKey": "section.6.image.0.src",
+    "description": "Nội dung vị trí, kết nối và hình minh họa."
+  },
+  {
+    "id": "7",
+    "title": "Ảnh nhịp sống đại dương",
+    "anchor": "cms-section-7",
+    "imageKey": "section.7.image.0.src",
+    "description": "Tiêu đề đặt trên ảnh và hai lớp ảnh của phần nhịp sống."
+  },
+  {
+    "id": "8",
+    "title": "Phong cách sống",
+    "anchor": "cms-section-8",
+    "imageKey": null,
+    "description": "Các điểm nhấn phong cách sống nằm ngay dưới ảnh đại dương."
+  },
+  {
+    "id": "9",
+    "title": "Giá trị sở hữu",
+    "anchor": "ownership",
+    "imageKey": "section.9.image.0.src",
+    "description": "Nội dung giá trị sở hữu, thông tin căn hộ, bàn giao và hình minh họa."
+  },
+  {
+    "id": "10",
+    "title": "Tiện ích tổng quan",
+    "anchor": "cms-section-10",
+    "imageKey": null,
+    "description": "Giới thiệu tiện ích chăm sóc sức khỏe và cảnh quan."
+  },
+  {
+    "id": "11",
+    "title": "Ảnh không gian thư giãn",
+    "anchor": "cms-section-11",
+    "imageKey": "section.11.image.0.src",
+    "description": "Tiêu đề cùng các lớp ảnh không gian thư giãn."
+  },
+  {
+    "id": "12",
+    "title": "Bộ sưu tập tiện ích",
+    "anchor": "amenities",
+    "imageKey": null,
+    "description": "Tiêu đề giới thiệu và các thẻ tiện ích kèm hình ảnh."
+  },
+  {
+    "id": "13",
+    "title": "Tiến độ & thư viện",
+    "anchor": "progress",
+    "imageKey": null,
+    "description": "Nội dung tiến độ cùng toàn bộ ảnh trong thư viện."
+  },
+  {
+    "id": "14",
+    "title": "Thông tin dự án",
+    "anchor": "project",
+    "imageKey": "section.14.image.0.src",
+    "description": "Nội dung dự án và bộ ảnh minh họa."
+  },
+  {
+    "id": "news",
+    "title": "Tin tức & bài viết",
+    "anchor": "news",
+    "imageKey": null,
+    "description": "Chỉ hiện trên landing page khi có bài viết đã xuất bản. Chọn mục Bài viết để soạn và đăng bài."
+  },
+  {
+    "id": "15",
+    "title": "Đăng ký tư vấn",
+    "anchor": "Contact-us",
+    "imageKey": null,
+    "description": "Tiêu đề và nội dung giới thiệu của biểu mẫu đăng ký tư vấn."
+  },
+  {
+    "id": "seo",
+    "title": "SEO toàn website",
+    "anchor": null,
+    "imageKey": null,
+    "description": "Tiêu đề và mô tả của trang chủ trên công cụ tìm kiếm.",
+    "settings": true
+  },
+  {
+    "id": "apartments",
+    "title": "Popup căn hộ",
+    "anchor": "apartments",
+    "imageKey": null,
+    "description": "Nội dung hộp thoại mở khi khách bấm Căn hộ.",
+    "settings": true
+  }
+]

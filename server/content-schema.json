@@ -5,7 +5,9 @@
     "section": "SEO",
     "type": "text",
     "default": "Sun Saphia Residence",
-    "maxLength": 120
+    "maxLength": 120,
+    "sectionId": "seo",
+    "group": "SEO toàn website"
   },
   {
     "key": "seo.description",
@@ -13,711 +15,889 @@
     "section": "SEO",
     "type": "textarea",
     "default": "Sun Saphia Residence — Nơi di sản chạm vào nhịp sống đại dương.",
-    "maxLength": 320
+    "maxLength": 320,
+    "sectionId": "seo",
+    "group": "SEO toàn website"
   },
   {
     "key": "film.youtube",
-    "label": "Link YouTube",
+    "label": "Link video YouTube",
     "section": "Phim dự án",
     "type": "youtube",
     "default": "https://www.youtube.com/watch?v=dU6ceuNIdXI",
-    "maxLength": 200
+    "maxLength": 200,
+    "sectionId": "5",
+    "group": "Video"
   },
   {
     "key": "section.0.text.0",
-    "label": "Nội dung 1",
+    "label": "Địa điểm",
     "section": "Hero",
     "type": "textarea",
     "default": "ĐÀ NẴNG · VIỆT NAM",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "0",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.0.text.1",
-    "label": "Tên dự án 2",
+    "label": "Tên dự án",
     "section": "Hero",
     "type": "text",
     "default": "SUN SAPHIA\nRESIDENCE",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "0",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.0.text.2",
-    "label": "Nội dung 3",
+    "label": "Thông điệp mở đầu",
     "section": "Hero",
     "type": "textarea",
     "default": "Dấu ấn sống bên bờ biển Sơn Thủy\nĐà Nẵng, Việt Nam",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "0",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.0.image.0.src",
-    "label": "Ảnh: Phối cảnh tòa tháp Sun Saphia Residence nhìn từ trên cao",
+    "label": "Đường dẫn ảnh",
     "section": "Hero",
     "type": "image",
     "default": "assets/sun-saphia-hero-panorama-1916.webp",
-    "maxLength": 1000
+    "maxLength": 1000,
+    "sectionId": "0",
+    "group": "Hình ảnh 1"
   },
   {
     "key": "section.0.image.0.alt",
-    "label": "Mô tả ảnh 1",
+    "label": "Mô tả ảnh (alt)",
     "section": "Hero",
     "type": "text",
     "default": "Phối cảnh tòa tháp Sun Saphia Residence nhìn từ trên cao",
-    "maxLength": 300
+    "maxLength": 300,
+    "sectionId": "0",
+    "group": "Hình ảnh 1"
   },
   {
     "key": "section.1.text.0",
-    "label": "Nội dung 1",
+    "label": "Nhãn section",
     "section": "Giới thiệu",
     "type": "textarea",
     "default": "(Sun Saphia Residence)",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "1",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.1.text.1",
-    "label": "Tiêu đề 2",
+    "label": "Tiêu đề chính",
     "section": "Giới thiệu",
     "type": "text",
     "default": "NƠI DI SẢN CHẠM VÀO NHỊP SỐNG ĐẠI DƯƠNG",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "1",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.1.text.2",
-    "label": "Dòng giới thiệu 3",
+    "label": "Tiêu đề phụ",
     "section": "Giới thiệu",
     "type": "textarea",
     "default": "Tọa lạc tại giao lộ Nguyễn Đức Thuận – Trường Sa, bên bờ biển Sơn Thủy, Sun Saphia Residence là dấu ấn kiến trúc ven biển lấy cảm hứng từ văn hóa Chăm Pa và vũ điệu Apsara, giữa thiên nhiên và nhịp sống Đà Nẵng.",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "1",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.1.text.3",
-    "label": "Nội dung 4",
+    "label": "Đoạn nội dung",
     "section": "Giới thiệu",
     "type": "textarea",
     "default": "Sun Saphia Residence là dự án căn hộ du lịch – thương mại dịch vụ tại phường Ngũ Hành Sơn, được giới thiệu là dự án căn hộ mặt biển đầu tiên của Sun Group tại Đà Nẵng.",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "1",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.1.text.4",
-    "label": "Nội dung 5",
+    "label": "Đoạn nội dung",
     "section": "Giới thiệu",
     "type": "textarea",
     "default": "Trên khu đất 3.720,1 m², tòa tháp cao khoảng 114 m gồm 30 tầng nổi, 2 tầng hầm và 782 sản phẩm. Trần căn hộ cao 3,5 m; bàn giao dự kiến tháng 11/2028.",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "1",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.2.image.0.src",
-    "label": "Ảnh: Kiến trúc khu căn hộ ven biển trong bản tham khảo",
+    "label": "Đường dẫn ảnh",
     "section": "Ảnh toàn cảnh",
     "type": "image",
     "default": "assets/668fa70a0c78d59de3e50000_photo-2.webp",
-    "maxLength": 1000
+    "maxLength": 1000,
+    "sectionId": "2",
+    "group": "Hình ảnh 1"
   },
   {
     "key": "section.2.image.0.alt",
-    "label": "Mô tả ảnh 1",
+    "label": "Mô tả ảnh (alt)",
     "section": "Ảnh toàn cảnh",
     "type": "text",
     "default": "Kiến trúc khu căn hộ ven biển trong bản tham khảo",
-    "maxLength": 300
+    "maxLength": 300,
+    "sectionId": "2",
+    "group": "Hình ảnh 1"
   },
   {
     "key": "section.3.text.0",
-    "label": "Nội dung 1",
+    "label": "Nhãn section",
     "section": "Kiến trúc",
     "type": "textarea",
     "default": "(Ý tưởng kiến trúc)",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "3",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.3.text.1",
-    "label": "Dòng giới thiệu 2",
+    "label": "Tiêu đề phụ",
     "section": "Kiến trúc",
     "type": "textarea",
     "default": "Vũ điệu di sản giữa chân trời đại dương",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "3",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.3.text.2",
-    "label": "Nội dung 3",
+    "label": "Đoạn nội dung",
     "section": "Kiến trúc",
     "type": "textarea",
     "default": "Kiến trúc lấy cảm hứng từ văn hóa Chăm Pa và hình tượng vũ nữ Apsara. Những đường cong mềm mại gợi chuyển động của vũ điệu truyền thống, trong khi hệ cửa kính rộng và trần cao 3,5 m đón ánh sáng và mở ra tầm nhìn biển, công viên hoặc thành phố tùy vị trí căn hộ.",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "3",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.3.image.0.src",
-    "label": "Ảnh: Đường nét kiến trúc",
+    "label": "Đường dẫn ảnh",
     "section": "Kiến trúc",
     "type": "image",
     "default": "assets/6690d8e97e590071c74c6d6b_photo-3.webp",
-    "maxLength": 1000
+    "maxLength": 1000,
+    "sectionId": "3",
+    "group": "Hình ảnh 1"
   },
   {
     "key": "section.3.image.0.alt",
-    "label": "Mô tả ảnh 1",
+    "label": "Mô tả ảnh (alt)",
     "section": "Kiến trúc",
     "type": "text",
     "default": "Đường nét kiến trúc",
-    "maxLength": 300
+    "maxLength": 300,
+    "sectionId": "3",
+    "group": "Hình ảnh 1"
   },
   {
     "key": "section.3.image.1.src",
-    "label": "Ảnh: Không gian ven biển",
+    "label": "Đường dẫn ảnh",
     "section": "Kiến trúc",
     "type": "image",
     "default": "assets/6690d8e9f4f07d1a4695e0b3_photo-2.webp",
-    "maxLength": 1000
+    "maxLength": 1000,
+    "sectionId": "3",
+    "group": "Hình ảnh 2"
   },
   {
     "key": "section.3.image.1.alt",
-    "label": "Mô tả ảnh 2",
+    "label": "Mô tả ảnh (alt)",
     "section": "Kiến trúc",
     "type": "text",
     "default": "Không gian ven biển",
-    "maxLength": 300
+    "maxLength": 300,
+    "sectionId": "3",
+    "group": "Hình ảnh 2"
   },
   {
     "key": "section.3.image.2.src",
-    "label": "Ảnh: Góc nhìn mở rộng",
+    "label": "Đường dẫn ảnh",
     "section": "Kiến trúc",
     "type": "image",
     "default": "assets/6690d8e918bc882adb77f80b_photo-1.webp",
-    "maxLength": 1000
+    "maxLength": 1000,
+    "sectionId": "3",
+    "group": "Hình ảnh 3"
   },
   {
     "key": "section.3.image.2.alt",
-    "label": "Mô tả ảnh 3",
+    "label": "Mô tả ảnh (alt)",
     "section": "Kiến trúc",
     "type": "text",
     "default": "Góc nhìn mở rộng",
-    "maxLength": 300
+    "maxLength": 300,
+    "sectionId": "3",
+    "group": "Hình ảnh 3"
   },
   {
     "key": "section.4.text.0",
-    "label": "Tiêu đề 1",
+    "label": "Tiêu đề chính",
     "section": "Dấu ấn dự án",
     "type": "text",
     "default": "NHỮNG DẤU ẤN TẠO NÊN SỰ KHÁC BIỆT",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "4",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.4.text.1",
-    "label": "Dòng giới thiệu 2",
+    "label": "Tiêu đề phụ",
     "section": "Dấu ấn dự án",
     "type": "textarea",
     "default": "Một biểu tượng kiến trúc mới bên bờ biển Đà Nẵng.",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "4",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.4.text.2",
-    "label": "Nội dung 3",
+    "label": "Đoạn nội dung",
     "section": "Dấu ấn dự án",
     "type": "textarea",
     "default": "Sun Saphia Residence kết hợp vị trí ven biển, kiến trúc Apsara và các lựa chọn căn hộ đa dạng với không gian chăm sóc sức khỏe.",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "4",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.5.text.0",
-    "label": "Tiêu đề 1",
+    "label": "Tiêu đề chính",
     "section": "Phim dự án",
     "type": "text",
     "default": "CẢM NHẬN VẺ ĐẸP TỪ TỪNG ĐƯỜNG NÉT",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "5",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.5.image.0.src",
-    "label": "Ảnh: Phối cảnh Sun Saphia Residence bên biển",
+    "label": "Đường dẫn ảnh",
     "section": "Phim dự án",
     "type": "image",
     "default": "assets/sun-saphia-hero-panorama-1440.webp",
-    "maxLength": 1000
+    "maxLength": 1000,
+    "sectionId": "5",
+    "group": "Hình ảnh 1"
   },
   {
     "key": "section.5.image.0.alt",
-    "label": "Mô tả ảnh 1",
+    "label": "Mô tả ảnh (alt)",
     "section": "Phim dự án",
     "type": "text",
     "default": "Phối cảnh Sun Saphia Residence bên biển",
-    "maxLength": 300
+    "maxLength": 300,
+    "sectionId": "5",
+    "group": "Hình ảnh 1"
   },
   {
     "key": "section.6.text.0",
-    "label": "Nội dung 1",
+    "label": "Nhãn section",
     "section": "Vị trí",
     "type": "textarea",
     "default": "(Vị trí ven biển)",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "6",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.6.text.1",
-    "label": "Tiêu đề 2",
+    "label": "Tiêu đề chính",
     "section": "Vị trí",
     "type": "text",
     "default": "ĐIỂM GIAO HÒA GIỮA BIỂN, THIÊN NHIÊN VÀ THÀNH PHỐ",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "6",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.6.text.2",
-    "label": "Dòng giới thiệu 3",
+    "label": "Tiêu đề phụ",
     "section": "Vị trí",
     "type": "textarea",
     "default": "Sun Saphia Residence tọa lạc tại giao lộ Nguyễn Đức Thuận – Trường Sa, phường Ngũ Hành Sơn, Đà Nẵng, trên trục giao thông ven biển phía nam thành phố.",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "6",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.6.text.3",
-    "label": "Tiêu đề nhỏ 4",
+    "label": "Tiêu đề chi tiết",
     "section": "Vị trí",
     "type": "text",
     "default": "CÔNG VIÊN VÀ BIỂN",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "6",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.6.text.4",
-    "label": "Nội dung 5",
+    "label": "Đoạn nội dung",
     "section": "Vị trí",
     "type": "textarea",
     "default": "Phía trước dự án là công viên công cộng với hồ nước, đường đi bộ, sân tennis, thảm cỏ và hàng cọ. Người lưu trú có thể đi bộ qua công viên để tiếp cận bãi tắm Sơn Thủy.",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "6",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.6.text.5",
-    "label": "Tiêu đề nhỏ 6",
+    "label": "Tiêu đề chi tiết",
     "section": "Vị trí",
     "type": "text",
     "default": "KẾT NỐI ĐÀ NẴNG",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "6",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.6.text.6",
-    "label": "Nội dung 7",
+    "label": "Đoạn nội dung",
     "section": "Vị trí",
     "type": "textarea",
     "default": "Khu vực xung quanh tập trung các khu nghỉ dưỡng, khách sạn, nhà hàng và dịch vụ du lịch. Trục ven biển kết nối dự án với trung tâm Đà Nẵng, sân bay quốc tế và các điểm tham quan.",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "6",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.6.image.0.src",
-    "label": "Ảnh: Cảnh quan ven biển của bản thiết kế tham khảo",
+    "label": "Đường dẫn ảnh",
     "section": "Vị trí",
     "type": "image",
     "default": "assets/66939e8fef0fef22f4c9f287_location-home.webp",
-    "maxLength": 1000
+    "maxLength": 1000,
+    "sectionId": "6",
+    "group": "Hình ảnh 1"
   },
   {
     "key": "section.6.image.0.alt",
-    "label": "Mô tả ảnh 1",
+    "label": "Mô tả ảnh (alt)",
     "section": "Vị trí",
     "type": "text",
     "default": "Cảnh quan ven biển của bản thiết kế tham khảo",
-    "maxLength": 300
+    "maxLength": 300,
+    "sectionId": "6",
+    "group": "Hình ảnh 1"
   },
   {
     "key": "section.7.text.0",
-    "label": "Tiêu đề 1",
+    "label": "Tiêu đề chính",
     "section": "Phong cách sống",
     "type": "text",
     "default": "NHỊP SỐNG\nBÊN ĐẠI DƯƠNG",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "7",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.7.image.0.src",
-    "label": "Ảnh: Nhịp sống ven biển",
+    "label": "Đường dẫn ảnh",
     "section": "Phong cách sống",
     "type": "image",
     "default": "assets/6693a1ebd9f34f3a2fa41f08_photo-2.webp",
-    "maxLength": 1000
+    "maxLength": 1000,
+    "sectionId": "7",
+    "group": "Hình ảnh 1"
   },
   {
     "key": "section.7.image.0.alt",
-    "label": "Mô tả ảnh 1",
+    "label": "Mô tả ảnh (alt)",
     "section": "Phong cách sống",
     "type": "text",
     "default": "Nhịp sống ven biển",
-    "maxLength": 300
+    "maxLength": 300,
+    "sectionId": "7",
+    "group": "Hình ảnh 1"
   },
   {
     "key": "section.7.image.1.src",
-    "label": "Ảnh: Không gian hướng biển",
+    "label": "Đường dẫn ảnh",
     "section": "Phong cách sống",
     "type": "image",
     "default": "assets/6693a1ebfc954b1ebf08d3e0_photo-1.webp",
-    "maxLength": 1000
+    "maxLength": 1000,
+    "sectionId": "7",
+    "group": "Hình ảnh 2"
   },
   {
     "key": "section.7.image.1.alt",
-    "label": "Mô tả ảnh 2",
+    "label": "Mô tả ảnh (alt)",
     "section": "Phong cách sống",
     "type": "text",
     "default": "Không gian hướng biển",
-    "maxLength": 300
+    "maxLength": 300,
+    "sectionId": "7",
+    "group": "Hình ảnh 2"
   },
   {
     "key": "section.9.text.0",
-    "label": "Nội dung 1",
+    "label": "Nhãn section",
     "section": "Giá trị sở hữu",
     "type": "textarea",
     "default": "(Giá trị sở hữu)",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "9",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.9.text.1",
-    "label": "Tiêu đề 2",
+    "label": "Tiêu đề chính",
     "section": "Giá trị sở hữu",
     "type": "text",
     "default": "GIÁ TRỊ SỞ HỮU TỪ VỊ TRÍ VEN BIỂN ĐÀ NẴNG",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "9",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.9.text.2",
-    "label": "Dòng giới thiệu 3",
+    "label": "Tiêu đề phụ",
     "section": "Giá trị sở hữu",
     "type": "textarea",
     "default": "Sun Saphia Residence là sản phẩm căn hộ du lịch – thương mại dịch vụ gần biển, với thiết kế đa dạng và khả năng tiếp cận dịch vụ du lịch Ngũ Hành Sơn.",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "9",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.9.text.3",
-    "label": "Nội dung 4",
+    "label": "Đoạn nội dung",
     "section": "Giá trị sở hữu",
     "type": "textarea",
     "default": "Theo bảng giá công bố ngày 28/10/2026, giá theo phương án có vay, chưa gồm VAT và kinh phí bảo trì, chưa trừ chiết khấu. Giá và chính sách cần cập nhật trước giao dịch.",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "9",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.9.text.4",
-    "label": "Tiêu đề nhỏ 5",
+    "label": "Tiêu đề chi tiết",
     "section": "Giá trị sở hữu",
     "type": "text",
     "default": "CĂN HỘ STUDIO",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "9",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.9.text.5",
-    "label": "Nội dung 6",
+    "label": "Đoạn nội dung",
     "section": "Giá trị sở hữu",
     "type": "textarea",
     "default": "Studio 30 m² tầng 15: SP1524 hướng thành phố 2,13 tỷ đồng; SP1509 cánh bên 2,37 tỷ đồng; SP1515 hướng biển 2,85 tỷ đồng.",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "9",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.9.text.6",
-    "label": "Tiêu đề nhỏ 7",
+    "label": "Tiêu đề chi tiết",
     "section": "Giá trị sở hữu",
     "type": "text",
     "default": "CĂN HỘ 1BR+ VÀ 2BR",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "9",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.9.text.7",
-    "label": "Nội dung 8",
+    "label": "Đoạn nội dung",
     "section": "Giá trị sở hữu",
     "type": "textarea",
     "default": "1BR+ diện tích 50–51 m² khoảng 4,5 tỷ đồng; 2BR diện tích 60–70 m² khoảng 6 tỷ đồng.",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "9",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.9.text.8",
-    "label": "Tiêu đề nhỏ 9",
+    "label": "Tiêu đề chi tiết",
     "section": "Giá trị sở hữu",
     "type": "text",
     "default": "CHÍNH SÁCH TÀI CHÍNH",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "9",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.9.text.9",
-    "label": "Nội dung 10",
+    "label": "Đoạn nội dung",
     "section": "Giá trị sở hữu",
     "type": "textarea",
     "default": "Hỗ trợ lãi suất 24 tháng theo điều kiện chương trình. Vietcombank và BIDV hỗ trợ vay tối đa 70%, tùy phê duyệt. Chiết khấu đặt chỗ sớm tùy từng thời điểm.",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "9",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.9.text.10",
-    "label": "Tiêu đề nhỏ 11",
+    "label": "Tiêu đề chi tiết",
     "section": "Giá trị sở hữu",
     "type": "text",
     "default": "THÔNG TIN BÀN GIAO",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "9",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.9.text.11",
-    "label": "Nội dung 12",
+    "label": "Đoạn nội dung",
     "section": "Giá trị sở hữu",
     "type": "textarea",
     "default": "Dự kiến bàn giao tháng 11/2028, hoàn thiện cơ bản. Giá và chính sách cần được cập nhật trước giao dịch.",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "9",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.9.image.0.src",
-    "label": "Ảnh: Căn hộ trong bản thiết kế tham khảo",
+    "label": "Đường dẫn ảnh",
     "section": "Giá trị sở hữu",
     "type": "image",
     "default": "assets/6693bd41ec6848d4cc7c0442_You-Earn-While-We-Manage(1).webp",
-    "maxLength": 1000
+    "maxLength": 1000,
+    "sectionId": "9",
+    "group": "Hình ảnh 1"
   },
   {
     "key": "section.9.image.0.alt",
-    "label": "Mô tả ảnh 1",
+    "label": "Mô tả ảnh (alt)",
     "section": "Giá trị sở hữu",
     "type": "text",
     "default": "Căn hộ trong bản thiết kế tham khảo",
-    "maxLength": 300
+    "maxLength": 300,
+    "sectionId": "9",
+    "group": "Hình ảnh 1"
   },
   {
     "key": "section.10.text.0",
-    "label": "Nội dung 1",
+    "label": "Nhãn section",
     "section": "Tiện ích tổng quan",
     "type": "textarea",
     "default": "(Tiện ích và sức khỏe)",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "10",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.10.text.1",
-    "label": "Tiêu đề 2",
+    "label": "Tiêu đề chính",
     "section": "Tiện ích tổng quan",
     "type": "text",
     "default": "KHÔNG GIAN DÀNH CHO SỰ CÂN BẰNG MỖI NGÀY",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "10",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.10.text.2",
-    "label": "Tiêu đề nhỏ 3",
+    "label": "Tiêu đề chi tiết",
     "section": "Tiện ích tổng quan",
     "type": "text",
     "default": "CHĂM SÓC SỨC KHỎE",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "10",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.10.text.3",
-    "label": "Nội dung 4",
+    "label": "Đoạn nội dung",
     "section": "Tiện ích tổng quan",
     "type": "textarea",
     "default": "Hệ tiện ích hướng đến trải nghiệm nghỉ dưỡng và chăm sóc sức khỏe với bể bơi, phòng gym, yoga và pilates.",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "10",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.10.text.4",
-    "label": "Tiêu đề nhỏ 5",
+    "label": "Tiêu đề chi tiết",
     "section": "Tiện ích tổng quan",
     "type": "text",
     "default": "CẢNH QUAN VEN BIỂN",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "10",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.10.text.5",
-    "label": "Nội dung 6",
+    "label": "Đoạn nội dung",
     "section": "Tiện ích tổng quan",
     "type": "textarea",
     "default": "Công viên công cộng phía trước và bãi tắm Sơn Thủy gần dự án mang đến không gian ngoài trời để thư giãn và vận động.",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "10",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.11.text.0",
-    "label": "Tiêu đề 1",
+    "label": "Tiêu đề chính",
     "section": "Không gian thư giãn",
     "type": "text",
     "default": "CÂN BẰNG\nMỖI NGÀY",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "11",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.11.image.0.src",
-    "label": "Ảnh: Trải nghiệm nghỉ dưỡng",
+    "label": "Đường dẫn ảnh",
     "section": "Không gian thư giãn",
     "type": "image",
     "default": "assets/66941012b22636e4f24216ef_photo-13.webp",
-    "maxLength": 1000
+    "maxLength": 1000,
+    "sectionId": "11",
+    "group": "Hình ảnh 1"
   },
   {
     "key": "section.11.image.0.alt",
-    "label": "Mô tả ảnh 1",
+    "label": "Mô tả ảnh (alt)",
     "section": "Không gian thư giãn",
     "type": "text",
     "default": "Trải nghiệm nghỉ dưỡng",
-    "maxLength": 300
+    "maxLength": 300,
+    "sectionId": "11",
+    "group": "Hình ảnh 1"
   },
   {
     "key": "section.11.image.1.src",
-    "label": "Ảnh: Không gian thư giãn",
+    "label": "Đường dẫn ảnh",
     "section": "Không gian thư giãn",
     "type": "image",
     "default": "assets/66941012ef48c354013d115c_photo-12.webp",
-    "maxLength": 1000
+    "maxLength": 1000,
+    "sectionId": "11",
+    "group": "Hình ảnh 2"
   },
   {
     "key": "section.11.image.1.alt",
-    "label": "Mô tả ảnh 2",
+    "label": "Mô tả ảnh (alt)",
     "section": "Không gian thư giãn",
     "type": "text",
     "default": "Không gian thư giãn",
-    "maxLength": 300
+    "maxLength": 300,
+    "sectionId": "11",
+    "group": "Hình ảnh 2"
   },
   {
     "key": "section.12.text.0",
-    "label": "Nội dung 1",
+    "label": "Nhãn section",
     "section": "Bộ sưu tập tiện ích",
     "type": "textarea",
     "default": "(Tiện ích và sức khỏe)",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "12",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.12.text.1",
-    "label": "Tiêu đề 2",
+    "label": "Tiêu đề chính",
     "section": "Bộ sưu tập tiện ích",
     "type": "text",
     "default": "KHÔNG GIAN DÀNH CHO SỰ CÂN BẰNG MỖI NGÀY",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "12",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.12.text.2",
-    "label": "Nội dung 3",
+    "label": "Đoạn nội dung",
     "section": "Bộ sưu tập tiện ích",
     "type": "textarea",
     "default": "Hệ tiện ích Sun Saphia Residence hướng đến trải nghiệm nghỉ dưỡng và chăm sóc sức khỏe, kết hợp không gian tiện nghi bên trong với cảnh quan tự nhiên gần dự án.",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "12",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.12.text.3",
-    "label": "Nội dung 4",
+    "label": "Đoạn nội dung",
     "section": "Bộ sưu tập tiện ích",
     "type": "textarea",
     "default": "Công viên và bãi biển là không gian công cộng gần dự án, không phải tiện ích thuộc sở hữu riêng của tòa nhà.",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "12",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.13.text.0",
-    "label": "Tiêu đề 1",
+    "label": "Tiêu đề chính",
     "section": "Tiến độ",
     "type": "text",
     "default": "TỪNG BƯỚC KIẾN TẠO DẤU ẤN VEN BIỂN",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "13",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.13.text.1",
-    "label": "Dòng giới thiệu 2",
+    "label": "Tiêu đề phụ",
     "section": "Tiến độ",
     "type": "textarea",
     "default": "Sun Saphia Residence được triển khai trên khu đất 3.720,1 m² với một tòa tháp cao khoảng 114 m, gồm 30 tầng nổi và 2 tầng hầm.",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "13",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.13.text.2",
-    "label": "Nội dung 3",
+    "label": "Đoạn nội dung",
     "section": "Tiến độ",
     "type": "textarea",
     "default": "Công trình cấp I có niên hạn thiết kế 100 năm. Tài liệu tiến độ ghi nhận giai đoạn thi công nền móng và đóng cọc thử tải. Dự kiến bàn giao tháng 11/2028 theo tiêu chuẩn hoàn thiện cơ bản.",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "13",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.13.text.3",
-    "label": "Nội dung 4",
+    "label": "Đoạn nội dung",
     "section": "Tiến độ",
     "type": "textarea",
     "default": "Những không gian và trải nghiệm:",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "13",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.14.text.0",
-    "label": "Nội dung 1",
+    "label": "Nhãn section",
     "section": "Thông tin dự án",
     "type": "textarea",
     "default": "(Thông tin dự án)",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "14",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.14.text.1",
-    "label": "Tiêu đề 2",
+    "label": "Tiêu đề chính",
     "section": "Thông tin dự án",
     "type": "text",
     "default": "DẤU ẤN KIẾN TRÚC –\nNỀN TẢNG PHÁT TRIỂN",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "14",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.14.text.2",
-    "label": "Dòng giới thiệu 3",
+    "label": "Tiêu đề phụ",
     "section": "Thông tin dự án",
     "type": "textarea",
     "default": "Sun Saphia Residence được giới thiệu là dự án căn hộ mặt biển đầu tiên của Sun Group tại Đà Nẵng, với kiến trúc lấy cảm hứng từ văn hóa Chăm Pa và hình tượng Apsara.",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "14",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.14.text.3",
-    "label": "Nội dung 4",
+    "label": "Đoạn nội dung",
     "section": "Thông tin dự án",
     "type": "textarea",
     "default": "Tên pháp lý: Khu căn hộ du lịch, thương mại dịch vụ Hải Minh. Địa chỉ: Nguyễn Đức Thuận – Trường Sa, Ngũ Hành Sơn, Đà Nẵng. Diện tích đất 3.720,1 m²; 30 tầng nổi, 2 tầng hầm; 782 sản phẩm. Công trình cấp I, niên hạn thiết kế 100 năm. Thời hạn sử dụng đất 50 năm, từ 17/09/2026 đến 16/09/2076. Dự kiến bàn giao tháng 11/2028. Đây là căn hộ du lịch – thương mại dịch vụ, không phải căn hộ chung cư nhà ở có chế độ sử dụng đất ở lâu dài. Thông tin pháp nhân chủ đầu tư và hồ sơ pháp lý đầy đủ cần được đối chiếu với tài liệu chính thức.",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "14",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.14.image.0.src",
-    "label": "Ảnh: Phong cách kiến trúc",
+    "label": "Đường dẫn ảnh",
     "section": "Thông tin dự án",
     "type": "image",
     "default": "assets/66941fda7d49ced90c81eec2_Photo_1.webp",
-    "maxLength": 1000
+    "maxLength": 1000,
+    "sectionId": "14",
+    "group": "Hình ảnh 1"
   },
   {
     "key": "section.14.image.0.alt",
-    "label": "Mô tả ảnh 1",
+    "label": "Mô tả ảnh (alt)",
     "section": "Thông tin dự án",
     "type": "text",
     "default": "Phong cách kiến trúc",
-    "maxLength": 300
+    "maxLength": 300,
+    "sectionId": "14",
+    "group": "Hình ảnh 1"
   },
   {
     "key": "section.14.image.1.src",
-    "label": "Ảnh: Chi tiết cảnh quan",
+    "label": "Đường dẫn ảnh",
     "section": "Thông tin dự án",
     "type": "image",
     "default": "assets/66941fda404e90e45472be8d_Photo_2.webp",
-    "maxLength": 1000
+    "maxLength": 1000,
+    "sectionId": "14",
+    "group": "Hình ảnh 2"
   },
   {
     "key": "section.14.image.1.alt",
-    "label": "Mô tả ảnh 2",
+    "label": "Mô tả ảnh (alt)",
     "section": "Thông tin dự án",
     "type": "text",
     "default": "Chi tiết cảnh quan",
-    "maxLength": 300
+    "maxLength": 300,
+    "sectionId": "14",
+    "group": "Hình ảnh 2"
   },
   {
     "key": "section.14.image.2.src",
-    "label": "Ảnh: Trải nghiệm không gian",
+    "label": "Đường dẫn ảnh",
     "section": "Thông tin dự án",
     "type": "image",
     "default": "assets/66941fdab22636e4f24c04e2_Photo_3.webp",
-    "maxLength": 1000
+    "maxLength": 1000,
+    "sectionId": "14",
+    "group": "Hình ảnh 3"
   },
   {
     "key": "section.14.image.2.alt",
-    "label": "Mô tả ảnh 3",
+    "label": "Mô tả ảnh (alt)",
     "section": "Thông tin dự án",
     "type": "text",
     "default": "Trải nghiệm không gian",
-    "maxLength": 300
+    "maxLength": 300,
+    "sectionId": "14",
+    "group": "Hình ảnh 3"
   },
   {
     "key": "section.15.text.0",
-    "label": "Tiêu đề 1",
+    "label": "Tiêu đề chính",
     "section": "Liên hệ",
     "type": "text",
     "default": "KHÁM PHÁ KHÔNG GIAN DÀNH RIÊNG CHO BẠN",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "15",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.15.text.1",
-    "label": "Dòng giới thiệu 2",
+    "label": "Tiêu đề phụ",
     "section": "Liên hệ",
     "type": "textarea",
     "default": "Đăng ký nhận thông tin căn hộ, mặt bằng, bảng giá và chính sách tài chính cập nhật.",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "15",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "section.15.text.2",
-    "label": "Nội dung 3",
+    "label": "Đoạn nội dung",
     "section": "Liên hệ",
     "type": "textarea",
     "default": "Đăng ký để tìm hiểu thông tin dự án",
-    "maxLength": 4000
+    "maxLength": 4000,
+    "sectionId": "15",
+    "group": "Tiêu đề & nội dung"
   },
   {
     "key": "apartments.text.0",
@@ -725,7 +905,9 @@
     "section": "Căn hộ",
     "type": "text",
     "default": "KHÔNG GIAN RIÊNG\nCHO TỪNG PHONG CÁCH SỐNG",
-    "maxLength": 1000
+    "maxLength": 1000,
+    "sectionId": "apartments",
+    "group": "Popup căn hộ"
   },
   {
     "key": "apartments.text.1",
@@ -733,7 +915,9 @@
     "section": "Căn hộ",
     "type": "text",
     "default": "STUDIO",
-    "maxLength": 1000
+    "maxLength": 1000,
+    "sectionId": "apartments",
+    "group": "Popup căn hộ"
   },
   {
     "key": "apartments.text.2",
@@ -741,7 +925,9 @@
     "section": "Căn hộ",
     "type": "text",
     "default": "30 m²",
-    "maxLength": 1000
+    "maxLength": 1000,
+    "sectionId": "apartments",
+    "group": "Popup căn hộ"
   },
   {
     "key": "apartments.text.3",
@@ -749,7 +935,9 @@
     "section": "Căn hộ",
     "type": "text",
     "default": "Hướng thành phố, cánh bên hoặc hướng biển tùy mã căn.",
-    "maxLength": 1000
+    "maxLength": 1000,
+    "sectionId": "apartments",
+    "group": "Popup căn hộ"
   },
   {
     "key": "apartments.text.4",
@@ -757,7 +945,9 @@
     "section": "Căn hộ",
     "type": "text",
     "default": "1BR+",
-    "maxLength": 1000
+    "maxLength": 1000,
+    "sectionId": "apartments",
+    "group": "Popup căn hộ"
   },
   {
     "key": "apartments.text.5",
@@ -765,7 +955,9 @@
     "section": "Căn hộ",
     "type": "text",
     "default": "50–51 m²",
-    "maxLength": 1000
+    "maxLength": 1000,
+    "sectionId": "apartments",
+    "group": "Popup căn hộ"
   },
   {
     "key": "apartments.text.6",
@@ -773,7 +965,9 @@
     "section": "Căn hộ",
     "type": "text",
     "default": "Không gian linh hoạt cho cặp đôi hoặc gia đình nhỏ.",
-    "maxLength": 1000
+    "maxLength": 1000,
+    "sectionId": "apartments",
+    "group": "Popup căn hộ"
   },
   {
     "key": "apartments.text.7",
@@ -781,7 +975,9 @@
     "section": "Căn hộ",
     "type": "text",
     "default": "2BR",
-    "maxLength": 1000
+    "maxLength": 1000,
+    "sectionId": "apartments",
+    "group": "Popup căn hộ"
   },
   {
     "key": "apartments.text.8",
@@ -789,7 +985,9 @@
     "section": "Căn hộ",
     "type": "text",
     "default": "60–70 m²",
-    "maxLength": 1000
+    "maxLength": 1000,
+    "sectionId": "apartments",
+    "group": "Popup căn hộ"
   },
   {
     "key": "apartments.text.9",
@@ -797,782 +995,998 @@
     "section": "Căn hộ",
     "type": "text",
     "default": "Hai phòng ngủ và không gian sinh hoạt chung.",
-    "maxLength": 1000
+    "maxLength": 1000,
+    "sectionId": "apartments",
+    "group": "Popup căn hộ"
   },
   {
     "key": "cards.features.0.title",
-    "label": "1. Tên",
+    "label": "Tiêu đề",
     "section": "Thẻ dấu ấn",
     "type": "text",
     "default": "VỊ TRÍ VEN BIỂN",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "4",
+    "group": "Thẻ nội dung 1"
   },
   {
     "key": "cards.features.0.copy",
-    "label": "1. Mô tả",
+    "label": "Mô tả",
     "section": "Thẻ dấu ấn",
     "type": "textarea",
     "default": "Nằm tại giao lộ Nguyễn Đức Thuận – Trường Sa, gần bãi tắm Sơn Thủy và công viên công cộng phía trước.",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "4",
+    "group": "Thẻ nội dung 1"
   },
   {
     "key": "cards.features.0.image",
-    "label": "1. Ảnh",
+    "label": "Ảnh",
     "section": "Thẻ dấu ấn",
     "type": "image",
     "default": "assets/669394ccd9f34f3a2f9b8179_Photo.webp",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "4",
+    "group": "Thẻ nội dung 1"
   },
   {
     "key": "cards.features.1.title",
-    "label": "2. Tên",
+    "label": "Tiêu đề",
     "section": "Thẻ dấu ấn",
     "type": "text",
     "default": "KIẾN TRÚC APSARA",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "4",
+    "group": "Thẻ nội dung 2"
   },
   {
     "key": "cards.features.1.copy",
-    "label": "2. Mô tả",
+    "label": "Mô tả",
     "section": "Thẻ dấu ấn",
     "type": "textarea",
     "default": "Mặt đứng với những đường cong lấy cảm hứng từ vũ điệu và di sản Chăm Pa.",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "4",
+    "group": "Thẻ nội dung 2"
   },
   {
     "key": "cards.features.1.image",
-    "label": "2. Ảnh",
+    "label": "Ảnh",
     "section": "Thẻ dấu ấn",
     "type": "image",
     "default": "assets/66d083e7364c1b52fe8dd886_33.webp",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "4",
+    "group": "Thẻ nội dung 2"
   },
   {
     "key": "cards.features.2.title",
-    "label": "3. Tên",
+    "label": "Tiêu đề",
     "section": "Thẻ dấu ấn",
     "type": "text",
     "default": "TÒA THÁP 114 M",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "4",
+    "group": "Thẻ nội dung 3"
   },
   {
     "key": "cards.features.2.copy",
-    "label": "3. Mô tả",
+    "label": "Mô tả",
     "section": "Thẻ dấu ấn",
     "type": "textarea",
     "default": "Công trình gồm 30 tầng nổi, 2 tầng hầm, mang đến các lựa chọn căn hộ tại nhiều tầng và hướng nhìn.",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "4",
+    "group": "Thẻ nội dung 3"
   },
   {
     "key": "cards.features.2.image",
-    "label": "3. Ảnh",
+    "label": "Ảnh",
     "section": "Thẻ dấu ấn",
     "type": "image",
     "default": "assets/669394cc52591b8b1e42a39f_Photo-2.webp",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "4",
+    "group": "Thẻ nội dung 3"
   },
   {
     "key": "cards.features.3.title",
-    "label": "4. Tên",
+    "label": "Tiêu đề",
     "section": "Thẻ dấu ấn",
     "type": "text",
     "default": "TRẦN CAO 3,5 M",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "4",
+    "group": "Thẻ nội dung 4"
   },
   {
     "key": "cards.features.3.copy",
-    "label": "4. Mô tả",
+    "label": "Mô tả",
     "section": "Thẻ dấu ấn",
     "type": "textarea",
     "default": "Tạo cảm giác rộng mở, thoáng đãng và tăng khả năng đón ánh sáng tự nhiên.",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "4",
+    "group": "Thẻ nội dung 4"
   },
   {
     "key": "cards.features.3.image",
-    "label": "4. Ảnh",
+    "label": "Ảnh",
     "section": "Thẻ dấu ấn",
     "type": "image",
     "default": "assets/669394ccffb9862a914d8f47_Photo-3.webp",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "4",
+    "group": "Thẻ nội dung 4"
   },
   {
     "key": "cards.features.4.title",
-    "label": "5. Tên",
+    "label": "Tiêu đề",
     "section": "Thẻ dấu ấn",
     "type": "text",
     "default": "782 SẢN PHẨM",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "4",
+    "group": "Thẻ nội dung 5"
   },
   {
     "key": "cards.features.4.copy",
-    "label": "5. Mô tả",
+    "label": "Mô tả",
     "section": "Thẻ dấu ấn",
     "type": "textarea",
     "default": "Bao gồm Studio, 1BR+, 2BR, shophouse khối đế, duplex và penthouse.",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "4",
+    "group": "Thẻ nội dung 5"
   },
   {
     "key": "cards.features.4.image",
-    "label": "5. Ảnh",
+    "label": "Ảnh",
     "section": "Thẻ dấu ấn",
     "type": "image",
     "default": "assets/669394cc5deb6fbbf22253ba_Photo-4.webp",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "4",
+    "group": "Thẻ nội dung 5"
   },
   {
     "key": "cards.features.5.title",
-    "label": "6. Tên",
+    "label": "Tiêu đề",
     "section": "Thẻ dấu ấn",
     "type": "text",
     "default": "CHĂM SÓC SỨC KHỎE",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "4",
+    "group": "Thẻ nội dung 6"
   },
   {
     "key": "cards.features.5.copy",
-    "label": "6. Mô tả",
+    "label": "Mô tả",
     "section": "Thẻ dấu ấn",
     "type": "textarea",
     "default": "Bể bơi hướng biển, phòng gym, yoga và pilates.",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "4",
+    "group": "Thẻ nội dung 6"
   },
   {
     "key": "cards.features.5.image",
-    "label": "6. Ảnh",
+    "label": "Ảnh",
     "section": "Thẻ dấu ấn",
     "type": "image",
     "default": "assets/669394cccbc7e78e84b8a3ac_Photo-5.webp",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "4",
+    "group": "Thẻ nội dung 6"
   },
   {
     "key": "cards.features.6.title",
-    "label": "7. Tên",
+    "label": "Tiêu đề",
     "section": "Thẻ dấu ấn",
     "type": "text",
     "default": "CĂN HỘ STUDIO",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "4",
+    "group": "Thẻ nội dung 7"
   },
   {
     "key": "cards.features.6.copy",
-    "label": "7. Mô tả",
+    "label": "Mô tả",
     "section": "Thẻ dấu ấn",
     "type": "textarea",
     "default": "Diện tích 30 m², với các lựa chọn hướng thành phố, cánh bên hoặc mặt trước hướng biển tùy mã căn.",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "4",
+    "group": "Thẻ nội dung 7"
   },
   {
     "key": "cards.features.6.image",
-    "label": "7. Ảnh",
+    "label": "Ảnh",
     "section": "Thẻ dấu ấn",
     "type": "image",
     "default": "assets/669394cc383af3570041f3a9_Photo-6.webp",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "4",
+    "group": "Thẻ nội dung 7"
   },
   {
     "key": "cards.features.7.title",
-    "label": "8. Tên",
+    "label": "Tiêu đề",
     "section": "Thẻ dấu ấn",
     "type": "text",
     "default": "CĂN HỘ 1BR+",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "4",
+    "group": "Thẻ nội dung 8"
   },
   {
     "key": "cards.features.7.copy",
-    "label": "8. Mô tả",
+    "label": "Mô tả",
     "section": "Thẻ dấu ấn",
     "type": "textarea",
     "default": "Diện tích 50–51 m², với không gian sinh hoạt linh hoạt cho cặp đôi hoặc gia đình nhỏ.",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "4",
+    "group": "Thẻ nội dung 8"
   },
   {
     "key": "cards.features.7.image",
-    "label": "8. Ảnh",
+    "label": "Ảnh",
     "section": "Thẻ dấu ấn",
     "type": "image",
     "default": "assets/66d08426b9ed0d4963e3cb33_Porsche.webp",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "4",
+    "group": "Thẻ nội dung 8"
   },
   {
     "key": "cards.features.8.title",
-    "label": "9. Tên",
+    "label": "Tiêu đề",
     "section": "Thẻ dấu ấn",
     "type": "text",
     "default": "CĂN HỘ 2BR",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "4",
+    "group": "Thẻ nội dung 9"
   },
   {
     "key": "cards.features.8.copy",
-    "label": "9. Mô tả",
+    "label": "Mô tả",
     "section": "Thẻ dấu ấn",
     "type": "textarea",
     "default": "Diện tích 60–70 m², với hai phòng ngủ và không gian sinh hoạt chung.",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "4",
+    "group": "Thẻ nội dung 9"
   },
   {
     "key": "cards.features.8.image",
-    "label": "9. Ảnh",
+    "label": "Ảnh",
     "section": "Thẻ dấu ấn",
     "type": "image",
     "default": "assets/669394cc21cfbc637ecdcdf1_Photo-8.webp",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "4",
+    "group": "Thẻ nội dung 9"
   },
   {
     "key": "cards.features.9.title",
-    "label": "10. Tên",
+    "label": "Tiêu đề",
     "section": "Thẻ dấu ấn",
     "type": "text",
     "default": "BỘ SƯU TẬP ĐẶC BIỆT",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "4",
+    "group": "Thẻ nội dung 10"
   },
   {
     "key": "cards.features.9.copy",
-    "label": "10. Mô tả",
+    "label": "Mô tả",
     "section": "Thẻ dấu ấn",
     "type": "textarea",
     "default": "Duplex, penthouse và shophouse khối đế bổ sung lựa chọn về không gian và công năng.",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "4",
+    "group": "Thẻ nội dung 10"
   },
   {
     "key": "cards.features.9.image",
-    "label": "10. Ảnh",
+    "label": "Ảnh",
     "section": "Thẻ dấu ấn",
     "type": "image",
     "default": "assets/66ccb851576b757ca4699208_concierge-2.webp",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "4",
+    "group": "Thẻ nội dung 10"
   },
   {
     "key": "cards.features.10.title",
-    "label": "11. Tên",
+    "label": "Tiêu đề",
     "section": "Thẻ dấu ấn",
     "type": "text",
     "default": "BÀN GIAO DỰ KIẾN",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "4",
+    "group": "Thẻ nội dung 11"
   },
   {
     "key": "cards.features.10.copy",
-    "label": "11. Mô tả",
+    "label": "Mô tả",
     "section": "Thẻ dấu ấn",
     "type": "textarea",
     "default": "Dự kiến tháng 11/2028 theo tiêu chuẩn hoàn thiện cơ bản.",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "4",
+    "group": "Thẻ nội dung 11"
   },
   {
     "key": "cards.features.10.image",
-    "label": "11. Ảnh",
+    "label": "Ảnh",
     "section": "Thẻ dấu ấn",
     "type": "image",
     "default": "assets/68494397ed927eb6ebff53ae_wheelchair.avif",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "4",
+    "group": "Thẻ nội dung 11"
   },
   {
     "key": "cards.amenities.0.title",
-    "label": "1. Tên",
+    "label": "Tiêu đề",
     "section": "Thẻ tiện ích",
     "type": "text",
     "default": "BỂ BƠI HƯỚNG BIỂN",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "12",
+    "group": "Thẻ nội dung 1"
   },
   {
     "key": "cards.amenities.0.copy",
-    "label": "1. Mô tả",
+    "label": "Mô tả",
     "section": "Thẻ tiện ích",
     "type": "textarea",
     "default": "Bể bơi được định hướng nhìn về phía công viên và bãi biển, tạo không gian thư giãn ven biển.",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "12",
+    "group": "Thẻ nội dung 1"
   },
   {
     "key": "cards.amenities.0.image",
-    "label": "1. Ảnh",
+    "label": "Ảnh",
     "section": "Thẻ tiện ích",
     "type": "image",
     "default": "assets/66941240c825827d10fba510_infrastructure_1.webp",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "12",
+    "group": "Thẻ nội dung 1"
   },
   {
     "key": "cards.amenities.1.title",
-    "label": "2. Tên",
+    "label": "Tiêu đề",
     "section": "Thẻ tiện ích",
     "type": "text",
     "default": "PHÒNG GYM",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "12",
+    "group": "Thẻ nội dung 2"
   },
   {
     "key": "cards.amenities.1.copy",
-    "label": "2. Mô tả",
+    "label": "Mô tả",
     "section": "Thẻ tiện ích",
     "type": "textarea",
     "default": "Phòng gym phục vụ nhu cầu rèn luyện sức khỏe và duy trì thói quen vận động.",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "12",
+    "group": "Thẻ nội dung 2"
   },
   {
     "key": "cards.amenities.1.image",
-    "label": "2. Ảnh",
+    "label": "Ảnh",
     "section": "Thẻ tiện ích",
     "type": "image",
     "default": "assets/669412402c29addda447ab11_infrastructure_2.webp",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "12",
+    "group": "Thẻ nội dung 2"
   },
   {
     "key": "cards.amenities.2.title",
-    "label": "3. Tên",
+    "label": "Tiêu đề",
     "section": "Thẻ tiện ích",
     "type": "text",
     "default": "KHÔNG GIAN YOGA",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "12",
+    "group": "Thẻ nội dung 3"
   },
   {
     "key": "cards.amenities.2.copy",
-    "label": "3. Mô tả",
+    "label": "Mô tả",
     "section": "Thẻ tiện ích",
     "type": "textarea",
     "default": "Không gian dành cho những hoạt động nhẹ nhàng, thư giãn và cân bằng tinh thần.",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "12",
+    "group": "Thẻ nội dung 3"
   },
   {
     "key": "cards.amenities.2.image",
-    "label": "3. Ảnh",
+    "label": "Ảnh",
     "section": "Thẻ tiện ích",
     "type": "image",
     "default": "assets/6694124079c4ff2e35536ba3_infrastructure_3.webp",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "12",
+    "group": "Thẻ nội dung 3"
   },
   {
     "key": "cards.amenities.3.title",
-    "label": "4. Tên",
+    "label": "Tiêu đề",
     "section": "Thẻ tiện ích",
     "type": "text",
     "default": "KHÔNG GIAN PILATES",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "12",
+    "group": "Thẻ nội dung 4"
   },
   {
     "key": "cards.amenities.3.copy",
-    "label": "4. Mô tả",
+    "label": "Mô tả",
     "section": "Thẻ tiện ích",
     "type": "textarea",
     "default": "Khu vực pilates bổ sung các lựa chọn tập luyện trong hệ tiện ích chăm sóc sức khỏe.",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "12",
+    "group": "Thẻ nội dung 4"
   },
   {
     "key": "cards.amenities.3.image",
-    "label": "4. Ảnh",
+    "label": "Ảnh",
     "section": "Thẻ tiện ích",
     "type": "image",
     "default": "assets/6694124066776b60f6368488_infrastructure_4.webp",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "12",
+    "group": "Thẻ nội dung 4"
   },
   {
     "key": "cards.amenities.4.title",
-    "label": "5. Tên",
+    "label": "Tiêu đề",
     "section": "Thẻ tiện ích",
     "type": "text",
     "default": "CÔNG VIÊN VEN BIỂN",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "12",
+    "group": "Thẻ nội dung 5"
   },
   {
     "key": "cards.amenities.4.copy",
-    "label": "5. Mô tả",
+    "label": "Mô tả",
     "section": "Thẻ tiện ích",
     "type": "textarea",
     "default": "Công viên công cộng phía trước dự án có hồ nước, sân tennis, đường đi bộ và những khoảng cây xanh.",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "12",
+    "group": "Thẻ nội dung 5"
   },
   {
     "key": "cards.amenities.4.image",
-    "label": "5. Ảnh",
+    "label": "Ảnh",
     "section": "Thẻ tiện ích",
     "type": "image",
     "default": "assets/66941240e88c1b08e56790da_infrastructure_5.webp",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "12",
+    "group": "Thẻ nội dung 5"
   },
   {
     "key": "cards.amenities.5.title",
-    "label": "6. Tên",
+    "label": "Tiêu đề",
     "section": "Thẻ tiện ích",
     "type": "text",
     "default": "BÃI TẮM SƠN THỦY",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "12",
+    "group": "Thẻ nội dung 6"
   },
   {
     "key": "cards.amenities.5.copy",
-    "label": "6. Mô tả",
+    "label": "Mô tả",
     "section": "Thẻ tiện ích",
     "type": "textarea",
     "default": "Bãi tắm công cộng gần dự án, thuận tiện cho những trải nghiệm biển và hoạt động ngoài trời.",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "12",
+    "group": "Thẻ nội dung 6"
   },
   {
     "key": "cards.amenities.5.image",
-    "label": "6. Ảnh",
+    "label": "Ảnh",
     "section": "Thẻ tiện ích",
     "type": "image",
     "default": "assets/66941240b7eaf9da62f93748_infrastructure_6.webp",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "12",
+    "group": "Thẻ nội dung 6"
   },
   {
     "key": "cards.gallery.0.title",
-    "label": "1. Tên",
+    "label": "Tiêu đề",
     "section": "Thư viện hình ảnh",
     "type": "text",
     "default": "PHÒNG GYM",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "13",
+    "group": "Ảnh thư viện 1"
   },
   {
     "key": "cards.gallery.0.copy",
-    "label": "1. Mô tả",
+    "label": "Mô tả",
     "section": "Thư viện hình ảnh",
     "type": "textarea",
     "default": "",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "13",
+    "group": "Ảnh thư viện 1"
   },
   {
     "key": "cards.gallery.0.image",
-    "label": "1. Ảnh",
+    "label": "Ảnh",
     "section": "Thư viện hình ảnh",
     "type": "image",
     "default": "assets/66c85a37dea8eb1d6873d669_1Photo-5.avif",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "13",
+    "group": "Ảnh thư viện 1"
   },
   {
     "key": "cards.gallery.1.title",
-    "label": "2. Tên",
+    "label": "Tiêu đề",
     "section": "Thư viện hình ảnh",
     "type": "text",
     "default": "BỂ BƠI HƯỚNG BIỂN",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "13",
+    "group": "Ảnh thư viện 2"
   },
   {
     "key": "cards.gallery.1.copy",
-    "label": "2. Mô tả",
+    "label": "Mô tả",
     "section": "Thư viện hình ảnh",
     "type": "textarea",
     "default": "",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "13",
+    "group": "Ảnh thư viện 2"
   },
   {
     "key": "cards.gallery.1.image",
-    "label": "2. Ảnh",
+    "label": "Ảnh",
     "section": "Thư viện hình ảnh",
     "type": "image",
     "default": "assets/66c858d41c944040b12ef6fa_Photo-6.avif",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "13",
+    "group": "Ảnh thư viện 2"
   },
   {
     "key": "cards.gallery.2.title",
-    "label": "3. Tên",
+    "label": "Tiêu đề",
     "section": "Thư viện hình ảnh",
     "type": "text",
     "default": "KHÔNG GIAN PILATES",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "13",
+    "group": "Ảnh thư viện 3"
   },
   {
     "key": "cards.gallery.2.copy",
-    "label": "3. Mô tả",
+    "label": "Mô tả",
     "section": "Thư viện hình ảnh",
     "type": "textarea",
     "default": "",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "13",
+    "group": "Ảnh thư viện 3"
   },
   {
     "key": "cards.gallery.2.image",
-    "label": "3. Ảnh",
+    "label": "Ảnh",
     "section": "Thư viện hình ảnh",
     "type": "image",
     "default": "assets/66c85a3842e8f4bf183bd168_1Photo-4.avif",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "13",
+    "group": "Ảnh thư viện 3"
   },
   {
     "key": "cards.gallery.3.title",
-    "label": "4. Tên",
+    "label": "Tiêu đề",
     "section": "Thư viện hình ảnh",
     "type": "text",
     "default": "KHÔNG GIAN YOGA",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "13",
+    "group": "Ảnh thư viện 4"
   },
   {
     "key": "cards.gallery.3.copy",
-    "label": "4. Mô tả",
+    "label": "Mô tả",
     "section": "Thư viện hình ảnh",
     "type": "textarea",
     "default": "",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "13",
+    "group": "Ảnh thư viện 4"
   },
   {
     "key": "cards.gallery.3.image",
-    "label": "4. Ảnh",
+    "label": "Ảnh",
     "section": "Thư viện hình ảnh",
     "type": "image",
     "default": "assets/66d5c4a6ab2d2e470737c019_restaurant-home.webp",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "13",
+    "group": "Ảnh thư viện 4"
   },
   {
     "key": "cards.gallery.4.title",
-    "label": "5. Tên",
+    "label": "Tiêu đề",
     "section": "Thư viện hình ảnh",
     "type": "text",
     "default": "CÔNG VIÊN VEN BIỂN",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "13",
+    "group": "Ảnh thư viện 5"
   },
   {
     "key": "cards.gallery.4.copy",
-    "label": "5. Mô tả",
+    "label": "Mô tả",
     "section": "Thư viện hình ảnh",
     "type": "textarea",
     "default": "",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "13",
+    "group": "Ảnh thư viện 5"
   },
   {
     "key": "cards.gallery.4.image",
-    "label": "5. Ảnh",
+    "label": "Ảnh",
     "section": "Thư viện hình ảnh",
     "type": "image",
     "default": "assets/66c85a37ae1f509051ab027e_1Photo-3.avif",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "13",
+    "group": "Ảnh thư viện 5"
   },
   {
     "key": "cards.gallery.5.title",
-    "label": "6. Tên",
+    "label": "Tiêu đề",
     "section": "Thư viện hình ảnh",
     "type": "text",
     "default": "BÃI TẮM SƠN THỦY",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "13",
+    "group": "Ảnh thư viện 6"
   },
   {
     "key": "cards.gallery.5.copy",
-    "label": "6. Mô tả",
+    "label": "Mô tả",
     "section": "Thư viện hình ảnh",
     "type": "textarea",
     "default": "",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "13",
+    "group": "Ảnh thư viện 6"
   },
   {
     "key": "cards.gallery.5.image",
-    "label": "6. Ảnh",
+    "label": "Ảnh",
     "section": "Thư viện hình ảnh",
     "type": "image",
     "default": "assets/66c858d492cf4fc3888168ef_Photo-7.avif",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "13",
+    "group": "Ảnh thư viện 6"
   },
   {
     "key": "cards.gallery.6.title",
-    "label": "7. Tên",
+    "label": "Tiêu đề",
     "section": "Thư viện hình ảnh",
     "type": "text",
     "default": "DANH THẮNG NGŨ HÀNH SƠN",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "13",
+    "group": "Ảnh thư viện 7"
   },
   {
     "key": "cards.gallery.6.copy",
-    "label": "7. Mô tả",
+    "label": "Mô tả",
     "section": "Thư viện hình ảnh",
     "type": "textarea",
     "default": "",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "13",
+    "group": "Ảnh thư viện 7"
   },
   {
     "key": "cards.gallery.6.image",
-    "label": "7. Ảnh",
+    "label": "Ảnh",
     "section": "Thư viện hình ảnh",
     "type": "image",
     "default": "assets/66c858d4824ed7c557641b99_Photo-8.avif",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "13",
+    "group": "Ảnh thư viện 7"
   },
   {
     "key": "cards.gallery.7.title",
-    "label": "8. Tên",
+    "label": "Tiêu đề",
     "section": "Thư viện hình ảnh",
     "type": "text",
     "default": "DI SẢN CHĂM PA",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "13",
+    "group": "Ảnh thư viện 8"
   },
   {
     "key": "cards.gallery.7.copy",
-    "label": "8. Mô tả",
+    "label": "Mô tả",
     "section": "Thư viện hình ảnh",
     "type": "textarea",
     "default": "",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "13",
+    "group": "Ảnh thư viện 8"
   },
   {
     "key": "cards.gallery.7.image",
-    "label": "8. Ảnh",
+    "label": "Ảnh",
     "section": "Thư viện hình ảnh",
     "type": "image",
     "default": "assets/66c858d4e2d5d4ef7d2196bf_Photo-9.avif",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "13",
+    "group": "Ảnh thư viện 8"
   },
   {
     "key": "cards.gallery.8.title",
-    "label": "9. Tên",
+    "label": "Tiêu đề",
     "section": "Thư viện hình ảnh",
     "type": "text",
     "default": "CẢNH QUAN THÀNH PHỐ",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "13",
+    "group": "Ảnh thư viện 9"
   },
   {
     "key": "cards.gallery.8.copy",
-    "label": "9. Mô tả",
+    "label": "Mô tả",
     "section": "Thư viện hình ảnh",
     "type": "textarea",
     "default": "",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "13",
+    "group": "Ảnh thư viện 9"
   },
   {
     "key": "cards.gallery.8.image",
-    "label": "9. Ảnh",
+    "label": "Ảnh",
     "section": "Thư viện hình ảnh",
     "type": "image",
     "default": "assets/66c858d4cb3c0aaddac51240_1.avif",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "13",
+    "group": "Ảnh thư viện 9"
   },
   {
     "key": "cards.gallery.9.title",
-    "label": "10. Tên",
+    "label": "Tiêu đề",
     "section": "Thư viện hình ảnh",
     "type": "text",
     "default": "NHỊP SỐNG ĐÀ NẴNG",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "13",
+    "group": "Ảnh thư viện 10"
   },
   {
     "key": "cards.gallery.9.copy",
-    "label": "10. Mô tả",
+    "label": "Mô tả",
     "section": "Thư viện hình ảnh",
     "type": "textarea",
     "default": "",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "13",
+    "group": "Ảnh thư viện 10"
   },
   {
     "key": "cards.gallery.9.image",
-    "label": "10. Ảnh",
+    "label": "Ảnh",
     "section": "Thư viện hình ảnh",
     "type": "image",
     "default": "assets/66c85a37ebd92c5b3e0c0500_1Photo-6.avif",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "13",
+    "group": "Ảnh thư viện 10"
   },
   {
     "key": "points.concept-points.0.title",
-    "label": "1. title",
+    "label": "Tiêu đề",
     "section": "Điểm nhấn kiến trúc",
     "type": "text",
     "default": "DI SẢN VĂN HÓA",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "3",
+    "group": "Điểm nhấn 1"
   },
   {
     "key": "points.concept-points.0.copy",
-    "label": "1. copy",
+    "label": "Mô tả",
     "section": "Điểm nhấn kiến trúc",
     "type": "text",
     "default": "Dấu ấn văn hóa Chăm Pa.",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "3",
+    "group": "Điểm nhấn 1"
   },
   {
     "key": "points.concept-points.1.title",
-    "label": "2. title",
+    "label": "Tiêu đề",
     "section": "Điểm nhấn kiến trúc",
     "type": "text",
     "default": "KIẾN TRÚC UYỂN CHUYỂN",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "3",
+    "group": "Điểm nhấn 2"
   },
   {
     "key": "points.concept-points.1.copy",
-    "label": "2. copy",
+    "label": "Mô tả",
     "section": "Điểm nhấn kiến trúc",
     "type": "text",
     "default": "Những đường cong kiến trúc Apsara.",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "3",
+    "group": "Điểm nhấn 2"
   },
   {
     "key": "points.concept-points.2.title",
-    "label": "3. title",
+    "label": "Tiêu đề",
     "section": "Điểm nhấn kiến trúc",
     "type": "text",
     "default": "GÓC NHÌN RỘNG MỞ",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "3",
+    "group": "Điểm nhấn 3"
   },
   {
     "key": "points.concept-points.2.copy",
-    "label": "3. copy",
+    "label": "Mô tả",
     "section": "Điểm nhấn kiến trúc",
     "type": "text",
     "default": "Kết nối cảnh quan biển và đô thị.",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "3",
+    "group": "Điểm nhấn 3"
   },
   {
     "key": "points.concept-points.3.title",
-    "label": "4. title",
+    "label": "Tiêu đề",
     "section": "Điểm nhấn kiến trúc",
     "type": "text",
     "default": "KHÔNG GIAN KHOÁNG ĐẠT",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "3",
+    "group": "Điểm nhấn 4"
   },
   {
     "key": "points.concept-points.3.copy",
-    "label": "4. copy",
+    "label": "Mô tả",
     "section": "Điểm nhấn kiến trúc",
     "type": "text",
     "default": "Không gian trần cao 3,5 m.",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "3",
+    "group": "Điểm nhấn 4"
   },
   {
     "key": "points.lifestyle-points.0.title",
-    "label": "1. title",
+    "label": "Tiêu đề",
     "section": "Điểm nhấn phong cách sống",
     "type": "text",
     "default": "BUỔI SÁNG BÊN BIỂN",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "8",
+    "group": "Điểm nhấn 1"
   },
   {
     "key": "points.lifestyle-points.0.copy",
-    "label": "1. copy",
+    "label": "Mô tả",
     "section": "Điểm nhấn phong cách sống",
     "type": "text",
     "default": "Đón ngày mới bên bãi biển Sơn Thủy.",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "8",
+    "group": "Điểm nhấn 1"
   },
   {
     "key": "points.lifestyle-points.1.title",
-    "label": "2. title",
+    "label": "Tiêu đề",
     "section": "Điểm nhấn phong cách sống",
     "type": "text",
     "default": "KHOẢNH KHẮC CÂN BẰNG",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "8",
+    "group": "Điểm nhấn 2"
   },
   {
     "key": "points.lifestyle-points.1.copy",
-    "label": "2. copy",
+    "label": "Mô tả",
     "section": "Điểm nhấn phong cách sống",
     "type": "text",
     "default": "Vận động với gym, yoga, pilates và bể bơi.",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "8",
+    "group": "Điểm nhấn 2"
   },
   {
     "key": "points.lifestyle-points.2.title",
-    "label": "3. title",
+    "label": "Tiêu đề",
     "section": "Điểm nhấn phong cách sống",
     "type": "text",
     "default": "KHÁM PHÁ ĐIỂM ĐẾN",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "8",
+    "group": "Điểm nhấn 3"
   },
   {
     "key": "points.lifestyle-points.2.copy",
-    "label": "3. copy",
+    "label": "Mô tả",
     "section": "Điểm nhấn phong cách sống",
     "type": "text",
     "default": "Khám phá Ngũ Hành Sơn, ẩm thực và các điểm đến du lịch Đà Nẵng.",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "8",
+    "group": "Điểm nhấn 3"
   },
   {
     "key": "points.lifestyle-points.3.title",
-    "label": "4. title",
+    "label": "Tiêu đề",
     "section": "Điểm nhấn phong cách sống",
     "type": "text",
     "default": "CHÂN TRỜI RỘNG MỞ",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "8",
+    "group": "Điểm nhấn 4"
   },
   {
     "key": "points.lifestyle-points.3.copy",
-    "label": "4. copy",
+    "label": "Mô tả",
     "section": "Điểm nhấn phong cách sống",
     "type": "text",
     "default": "Góc nhìn hướng biển, công viên hoặc thành phố tùy vị trí căn hộ. Công viên và bãi biển là không gian công cộng.",
-    "maxLength": 1500
+    "maxLength": 1500,
+    "sectionId": "8",
+    "group": "Điểm nhấn 4"
+  },
+  {
+    "key": "blog.section.eyebrow",
+    "label": "Nhãn section",
+    "section": "Tin tức",
+    "sectionId": "news",
+    "group": "Tiêu đề & nội dung",
+    "type": "text",
+    "default": "(Tin tức & góc nhìn)",
+    "maxLength": 300
+  },
+  {
+    "key": "blog.section.title",
+    "label": "Tiêu đề chính",
+    "section": "Tin tức",
+    "sectionId": "news",
+    "group": "Tiêu đề & nội dung",
+    "type": "text",
+    "default": "CÂU CHUYỆN SUN SAPHIA",
+    "maxLength": 300
   }
 ]

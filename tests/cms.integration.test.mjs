@@ -61,7 +61,24 @@ test('Worker: authentication, private drafts, preview, atomic publication, media
     const leads=await(await request('/api/admin/leads')).json();assert(leads.leads.some(item=>item.id===leadRecord.id));
     assert.equal((await request('/api/admin/leads','PATCH',{id:leadRecord.id,status:'contacted'})).status,200);
     const history=await(await request('/api/admin/history')).json();assert(history.revisions.length>=4);
+    const articleTitle='Bài viết tích hợp '+crypto.randomUUID(),articleSlug='bai-viet-'+crypto.randomUUID();
+    const postValues={title:articleTitle,slug:articleSlug,author:'Sun Saphia Residence',excerpt:'Mô tả bài thử',category:'Kiến trúc',cover:media.url,coverAlt:'Ảnh phối cảnh',seoTitle:'SEO của bài thử',seoDescription:'Mô tả SEO riêng',document:{type:'doc',content:[{type:'heading',attrs:{level:2},content:[{type:'text',text:'Đường cong kiến trúc'}]},{type:'paragraph',content:[{type:'text',text:'Nội dung bài viết tích hợp.'}]}]}};
+    const created=await request('/api/admin/posts','POST',{version:0,values:postValues});assert.equal(created.status,201);let post=await created.json();
+    assert.equal((await request('/bai-viet/'+articleSlug)).status,404,'Unpublished article is private');
+    const articlePreview=await request('/preview/bai-viet/'+post.id);assert.equal(articlePreview.status,200);assert(articlePreview.headers.get('x-robots-tag').includes('noindex'));assert((await articlePreview.text()).includes(articleTitle));
+    assert.equal((await request('/api/admin/posts/publish','POST',{id:post.id,draftId:post.draft_id,version:post.version-1})).status,409);
+    const publishedPost=await request('/api/admin/posts/publish','POST',{id:post.id,draftId:post.draft_id,version:post.version});assert.equal(publishedPost.status,200);post=await publishedPost.json();
+    const publicArticle=await(await request('/bai-viet/'+articleSlug)).text();assert(publicArticle.includes('<h2>Đường cong kiến trúc</h2>'));assert(publicArticle.includes('<title>SEO của bài thử</title>'));assert((await(await request('/')).text()).includes(articleTitle));assert((await(await request('/bai-viet')).text()).includes(articleTitle));
+    const edited=await request('/api/admin/posts','POST',{id:post.id,version:post.version,values:{...postValues,title:'BẢN SỬA CHƯA ĐĂNG'}});assert.equal(edited.status,201);post=await edited.json();
+    assert(!(await(await request('/bai-viet/'+articleSlug)).text()).includes('BẢN SỬA CHƯA ĐĂNG'));
+    assert.equal((await request('/api/admin/posts','POST',{id:post.id,version:post.version,values:{...postValues,slug:'doi-slug'}})).status,409);
+    assert.equal((await request('/api/admin/posts','POST',{id:post.id,version:post.version,values:{...postValues,document:{type:'doc',content:[{type:'script'}]}}})).status,400);
+    const duplicate=await(await request('/api/admin/posts','POST',{version:0,values:postValues})).json();assert.equal((await request('/api/admin/posts/publish','POST',{id:duplicate.id,draftId:duplicate.draft_id,version:duplicate.version})).status,409);
+    const postHistory=await(await request('/api/admin/posts/'+post.id+'/history')).json();assert(postHistory.revisions.length>=2);
+    const restoredPost=await request('/api/admin/posts/'+post.id+'/restore','POST',{revisionId:postHistory.revisions.at(-1).id,version:post.version});assert.equal(restoredPost.status,200);post=await restoredPost.json();
+    const unpublish=await request('/api/admin/posts/unpublish','POST',{id:post.id,version:post.version});assert.equal(unpublish.status,200);assert.equal((await request('/bai-viet/'+articleSlug)).status,404);assert(!(await(await request('/')).text()).includes(articleTitle));
     assert.equal((await request('/api/admin/logout','POST')).status,200);assert.equal((await request('/api/admin/leads')).status,401);assert.equal((await request('/api/admin/media','POST',{})).status,401);
+    assert.equal((await request('/preview/bai-viet/'+post.id)).status,401);assert.equal((await request('/api/admin/posts')).status,401);
     execFileSync(process.execPath,[wrangler,'d1','execute','sun-saphia-test','--local','--config',configFile,'--persist-to',persistence,'--command','DROP TABLE site_state'],{stdio:'pipe',env:{...process.env,WRANGLER_SEND_METRICS:'false'}});
     const degraded=await request('/');assert.equal(degraded.status,200);assert.equal(degraded.headers.get('x-content-status'),'last-published');assert(!(await degraded.text()).includes(marker),'Storage outage must preserve last published content, not draft content');
   } finally {

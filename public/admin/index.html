@@ -1,39 +1,59 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="vi">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex,nofollow"><title>Sun Saphia · Studio</title>
-<link rel="stylesheet" href="/assets/fonts.css"><link rel="stylesheet" href="/admin/studio.css">
-<script defer src="/admin/studio.js"></script>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="noindex,nofollow" name="robots"/><title>Sun Saphia · Studio</title>
+<link href="/assets/fonts.css" rel="stylesheet"/><link href="/admin/studio.css" rel="stylesheet"/>
+<script defer="" src="/admin/studio.js"></script>
 </head>
 <body>
-<section id="login-view" class="login-shell">
-  <form id="login-form" class="login-card">
-    <p class="eyebrow">SUN SAPHIA RESIDENCE</p><h1>Content Studio</h1>
-    <p class="muted">Đăng nhập để quản lý nội dung website.</p>
-    <label>Email quản trị<input name="email" type="email" autocomplete="username" required></label>
-    <label>Mật khẩu<input name="password" type="password" autocomplete="current-password" required maxlength="256"></label>
-    <button class="primary" type="submit">Đăng nhập</button><p id="login-status" role="status"></p>
-    <a href="/">Về website</a>
-  </form>
+<section class="login-shell" id="login-view">
+<form class="login-card" id="login-form">
+<p class="eyebrow">SUN SAPHIA RESIDENCE</p><h1>Content Studio</h1>
+<p class="muted">Đăng nhập để quản lý nội dung website.</p>
+<label>Email quản trị<input autocomplete="username" name="email" required="" type="email"/></label>
+<label>Mật khẩu<input autocomplete="current-password" maxlength="256" name="password" required="" type="password"/></label>
+<button class="primary" type="submit">Đăng nhập</button><p id="login-status" role="status"></p>
+<a href="/">Về website</a>
+</form>
 </section>
-<div id="studio-view" hidden>
-  <header class="studio-header"><a class="brand" href="/admin/"><span class="eyebrow">SUN SAPHIA RESIDENCE</span><strong>Content Studio</strong></a><div class="header-actions"><a class="button" href="/" target="_blank" rel="noopener">Xem website</a><button id="logout" type="button">Đăng xuất</button></div></header>
-  <div class="studio-layout">
-    <aside class="sidebar"><p class="eyebrow">QUẢN TRỊ WEBSITE</p><nav aria-label="Quản trị"><button class="nav-button active" data-tab="content" type="button">Nội dung landing page</button><button class="nav-button" data-tab="media" type="button">Thư viện ảnh</button><button class="nav-button" data-tab="history" type="button">Lịch sử phiên bản</button><button class="nav-button" data-tab="leads" type="button">Yêu cầu tư vấn</button></nav><div class="sidebar-note"><span id="admin-email"></span><p>Chỉnh nội dung tại đây.<br>Bố cục và chuyển động được giữ theo thiết kế.</p></div></aside>
-    <main>
-      <div class="page-heading"><div><p class="eyebrow" id="page-eyebrow">BIÊN TẬP NỘI DUNG</p><h1 id="page-title">Nội dung landing page</h1></div><span id="draft-badge" class="badge">Bản nháp</span></div>
-      <p id="studio-status" class="status" role="status" aria-live="polite">Đang tải nội dung…</p>
-      <section id="content-panel">
-        <div class="editor-toolbar"><span id="save-state">Đang tải…</span><div class="toolbar-actions"><button id="preview" type="button" disabled>Xem trước</button><button id="save" type="button" disabled>Lưu nháp</button><button id="publish" class="primary" type="button" disabled>Xuất bản</button></div></div>
-        <div class="editor-filter"><label>Phần nội dung<select id="section-select"></select></label><label>Tìm trường nội dung<input id="field-search" type="search" placeholder="Tiêu đề, mô tả, ảnh…"></label></div>
-        <form id="content-form" class="content-form"></form>
-      </section>
-      <section id="media-panel" hidden><div class="panel-intro"><div><h2>Ảnh của dự án</h2><p class="muted">PNG, JPEG hoặc WebP · Tối đa 8 MB mỗi ảnh.</p></div><label class="button upload-button">Tải ảnh lên<input id="media-upload" type="file" accept="image/png,image/jpeg,image/webp"></label></div><div id="media-grid" class="media-grid"></div></section>
-      <section id="history-panel" hidden><p class="muted">Khôi phục tạo một bản nháp mới. Website chỉ thay đổi sau khi bạn xuất bản.</p><div id="history-list" class="history-list"></div></section>
-      <section id="leads-panel" hidden><p class="muted">Yêu cầu được lưu tại đây. Bản này chưa gửi thông báo email tự động.</p><div class="table-wrap"><table><thead><tr><th>Khách hàng</th><th>Liên hệ</th><th>Thời gian</th><th>Trạng thái</th></tr></thead><tbody id="lead-list"></tbody></table></div></section>
-    </main>
-  </div>
+<div hidden="" id="studio-view">
+<header class="studio-header"><a class="brand" href="/admin/"><span class="eyebrow">SUN SAPHIA RESIDENCE</span><strong>Content Studio</strong></a><div class="header-actions"><a class="button" href="/" rel="noopener" target="_blank">Xem website</a><button id="logout" type="button">Đăng xuất</button></div></header>
+<div class="studio-layout">
+<aside class="sidebar"><p class="eyebrow">QUẢN TRỊ WEBSITE</p><nav aria-label="Quản trị"><button class="nav-button active" data-tab="content" type="button">Nội dung landing page</button><button class="nav-button" data-tab="posts" type="button">Bài viết</button><button class="nav-button" data-tab="media" type="button">Thư viện ảnh</button><button class="nav-button" data-tab="history" type="button">Lịch sử phiên bản</button><button class="nav-button" data-tab="leads" type="button">Yêu cầu tư vấn</button></nav><div class="sidebar-note"><span id="admin-email"></span><p>Chỉnh nội dung tại đây.<br/>Bố cục và chuyển động được giữ theo thiết kế.</p></div></aside>
+<main>
+<div class="page-heading"><div><p class="eyebrow" id="page-eyebrow">BIÊN TẬP NỘI DUNG</p><h1 id="page-title">Nội dung landing page</h1></div><span class="badge" id="draft-badge">Bản nháp</span></div>
+<p aria-live="polite" class="status" id="studio-status" role="status">Đang tải nội dung…</p>
+<section id="content-panel">
+<div class="editor-toolbar"><span id="save-state">Đang tải…</span><div class="toolbar-actions"><button disabled="" id="preview" type="button">Xem trước</button><button disabled="" id="save" type="button">Lưu nháp</button><button class="primary" disabled="" id="publish" type="button">Xuất bản</button></div></div>
+<div class="section-workspace"><details class="section-map" id="section-map" open=""><summary><span>Sections trên landing page</span><small id="section-count"></small></summary><nav aria-label="Chọn section" id="section-list"></nav></details><div class="section-editor"><div class="section-heading"><div><p class="eyebrow" id="section-position"></p><h2 id="section-title"></h2><p class="muted" id="section-description"></p></div><a class="button" id="section-preview" rel="noopener" target="_blank">Xem section</a></div><div class="editor-filter"><label>Phần nội dung<select id="section-select"></select></label><label>Tìm trường nội dung<input id="field-search" placeholder="Tiêu đề, mô tả, ảnh…" type="search"/></label></div><form class="content-form" id="content-form"></form></div></div></section><section hidden="" id="posts-panel"><div class="posts-workspace">
+<aside class="posts-browser"><button class="primary" id="post-new" type="button">Viết bài mới</button><label>Tìm bài viết<input id="post-search" placeholder="Tiêu đề hoặc đường dẫn…" type="search"/></label><div id="post-list"></div></aside>
+<div class="post-workspace"><div class="post-empty" id="post-empty"><h2>Viết câu chuyện của dự án</h2><p>Chọn bài viết để chỉnh sửa hoặc bấm Viết bài mới.</p></div>
+<div hidden="" id="post-editor-view"><div class="editor-toolbar"><span id="post-save-state">Bản nháp mới</span><div class="toolbar-actions"><button id="post-preview" type="button">Xem trước</button><button id="post-save" type="button">Lưu nháp</button><button class="primary" id="post-publish" type="button">Xuất bản bài</button></div></div>
+<form id="post-form"><div class="post-meta-grid">
+<label>Tiêu đề bài viết<input maxlength="200" name="title" placeholder="Nhập tiêu đề bài viết" required=""/></label>
+<label>Đường dẫn (slug)<input maxlength="100" name="slug" placeholder="cau-chuyen-kien-truc-apsara" required=""/><small id="post-slug-note">Tự gợi ý từ tiêu đề, có thể sửa trước lần xuất bản đầu tiên.</small></label>
+<label>Tác giả<input maxlength="120" name="author"/></label><label>Danh mục<input maxlength="100" name="category"/></label>
+<label class="post-wide">Mô tả ngắn<textarea maxlength="700" name="excerpt" rows="3"></textarea></label>
+<div class="post-wide field"><label>Ảnh bìa<input maxlength="1000" name="cover" placeholder="Chọn ảnh hoặc tải ảnh lên"/></label><div class="post-cover-row"><img alt="Ảnh bìa đang chọn" hidden="" id="post-cover-preview"/><div class="image-actions"><button id="post-cover-library" type="button">Chọn từ thư viện</button><label class="button upload-button">Tải ảnh bìa<input accept="image/png,image/jpeg,image/webp" id="post-cover-upload" type="file"/></label></div></div><label>Mô tả ảnh bìa (alt)<input maxlength="300" name="coverAlt"/></label></div>
 </div>
-<dialog id="media-picker"><div class="dialog-heading"><h2>Chọn ảnh</h2><button id="close-picker" type="button">Đóng</button></div><p class="muted">Ảnh được chọn chỉ thay đổi bản nháp.</p><div id="picker-grid" class="media-grid"></div></dialog>
-</body></html>
+<div class="rich-editor"><div class="rich-heading"><h2>Nội dung bài viết</h2><span class="muted" id="post-wordcount">0 từ</span></div><div aria-label="Định dạng bài viết" class="rich-toolbar" id="post-toolbar" role="toolbar">
+<select aria-label="Kiểu đoạn văn" id="post-block"><option value="paragraph">Đoạn văn</option><option value="h2">Tiêu đề H2</option><option value="h3">Tiêu đề H3</option></select>
+<button aria-label="In đậm" data-command="bold" type="button"><strong>B</strong></button><button aria-label="In nghiêng" data-command="italic" type="button"><em>I</em></button><button aria-label="Gạch chân" data-command="underline" type="button"><u>U</u></button>
+<button data-command="bulletList" type="button">Danh sách</button><button data-command="orderedList" type="button">Đánh số</button><button data-command="blockquote" type="button">Trích dẫn</button>
+<button data-align="left" type="button">Trái</button><button data-align="center" type="button">Giữa</button><button data-align="right" type="button">Phải</button>
+<button id="post-link" type="button">Liên kết</button><button id="post-image" type="button">Thêm ảnh</button><button id="post-table" type="button">Chèn bảng</button><button id="post-undo" type="button">Hoàn tác</button><button id="post-redo" type="button">Làm lại</button>
+</div><div hidden="" id="post-table-tools"><button data-table="addRowAfter" type="button">Thêm hàng</button><button data-table="addColumnAfter" type="button">Thêm cột</button><button data-table="deleteRow" type="button">Xóa hàng</button><button data-table="deleteColumn" type="button">Xóa cột</button><button data-table="deleteTable" type="button">Bỏ bảng</button></div><div id="post-richtext"></div></div>
+<details class="post-seo" open=""><summary>Thiết lập SEO</summary><label>SEO title · <span id="post-seo-count"></span><input maxlength="120" name="seoTitle" placeholder="Để trống để dùng tiêu đề bài viết"/></label><label>Meta description<textarea maxlength="320" name="seoDescription" placeholder="Để trống để dùng mô tả ngắn" rows="3"></textarea></label></details>
+</form><div class="post-bottom"><a hidden="" id="post-live" rel="noopener" target="_blank">Xem bài đã xuất bản</a><button hidden="" id="post-unpublish" type="button">Gỡ khỏi website</button></div><details class="post-history"><summary>Lịch sử bản nháp của bài viết</summary><div id="post-history-list"></div></details>
+</div></div></div></section>
+<section hidden="" id="media-panel"><div class="panel-intro"><div><h2>Ảnh của dự án</h2><p class="muted">PNG, JPEG hoặc WebP · Tối đa 8 MB mỗi ảnh.</p></div><label class="button upload-button">Tải ảnh lên<input accept="image/png,image/jpeg,image/webp" id="media-upload" type="file"/></label></div><div class="media-grid" id="media-grid"></div></section>
+<section hidden="" id="history-panel"><p class="muted">Khôi phục tạo một bản nháp mới. Website chỉ thay đổi sau khi bạn xuất bản.</p><div class="history-list" id="history-list"></div></section>
+<section hidden="" id="leads-panel"><p class="muted">Yêu cầu được lưu tại đây. Bản này chưa gửi thông báo email tự động.</p><div class="table-wrap"><table><thead><tr><th>Khách hàng</th><th>Liên hệ</th><th>Thời gian</th><th>Trạng thái</th></tr></thead><tbody id="lead-list"></tbody></table></div></section>
+</main>
+</div>
+</div>
+<dialog id="media-picker"><div class="dialog-heading"><h2>Chọn ảnh</h2><button id="close-picker" type="button">Đóng</button></div><p class="muted">Ảnh được chọn chỉ thay đổi bản nháp.</p><div class="media-grid" id="picker-grid"></div></dialog>
+<dialog id="post-link-dialog"><form id="post-link-form" method="dialog"><h2>Chèn liên kết</h2><label>Đường dẫn<input id="post-link-url" placeholder="https://… hoặc /bai-viet/…" type="text"/></label><div class="dialog-actions"><button id="post-link-remove" type="button">Bỏ liên kết</button><button value="cancel">Hủy</button><button class="primary" value="apply">Áp dụng</button></div></form></dialog>
+<dialog id="post-image-dialog"><form id="post-image-form" method="dialog"><h2>Thêm ảnh vào bài</h2><label>Ảnh<input id="post-image-url" placeholder="Đường dẫn ảnh HTTPS hoặc ảnh trong thư viện" type="text"/></label><div class="image-actions"><button id="post-image-library" type="button">Chọn từ thư viện</button><label class="button upload-button">Tải ảnh lên<input accept="image/png,image/jpeg,image/webp" id="post-inline-upload" type="file"/></label></div><label>Mô tả ảnh<input id="post-image-alt" maxlength="500"/></label><label>Chú thích ảnh<input id="post-image-caption" maxlength="500"/></label><div class="dialog-actions"><button value="cancel">Hủy</button><button class="primary" value="apply">Chèn ảnh</button></div></form></dialog></body></html>

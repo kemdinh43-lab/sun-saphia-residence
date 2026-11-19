@@ -1,6 +1,8 @@
 import { HttpError, json, sameOrigin, bodyJson, bytes, secureResponse } from './http.js';
 import { login, logout, requireAdmin, limited } from './auth.js';
 import { schema, defaults, initialize, state, revision, saveDraft, publish, published, renderPage } from './content.js';
+import sections from './sections.json' with { type: 'json' };
+import { listPosts, getPost, savePost, publishPost, publicPosts, articleCard, blogPage, renderArticle } from './posts.js';
 
 const readOnly = request => ['GET', 'HEAD'].includes(request.method);
 async function adminApi(request, env, path) {
@@ -12,7 +14,33 @@ async function adminApi(request, env, path) {
   if (!readOnly(request)) await limited(env, 'admin:' + user.email, 120, 60);
   if (path === '/api/admin/content' && request.method === 'GET') {
     await initialize(env);
-    return json({ ...(await state(env)), schema, email: user.email });
+    return json({ ...(await state(env)), schema, sections, email: user.email });
+  }
+  if(path==='/api/admin/posts'&&request.method==='GET')return json({posts:await listPosts(env)});
+  if(path==='/api/admin/posts'&&request.method==='POST')return json(await savePost(env,await bodyJson(request,350000),user.email),201);
+  if(path==='/api/admin/posts/publish'&&request.method==='POST')return json(await publishPost(env,await bodyJson(request,2000)));
+  if(path==='/api/admin/posts/unpublish'&&request.method==='POST') {
+    const body=await bodyJson(request,2000);
+    if(typeof body.id!=='string'||!Number.isSafeInteger(body.version))throw new HttpError(400,'Phiên bản bài viết không hợp lệ.');
+    const result=await env.DB.prepare('UPDATE posts SET published_id=NULL,version=version+1 WHERE id=? AND version=?').bind(body.id,body.version).run();
+    if(result.meta.changes!==1)throw new HttpError(409,'Bài viết đã thay đổi. Hãy tải lại.');
+    return json(await getPost(env,body.id));
+  }
+  const postMatch=path.match(/^\/api\/admin\/posts\/([a-f0-9-]{36})(?:\/(history|restore))?$/);
+  if(postMatch) {
+    const [,id,action]=postMatch;
+    if(!action&&request.method==='GET')return json(await getPost(env,id));
+    if(action==='history'&&request.method==='GET') {
+      const result=await env.DB.prepare('SELECT id,created_at,created_by FROM post_revisions WHERE post_id=? ORDER BY created_at DESC LIMIT 40').bind(id).all();
+      return json({revisions:result.results});
+    }
+    if(action==='restore'&&request.method==='POST') {
+      const body=await bodyJson(request,2000);
+      if(typeof body.revisionId!=='string')throw new HttpError(400,'Chưa chọn phiên bản.');
+      const row=await env.DB.prepare('SELECT content FROM post_revisions WHERE id=? AND post_id=?').bind(body.revisionId,id).first();
+      if(!row)throw new HttpError(404,'Không tìm thấy phiên bản.');
+      return json(await savePost(env,{id,version:body.version,values:JSON.parse(row.content)},user.email));
+    }
   }
   if (path === '/api/admin/draft' && request.method === 'PUT') {
     const body = await bodyJson(request);
@@ -87,7 +115,20 @@ async function route(request, env, ctx) {
   if (path === '/preview') {
     await requireAdmin(request, env);
     const draft = await state(env);
-    return renderPage(request, env, draft.values, true);
+    return renderPage(request, env, draft.values, true,(await publicPosts(env,3)).map(articleCard).join(''));
+  }
+  const postPreview=path.match(/^\/preview\/bai-viet\/([a-f0-9-]{36})$/);
+  if(postPreview){await requireAdmin(request,env);return renderArticle(request,env,await getPost(env,postPreview[1]),true);}
+  if(path==='/bai-viet'||path==='/bai-viet/') {
+    if(path.endsWith('/'))return Response.redirect(url.origin+'/bai-viet',301);
+    const posts=await publicPosts(env);
+    return blogPage(request,env,{title:'Tin tức & góc nhìn | Sun Saphia Residence',description:'Câu chuyện kiến trúc, tiến độ và thông tin Sun Saphia Residence.',body:`<p class="blog-category">TIN TỨC & GÓC NHÌN</p><h1>Câu chuyện Sun Saphia</h1><div class="blog-grid">${posts.length?posts.map(articleCard).join(''):'<p class="blog-empty">Nội dung đang được cập nhật. Bạn có thể liên hệ để nhận thông tin dự án.</p>'}</div>`,path:'/bai-viet'});
+  }
+  const postPath=path.match(/^\/bai-viet\/([a-z0-9]+(?:-[a-z0-9]+)*)$/);
+  if(postPath) {
+    const row=await env.DB.prepare('SELECT p.id,p.slug,p.published_at,r.created_at AS updated_at,r.content FROM posts p JOIN post_revisions r ON r.id=p.published_id WHERE p.slug=?').bind(postPath[1]).first();
+    if(row)return renderArticle(request,env,{...row,values:JSON.parse(row.content)});
+    return blogPage(request,env,{title:'Không tìm thấy bài viết | Sun Saphia',description:'Bài viết chưa được xuất bản hoặc không còn công khai.',body:'<h1>Không tìm thấy bài viết</h1><p>Bài viết chưa được xuất bản hoặc không còn công khai.</p><a href="/bai-viet">Về trang tin tức</a>',path,status:404});
   }
   if (path === '/admin' || path === '/admin/') return env.ASSETS.fetch(new Request(new URL('/admin/index.html', request.url)));
   if (path.startsWith('/media/')) {
@@ -106,19 +147,21 @@ async function route(request, env, ctx) {
   if (path === '/sitemap.xml') {
     let origin; try { origin = new URL(env.SITE_ORIGIN).origin; } catch { throw new HttpError(404, 'Chưa cấu hình tên miền.'); }
     if (origin !== url.origin) throw new HttpError(404, 'Không tìm thấy sitemap tại tên miền này.');
-    return new Response(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${origin.replaceAll('&','&amp;')}/</loc></url></urlset>`, { headers: { 'content-type': 'application/xml; charset=utf-8' } });
+    const posts=await publicPosts(env,1000);
+    const urls=['/','/bai-viet',...posts.map(post=>'/bai-viet/'+post.slug)];
+    return new Response(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map(path=>`<url><loc>${origin.replaceAll('&','&amp;')}${path}</loc></url>`).join('')}</urlset>`, { headers: { 'content-type': 'application/xml; charset=utf-8' } });
   }
   if (path === '/index.html') return Response.redirect(url.origin + '/', 301);
   if (path === '/') {
     const cache = caches.default, cacheKey = new Request(url.origin + '/__cms-last-published');
-    let content;
-    try { content = await published(env); }
+    let content,postCards;
+    try { content = await published(env);postCards=(await publicPosts(env,3)).map(articleCard).join(''); }
     catch (error) {
       const backup = await cache.match(cacheKey);
       if (backup) { const headers = new Headers(backup.headers); headers.set('cache-control','no-cache'); headers.set('x-content-status','last-published'); return new Response(backup.body, { headers }); }
       throw error;
     }
-    const response = await renderPage(request, env, content.values);
+    const response = await renderPage(request, env, content.values,false,postCards);
     const headers = new Headers(response.headers); headers.set('cache-control','public, max-age=86400');
     ctx.waitUntil(cache.put(cacheKey, new Response(response.clone().body, { status: response.status, headers })));
     return response;
@@ -129,7 +172,7 @@ async function route(request, env, ctx) {
 export default {
   async fetch(request, env, ctx) {
     const path = new URL(request.url).pathname;
-    const privatePage = path.startsWith('/admin') || path.startsWith('/api') || path === '/preview';
+    const privatePage = path.startsWith('/admin') || path.startsWith('/api') || path === '/preview' || path.startsWith('/preview/');
     try {
       let response = await route(request, env, ctx);
       if (request.method === 'HEAD') response = new Response(null, { status: response.status, headers: response.headers });

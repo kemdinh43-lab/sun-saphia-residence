@@ -2,6 +2,7 @@ import schema from './content-schema.json' with { type: 'json' };
 import { HttpError } from './http.js';
 export { schema };
 export const defaults = Object.fromEntries(schema.map(field => [field.key, field.default]));
+const storedValues = value => ({ ...defaults, ...JSON.parse(value) });
 export function imageUrl(value) {
   if (/^(?:\/?assets\/[a-zA-Z0-9_./%()-]+|\/media\/[a-f0-9-]+\.(?:png|jpg|webp))$/.test(value)) {
     try { if (!decodeURIComponent(value).includes('..')) return true; } catch {}
@@ -40,12 +41,12 @@ export async function initialize(env) {
 export async function state(env) {
   const row = await env.DB.prepare('SELECT s.*,r.content FROM site_state s LEFT JOIN revisions r ON r.id=s.draft_id WHERE s.id=1').first();
   if (!row) throw new HttpError(503, 'Cơ sở dữ liệu chưa được khởi tạo.');
-  return { draftId: row.draft_id, publishedId: row.published_id, version: row.draft_version, publishedAt: row.published_at, values: row.content ? JSON.parse(row.content) : defaults };
+  return { draftId: row.draft_id, publishedId: row.published_id, version: row.draft_version, publishedAt: row.published_at, values: row.content ? storedValues(row.content) : defaults };
 }
 export async function revision(env, id) {
   const row = await env.DB.prepare('SELECT * FROM revisions WHERE id=?').bind(id).first();
   if (!row) throw new HttpError(404, 'Không tìm thấy phiên bản nội dung.');
-  return { ...row, values: JSON.parse(row.content) };
+  return { ...row, values: storedValues(row.content) };
 }
 export async function saveDraft(env, values, version, email, label = 'Lưu bản nháp') {
   if (!Number.isSafeInteger(version) || version < 0) throw new HttpError(400, 'Thiếu phiên bản chỉnh sửa.');
@@ -68,11 +69,11 @@ export async function published(env) {
   const row = await env.DB.prepare('SELECT s.published_id,r.content FROM site_state s LEFT JOIN revisions r ON r.id=s.published_id WHERE s.id=1').first();
   if (!row) throw new HttpError(503, 'Cơ sở dữ liệu chưa được khởi tạo.');
   if (row.published_id && !row.content) throw new HttpError(503, 'Không đọc được phiên bản công khai.');
-  return { id: row.published_id || 'baseline-v1', values: row.content ? JSON.parse(row.content) : defaults };
+  return { id: row.published_id || 'baseline-v1', values: row.content ? storedValues(row.content) : defaults };
 }
 export function serialize(values) { return JSON.stringify(values).replace(/</g, '\\u003c').replace(/>/g, '\\u003e').replace(/&/g, '\\u0026'); }
 function escapeAttribute(value) { return value.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;').replaceAll('>', '&gt;'); }
-export async function renderPage(request, env, values, preview = false) {
+export async function renderPage(request, env, values, preview = false, postCards = '') {
   const base = new URL('/index.html', request.url);
   const asset = await env.ASSETS.fetch(new Request(base));
   const headers = new Headers(asset.headers);
@@ -82,6 +83,8 @@ export async function renderPage(request, env, values, preview = false) {
   try { const site = new URL(env.SITE_ORIGIN); if (site.protocol === 'https:') origin = site.origin; } catch {}
   if (preview || !origin || new URL(request.url).origin !== origin) headers.set('x-robots-tag', 'noindex, nofollow');
   const rewriter = new HTMLRewriter()
+    .on('#news', { element(el) { if(postCards)el.removeAttribute('hidden'); } })
+    .on('#landing-posts', { element(el) { el.setInnerContent(postCards,{html:true}); } })
     .on('body', { element(el) { if (preview) { el.setAttribute('data-preview', 'true'); el.prepend('<div class="cms-preview-bar">Bản nháp riêng tư · <a href="/admin/">Về trang quản trị</a></div>', { html: true }); } } })
     .on('[data-cms]', { element(el) { const value = values[el.getAttribute('data-cms')]; if (typeof value === 'string') el.setInnerContent(value); } })
     .on('[data-cms-image]', { element(el) {
