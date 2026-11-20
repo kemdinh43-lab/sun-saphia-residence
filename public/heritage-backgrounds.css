@@ -1,0 +1,21 @@
+/* Three editorial pauses: dance / coastal setting / architectural heritage.
+   User artwork is applied once per section; all foreground copy stays semantic. */
+:root{--heritage-paper:#fdfbf5}
+.concept,.location,.project{background-color:var(--heritage-paper);background-repeat:no-repeat;background-attachment:scroll}
+/* Square Apsara artwork frames the architecture story; the centre stays quiet. */
+.concept{background-image:url('assets/sun-saphia-heritage-apsara.webp');background-size:min(100%,1440px) auto;background-position:center top}
+/* The swallow and border close the location chapter, away from the main title. */
+.location{background-image:url('assets/sun-saphia-heritage-swallow.webp');background-size:max(100%,1100px) auto;background-position:left bottom;padding-top:clamp(72px,7vw,110px);padding-bottom:clamp(100px,12vw,180px)}
+.location .location-map,.location .bird{display:none}
+/* Temple illustration sits in the lower right beside the architectural images. */
+.project{background-image:url('assets/sun-saphia-heritage-temple.webp');background-size:min(100%,1672px) auto;background-position:right bottom;padding-bottom:clamp(100px,9vw,144px)}
+@media(max-width:800px){
+ .concept{background-size:720px auto;background-position:right -90px top}
+ .location{background-size:1000px auto;background-position:left -80px bottom;padding-top:64px;padding-bottom:140px}
+ .project{background-size:1000px auto;background-position:right -40px bottom;padding-bottom:110px}
+}
+@media(max-width:480px){
+ .concept{background-size:560px auto;background-position:right -65px top}
+ .location{background-size:780px auto;background-position:left -70px bottom;padding-top:56px;padding-bottom:130px}
+ .project{background-size:780px auto;background-position:right -60px bottom;padding-bottom:96px}
+}

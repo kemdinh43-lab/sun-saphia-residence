@@ -498,5 +498,23 @@
     "source": "User supplied natural grade V2: /Users/thanhtung/Downloads/SunSaphia_Natural_Grade_5_PNG_WebP_V2/S05_Aerial_Night_Website.webp",
     "processing": "Original supplied WebP copied without recompression or color changes",
     "bytes": 351142
+  },
+  {
+    "file": "sun-saphia-heritage-swallow.webp",
+    "source": "User supplied decorative background: /Users/thanhtung/Downloads/ChatGPT Image Nov 20, 2026, 02_24_22 PM-1.png",
+    "processing": "WebP quality 90 at original dimensions; no artwork or color edits",
+    "bytes": 35824
+  },
+  {
+    "file": "sun-saphia-heritage-apsara.webp",
+    "source": "User supplied decorative background: /Users/thanhtung/Downloads/ChatGPT Image Nov 20, 2026, 02_24_23 PM-2.png",
+    "processing": "WebP quality 90 at original dimensions; no artwork or color edits",
+    "bytes": 81446
+  },
+  {
+    "file": "sun-saphia-heritage-temple.webp",
+    "source": "User supplied decorative background: /Users/thanhtung/Downloads/ChatGPT Image Nov 20, 2026, 02_24_24 PM-3.png",
+    "processing": "WebP quality 90 at original dimensions; no artwork or color edits",
+    "bytes": 48318
   }
 ]
