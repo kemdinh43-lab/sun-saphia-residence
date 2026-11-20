@@ -44,7 +44,7 @@
     "label": "Đường dẫn ảnh",
     "section": "Hero",
     "type": "image",
-    "default": "assets/sun-saphia-aerial-day-natural-v2.webp",
+    "default": "assets/sun-saphia-podium-natural-v2.webp",
     "maxLength": 1000,
     "sectionId": "0",
     "group": "Hình ảnh 1"
@@ -54,7 +54,7 @@
     "label": "Mô tả ảnh (alt)",
     "section": "Hero",
     "type": "text",
-    "default": "Phối cảnh tòa tháp Sun Saphia Residence nhìn từ trên cao",
+    "default": "Phối cảnh khối đế và mặt đứng Sun Saphia Residence lúc chạng vạng",
     "maxLength": 300,
     "sectionId": "0",
     "group": "Hình ảnh 1"
@@ -264,7 +264,7 @@
     "label": "Đường dẫn ảnh",
     "section": "Phim dự án",
     "type": "image",
-    "default": "assets/sun-saphia-aerial-day-natural-v2.webp",
+    "default": "assets/sun-saphia-aerial-night-natural-v2.webp",
     "maxLength": 1000,
     "sectionId": "5",
     "group": "Hình ảnh 1"
@@ -274,7 +274,7 @@
     "label": "Mô tả ảnh (alt)",
     "section": "Phim dự án",
     "type": "text",
-    "default": "Phối cảnh Sun Saphia Residence bên biển",
+    "default": "Phối cảnh tổng thể Sun Saphia Residence bên biển về đêm",
     "maxLength": 300,
     "sectionId": "5",
     "group": "Hình ảnh 1"
