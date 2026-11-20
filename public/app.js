@@ -3,28 +3,145 @@ const siteContent = JSON.parse(document.getElementById('site-content')?.textCont
 const asset = name => /^(assets\/|\/|https:\/\/)/.test(name) ? name : `assets/${name}`;
 // Editable copy and visual assets. All layout and interaction code is independently authored.
 const featureCards = [
- ['VỊ TRÍ VEN BIỂN','Nằm tại giao lộ Nguyễn Đức Thuận – Trường Sa, gần bãi tắm Sơn Thủy và công viên công cộng phía trước.','669394ccd9f34f3a2f9b8179_Photo.webp'],
- ['KIẾN TRÚC APSARA','Mặt đứng với những đường cong lấy cảm hứng từ vũ điệu và di sản Chăm Pa.','66d083e7364c1b52fe8dd886_33.webp'],
- ['TÒA THÁP 114 M','Công trình gồm 30 tầng nổi, 2 tầng hầm, mang đến các lựa chọn căn hộ tại nhiều tầng và hướng nhìn.','669394cc52591b8b1e42a39f_Photo-2.webp'],
- ['TRẦN CAO 3,5 M','Tạo cảm giác rộng mở, thoáng đãng và tăng khả năng đón ánh sáng tự nhiên.','669394ccffb9862a914d8f47_Photo-3.webp'],
- ['782 SẢN PHẨM','Bao gồm Studio, 1BR+, 2BR, shophouse khối đế, duplex và penthouse.','669394cc5deb6fbbf22253ba_Photo-4.webp'],
- ['CHĂM SÓC SỨC KHỎE','Bể bơi hướng biển, phòng gym, yoga và pilates.','669394cccbc7e78e84b8a3ac_Photo-5.webp'],
- ['CĂN HỘ STUDIO','Diện tích 30 m², với các lựa chọn hướng thành phố, cánh bên hoặc mặt trước hướng biển tùy mã căn.','669394cc383af3570041f3a9_Photo-6.webp'],
- ['CĂN HỘ 1BR+','Diện tích 50–51 m², với không gian sinh hoạt linh hoạt cho cặp đôi hoặc gia đình nhỏ.','66d08426b9ed0d4963e3cb33_Porsche.webp'],
- ['CĂN HỘ 2BR','Diện tích 60–70 m², với hai phòng ngủ và không gian sinh hoạt chung.','669394cc21cfbc637ecdcdf1_Photo-8.webp'],
- ['BỘ SƯU TẬP ĐẶC BIỆT','Duplex, penthouse và shophouse khối đế bổ sung lựa chọn về không gian và công năng.','66ccb851576b757ca4699208_concierge-2.webp'],
- ['BÀN GIAO DỰ KIẾN','Dự kiến tháng 11/2028 theo tiêu chuẩn hoàn thiện cơ bản.','68494397ed927eb6ebff53ae_wheelchair.avif']
+ [
+  "VỊ TRÍ VEN BIỂN",
+  "Nằm tại giao lộ Nguyễn Đức Thuận – Trường Sa, gần bãi tắm Sơn Thủy và công viên công cộng phía trước.",
+  "assets/sun-saphia-aerial-day.webp"
+ ],
+ [
+  "KIẾN TRÚC APSARA",
+  "Mặt đứng với những đường cong lấy cảm hứng từ vũ điệu và di sản Chăm Pa.",
+  "assets/sun-saphia-tower-day.webp"
+ ],
+ [
+  "TÒA THÁP 114 M",
+  "Công trình gồm 30 tầng nổi, 2 tầng hầm, mang đến các lựa chọn căn hộ tại nhiều tầng và hướng nhìn.",
+  "assets/sun-saphia-tower-night.webp"
+ ],
+ [
+  "TRẦN CAO 3,5 M",
+  "Tạo cảm giác rộng mở, thoáng đãng và tăng khả năng đón ánh sáng tự nhiên.",
+  "assets/sun-saphia-living-sea.webp"
+ ],
+ [
+  "782 SẢN PHẨM",
+  "Bao gồm Studio, 1BR+, 2BR, shophouse khối đế, duplex và penthouse.",
+  "assets/sun-saphia-aerial-night.webp"
+ ],
+ [
+  "CHĂM SÓC SỨC KHỎE",
+  "Bể bơi hướng biển, phòng gym, yoga và pilates.",
+  "assets/sun-saphia-gym.webp"
+ ],
+ [
+  "CĂN HỘ STUDIO",
+  "Diện tích 30 m², với các lựa chọn hướng thành phố, cánh bên hoặc mặt trước hướng biển tùy mã căn.",
+  "assets/sun-saphia-bedroom-city.webp"
+ ],
+ [
+  "CĂN HỘ 1BR+",
+  "Diện tích 50–51 m², với không gian sinh hoạt linh hoạt cho cặp đôi hoặc gia đình nhỏ.",
+  "assets/sun-saphia-living-interior.webp"
+ ],
+ [
+  "CĂN HỘ 2BR",
+  "Diện tích 60–70 m², với hai phòng ngủ và không gian sinh hoạt chung.",
+  "assets/sun-saphia-bedroom-river.webp"
+ ],
+ [
+  "BỘ SƯU TẬP ĐẶC BIỆT",
+  "Duplex, penthouse và shophouse khối đế bổ sung lựa chọn về không gian và công năng.",
+  "assets/sun-saphia-podium.webp"
+ ],
+ [
+  "BÀN GIAO DỰ KIẾN",
+  "Dự kiến tháng 11/2028 theo tiêu chuẩn hoàn thiện cơ bản.",
+  "assets/sun-saphia-living-interior.webp"
+ ]
 ];
 const amenityCards = [
- ['BỂ BƠI HƯỚNG BIỂN','Bể bơi được định hướng nhìn về phía công viên và bãi biển, tạo không gian thư giãn ven biển.','66941240c825827d10fba510_infrastructure_1.webp'],
- ['PHÒNG GYM','Phòng gym phục vụ nhu cầu rèn luyện sức khỏe và duy trì thói quen vận động.','669412402c29addda447ab11_infrastructure_2.webp'],
- ['KHÔNG GIAN YOGA','Không gian dành cho những hoạt động nhẹ nhàng, thư giãn và cân bằng tinh thần.','6694124079c4ff2e35536ba3_infrastructure_3.webp'],
- ['KHÔNG GIAN PILATES','Khu vực pilates bổ sung các lựa chọn tập luyện trong hệ tiện ích chăm sóc sức khỏe.','6694124066776b60f6368488_infrastructure_4.webp'],
- ['CÔNG VIÊN VEN BIỂN','Công viên công cộng phía trước dự án có hồ nước, sân tennis, đường đi bộ và những khoảng cây xanh.','66941240e88c1b08e56790da_infrastructure_5.webp'],
- ['BÃI TẮM SƠN THỦY','Bãi tắm công cộng gần dự án, thuận tiện cho những trải nghiệm biển và hoạt động ngoài trời.','66941240b7eaf9da62f93748_infrastructure_6.webp']
+ [
+  "BỂ BƠI HƯỚNG BIỂN",
+  "Phối cảnh bể bơi với không gian mở nhìn ra cảnh quan ven biển.",
+  "assets/sun-saphia-pool-sea.webp"
+ ],
+ [
+  "PHÒNG GYM",
+  "Phối cảnh phòng gym phục vụ nhu cầu rèn luyện sức khỏe mỗi ngày.",
+  "assets/sun-saphia-gym.webp"
+ ],
+ [
+  "KHÔNG GIAN YOGA",
+  "Phối cảnh phòng yoga với ánh sáng tự nhiên và không gian thư giãn.",
+  "assets/sun-saphia-yoga.webp"
+ ],
+ [
+  "BỂ BƠI TRONG NHÀ",
+  "Phối cảnh không gian bể bơi trong nhà, kết hợp cây xanh và khu ghế nghỉ.",
+  "assets/sun-saphia-indoor-pool.webp"
+ ],
+ [
+  "GÓC NHÌN BIỂN TỪ CĂN HỘ",
+  "Phối cảnh tầm nhìn từ ban công hướng biển. Hướng nhìn thay đổi theo tầng và vị trí căn hộ.",
+  "assets/sun-saphia-balcony-sea.webp"
+ ],
+ [
+  "GÓC NHÌN NGŨ HÀNH SƠN",
+  "Phối cảnh tầm nhìn từ ban công về Ngũ Hành Sơn và cảnh quan xung quanh.",
+  "assets/sun-saphia-balcony-mountains.webp"
+ ]
 ];
 const galleryCards = [
- ['PHÒNG GYM','','66c85a37dea8eb1d6873d669_1Photo-5.avif'],['BỂ BƠI HƯỚNG BIỂN','','66c858d41c944040b12ef6fa_Photo-6.avif'],['KHÔNG GIAN PILATES','','66c85a3842e8f4bf183bd168_1Photo-4.avif'],['KHÔNG GIAN YOGA','','66d5c4a6ab2d2e470737c019_restaurant-home.webp'],['CÔNG VIÊN VEN BIỂN','','66c85a37ae1f509051ab027e_1Photo-3.avif'],['BÃI TẮM SƠN THỦY','','66c858d492cf4fc3888168ef_Photo-7.avif'],['DANH THẮNG NGŨ HÀNH SƠN','','66c858d4824ed7c557641b99_Photo-8.avif'],['DI SẢN CHĂM PA','','66c858d4e2d5d4ef7d2196bf_Photo-9.avif'],['CẢNH QUAN THÀNH PHỐ','','66c858d4cb3c0aaddac51240_1.avif'],['NHỊP SỐNG ĐÀ NẴNG','','66c85a37ebd92c5b3e0c0500_1Photo-6.avif']
+ [
+  "PHÒNG GYM",
+  "Hình ảnh phối cảnh minh họa.",
+  "assets/sun-saphia-gym.webp"
+ ],
+ [
+  "BỂ BƠI HƯỚNG BIỂN",
+  "Hình ảnh phối cảnh minh họa.",
+  "assets/sun-saphia-pool-sea.webp"
+ ],
+ [
+  "BỂ BƠI TRONG NHÀ",
+  "Hình ảnh phối cảnh minh họa.",
+  "assets/sun-saphia-indoor-pool.webp"
+ ],
+ [
+  "KHÔNG GIAN YOGA",
+  "Hình ảnh phối cảnh minh họa.",
+  "assets/sun-saphia-yoga.webp"
+ ],
+ [
+  "PHÒNG KHÁCH HƯỚNG BIỂN",
+  "Hình ảnh phối cảnh minh họa.",
+  "assets/sun-saphia-living-sea.webp"
+ ],
+ [
+  "BAN CÔNG HƯỚNG BIỂN",
+  "Hình ảnh phối cảnh minh họa.",
+  "assets/sun-saphia-balcony-sea.webp"
+ ],
+ [
+  "GÓC NHÌN NGŨ HÀNH SƠN",
+  "Hình ảnh phối cảnh minh họa.",
+  "assets/sun-saphia-balcony-mountains.webp"
+ ],
+ [
+  "NỘI THẤT CĂN HỘ",
+  "Hình ảnh phối cảnh minh họa.",
+  "assets/sun-saphia-living-interior.webp"
+ ],
+ [
+  "PHÒNG NGỦ HƯỚNG THÀNH PHỐ",
+  "Hình ảnh phối cảnh minh họa.",
+  "assets/sun-saphia-bedroom-city.webp"
+ ],
+ [
+  "PHÒNG NGỦ HƯỚNG SÔNG",
+  "Hình ảnh phối cảnh minh họa.",
+  "assets/sun-saphia-bedroom-river.webp"
+ ]
 ];
 const points = {
  'concept-points':[['DI SẢN VĂN HÓA','Dấu ấn văn hóa Chăm Pa.'],['KIẾN TRÚC UYỂN CHUYỂN','Những đường cong kiến trúc Apsara.'],['GÓC NHÌN RỘNG MỞ','Kết nối cảnh quan biển và đô thị.'],['KHÔNG GIAN KHOÁNG ĐẠT','Không gian trần cao 3,5 m.']],

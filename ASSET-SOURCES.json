@@ -310,5 +310,80 @@
     "source": "User-supplied portrait photograph of Phạm Thanh Hiếu",
     "processing": "Resized and WebP compressed; no generative retouching",
     "bytes": 44558
+  },
+  {
+    "file": "sun-saphia-podium.webp",
+    "source": "User supplied Sun Saphia project imagery: 1.1.jpg",
+    "bytes": 235986
+  },
+  {
+    "file": "sun-saphia-tower-day.webp",
+    "source": "User supplied Sun Saphia project imagery: 2 (2).jpg",
+    "bytes": 215446
+  },
+  {
+    "file": "sun-saphia-aerial-day.webp",
+    "source": "User supplied Sun Saphia project imagery: 1 (8).jpg",
+    "bytes": 280520
+  },
+  {
+    "file": "sun-saphia-tower-night.webp",
+    "source": "User supplied Sun Saphia project imagery: 11_4K.jpg",
+    "bytes": 178174
+  },
+  {
+    "file": "sun-saphia-aerial-night.webp",
+    "source": "User supplied Sun Saphia project imagery: 12_4K.jpg",
+    "bytes": 229168
+  },
+  {
+    "file": "sun-saphia-bedroom-city.webp",
+    "source": "User supplied Sun Saphia project imagery: Tang 15_PN STU view san bay_City_bien.jpg",
+    "bytes": 238544
+  },
+  {
+    "file": "sun-saphia-balcony-mountains.webp",
+    "source": "User supplied Sun Saphia project imagery: Tang 20_view Ngu Hanh Son_song coco_002_op1.jpg",
+    "bytes": 250098
+  },
+  {
+    "file": "sun-saphia-living-sea.webp",
+    "source": "User supplied Sun Saphia project imagery: Tang 5_Phong khach view bien_binh minh.jpg",
+    "bytes": 175032
+  },
+  {
+    "file": "sun-saphia-bedroom-river.webp",
+    "source": "User supplied Sun Saphia project imagery: Tang 25_view PN_song_Sunneva.jpg",
+    "bytes": 180320
+  },
+  {
+    "file": "sun-saphia-balcony-sea.webp",
+    "source": "User supplied Sun Saphia project imagery: Tang 10_Ban cong view bien_binh minh 001_op1.jpg",
+    "bytes": 252778
+  },
+  {
+    "file": "sun-saphia-indoor-pool.webp",
+    "source": "User supplied Sun Saphia project imagery: be-boi-trong-nha.webp",
+    "bytes": 244400
+  },
+  {
+    "file": "sun-saphia-living-interior.webp",
+    "source": "User supplied Sun Saphia project imagery: image-20261027091007-3.png",
+    "bytes": 118082
+  },
+  {
+    "file": "sun-saphia-gym.webp",
+    "source": "User supplied Sun Saphia project imagery: image-20261027091007-4.png",
+    "bytes": 160282
+  },
+  {
+    "file": "sun-saphia-pool-sea.webp",
+    "source": "User supplied Sun Saphia project imagery: image-20261027091007-5.png",
+    "bytes": 140352
+  },
+  {
+    "file": "sun-saphia-yoga.webp",
+    "source": "User supplied Sun Saphia project imagery: phong-yoga.webp",
+    "bytes": 402328
   }
 ]

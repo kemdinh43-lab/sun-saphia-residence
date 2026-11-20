@@ -12,14 +12,14 @@ Landing page HTML/CSS/JS cùng dashboard quản trị, Cloudflare Worker, D1 và
 
 ## Hero TVC và chuyên viên tư vấn
 
-Hero phát bản teaser 30 giây do người dùng cung cấp, mặc định không tiếng. Hai MP4 H.264/AAC được host cùng Static Assets: desktop 1600px khoảng 8,5 MB, mobile 960px khoảng 2,9 MB; không cần R2. Có ảnh dự phòng, điều khiển phát/tạm dừng và âm thanh; không tự tải khi bật giảm chuyển động, tiết kiệm dữ liệu hoặc mạng 2G. Video dừng khi ra khỏi khung nhìn/ẩn tab. Video hero hiện được cập nhật cùng mã nguồn, không phải qua upload của dashboard.
+Hero phát bản teaser 30 giây do người dùng cung cấp, mặc định không tiếng. Hai MP4 H.264/AAC được host cùng Static Assets: desktop 1600px khoảng 8,5 MB, mobile 960px khoảng 2,9 MB; không cần R2. Chỉ giữ tên, mô tả và vị trí căn giữa trên hero; TVC luôn tắt tiếng, có ảnh dự phòng và điều khiển tạm dừng chỉ hiện khi focus bằng bàn phím; không tự tải khi bật giảm chuyển động, tiết kiệm dữ liệu hoặc mạng 2G. Video dừng khi ra khỏi khung nhìn/ẩn tab. Video hero hiện được cập nhật cùng mã nguồn, không phải qua upload của dashboard.
 
-Trong mục Chuyên viên & đăng ký tư vấn, quản trị được tên, vai trò, giới thiệu, ba ảnh/alt và số điện thoại/Zalo của Phạm Thanh Hiếu. Liên kết gọi/Zalo được render từ số hợp lệ ở máy chủ.
+Trong mục Chuyên viên & đăng ký tư vấn, quản trị được tên, vai trò, một ảnh/alt, số điện thoại/Zalo, email và địa chỉ văn phòng tư vấn của Phạm Thanh Hiếu. Liên kết gọi/Zalo được render từ số hợp lệ ở máy chủ.
 
 ## Những gì đã có
 
 - Đăng nhập một tài khoản quản trị; mật khẩu băm PBKDF2 có salt, cookie HttpOnly, phiên 8 giờ và giới hạn thử đăng nhập.
-- Biên tập 209 trường nội dung của landing page: tiêu đề, đoạn văn, ảnh/alt, loại căn hiện có, thẻ dấu ấn/tiện ích, thư viện, video YouTube, tiến độ và SEO.
+- Biên tập 206 trường nội dung của landing page: tiêu đề, đoạn văn, ảnh/alt, loại căn hiện có, thẻ dấu ấn/tiện ích, thư viện, video YouTube, tiến độ và SEO.
 - Chọn theo 17 section thực tế trên trang (16 section cũ + mục tin tức bổ sung), gom tiêu đề, nội dung, ảnh, thẻ và thư viện vào đúng khu vực. SEO chung và popup căn hộ là thiết lập riêng.
 - Lưu bản nháp riêng, xem trước có xác thực/noindex, xuất bản một phiên bản hoàn chỉnh.
 - Module Bài viết: trình soạn trực quan tự host bằng Tiptap, H2/H3, đậm/nghiêng/gạch chân, danh sách, căn lề, trích dẫn, liên kết, ảnh/chú thích, bảng, hoàn tác/làm lại.
@@ -134,3 +134,5 @@ Integration test chạy Worker riêng ở port 8790, D1/R2 riêng dưới `.wran
 - Các ảnh tham khảo cũ còn trên landing page chưa được thay hết bằng bộ ảnh dự án. Xem `ASSET-SOURCES.json` trước khi xuất bản chính thức.
 
 Tài liệu Cloudflare: https://developers.cloudflare.com/workers/static-assets/ · https://developers.cloudflare.com/d1/ · https://developers.cloudflare.com/r2/
+
+Bộ ảnh Sun Saphia do người dùng cung cấp gồm 15 phối cảnh tòa nhà, nội thất, tầm nhìn và tiện ích; đã tối ưu WebP (~3,3 MB tổng), thay ảnh mẫu tại các section tương ứng và vẫn chỉnh được qua CMS.

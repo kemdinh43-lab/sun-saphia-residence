@@ -2,7 +2,7 @@ import schema from './content-schema.json' with { type: 'json' };
 import { HttpError } from './http.js';
 export { schema };
 export const defaults = Object.fromEntries(schema.map(field => [field.key, field.default]));
-const storedValues = value => ({ ...defaults, ...JSON.parse(value) });
+const storedValues = value => { const stored = JSON.parse(value); return Object.fromEntries(schema.map(field => [field.key, stored[field.key] ?? field.default])); };
 export function imageUrl(value) {
   if (/^(?:\/?assets\/[a-zA-Z0-9_./%()-]+|\/media\/[a-f0-9-]+\.(?:png|jpg|webp))$/.test(value)) {
     try { if (!decodeURIComponent(value).includes('..')) return true; } catch {}
@@ -28,6 +28,7 @@ export function validateContent(input) {
     if (field.type === 'image' && !imageUrl(output[field.key])) throw new HttpError(400, `${field.label}: dùng ảnh đã tải lên hoặc URL HTTPS hợp lệ.`);
     if (field.type === 'youtube' && !videoId(output[field.key])) throw new HttpError(400, 'Link YouTube không hợp lệ.');
     if (field.key === 'advisor.phone' && !/^0[0-9]{9}$/.test(output[field.key])) throw new HttpError(400, 'Số điện thoại / Zalo cần có 10 chữ số, bắt đầu bằng 0.');
+    if (field.key === 'advisor.email' && !/^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/.test(output[field.key])) throw new HttpError(400, 'Email tư vấn không hợp lệ.');
   }
   if (!output['seo.title'] || !output['seo.description']) throw new HttpError(400, 'Vui lòng nhập tiêu đề và mô tả SEO.');
   if (Object.keys(input).some(key => !Object.hasOwn(output, key))) throw new HttpError(400, 'Có trường nội dung không được hỗ trợ.');
@@ -90,6 +91,8 @@ export async function renderPage(request, env, values, preview = false, postCard
     .on('[data-cms]', { element(el) { const value = values[el.getAttribute('data-cms')]; if (typeof value === 'string') el.setInnerContent(value); } })
     .on('[data-cms-phone]', { element(el) { const phone = values[el.getAttribute('data-cms-phone')]; if (/^0[0-9]{9}$/.test(phone || '')) el.setAttribute('href', 'tel:+84' + phone.slice(1)); } })
     .on('[data-cms-zalo]', { element(el) { const phone = values[el.getAttribute('data-cms-zalo')]; if (/^0[0-9]{9}$/.test(phone || '')) el.setAttribute('href', 'https://zalo.me/' + phone); } })
+    .on('[data-cms-email]', { element(el) { const email = values[el.getAttribute('data-cms-email')]; if (/^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/.test(email || '')) el.setAttribute('href', 'mailto:' + email); } })
+    .on('[data-cms-map]', { element(el) { const address = values[el.getAttribute('data-cms-map')]; if (address) el.setAttribute('href', 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(address)); } })
     .on('[data-cms-image]', { element(el) {
       const key = el.getAttribute('data-cms-image'), src = values[key + '.src'];
       if (src) { if (src !== el.getAttribute('src')) el.removeAttribute('srcset'); el.setAttribute('src', src); }
