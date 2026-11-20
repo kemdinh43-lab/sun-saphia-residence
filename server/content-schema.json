@@ -30,31 +30,11 @@
     "group": "Video"
   },
   {
-    "key": "section.0.text.0",
-    "label": "Địa điểm",
-    "section": "Hero",
-    "type": "textarea",
-    "default": "ĐÀ NẴNG · VIỆT NAM",
-    "maxLength": 4000,
-    "sectionId": "0",
-    "group": "Tiêu đề & nội dung"
-  },
-  {
     "key": "section.0.text.1",
     "label": "Tên dự án",
     "section": "Hero",
     "type": "text",
     "default": "SUN SAPHIA\nRESIDENCE",
-    "maxLength": 4000,
-    "sectionId": "0",
-    "group": "Tiêu đề & nội dung"
-  },
-  {
-    "key": "section.0.text.2",
-    "label": "Thông điệp mở đầu",
-    "section": "Hero",
-    "type": "textarea",
-    "default": "Dấu ấn sống bên bờ biển Sơn Thủy\nĐà Nẵng, Việt Nam",
     "maxLength": 4000,
     "sectionId": "0",
     "group": "Tiêu đề & nội dung"
@@ -1084,7 +1064,7 @@
     "label": "Ảnh",
     "section": "Thẻ dấu ấn",
     "type": "image",
-    "default": "assets/sun-saphia-tower-night.webp",
+    "default": "assets/sun-saphia-tower-height.webp",
     "maxLength": 1500,
     "sectionId": "4",
     "group": "Thẻ nội dung 3"

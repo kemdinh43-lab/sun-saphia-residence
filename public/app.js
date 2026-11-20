@@ -16,7 +16,7 @@ const featureCards = [
  [
   "TÒA THÁP 114 M",
   "Công trình gồm 30 tầng nổi, 2 tầng hầm, mang đến các lựa chọn căn hộ tại nhiều tầng và hướng nhìn.",
-  "assets/sun-saphia-tower-night.webp"
+  "assets/sun-saphia-tower-height.webp"
  ],
  [
   "TRẦN CAO 3,5 M",

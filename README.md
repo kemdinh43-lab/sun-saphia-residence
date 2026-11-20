@@ -19,7 +19,7 @@ Trong mục Chuyên viên & đăng ký tư vấn, quản trị được tên, va
 ## Những gì đã có
 
 - Đăng nhập một tài khoản quản trị; mật khẩu băm PBKDF2 có salt, cookie HttpOnly, phiên 8 giờ và giới hạn thử đăng nhập.
-- Biên tập 206 trường nội dung của landing page: tiêu đề, đoạn văn, ảnh/alt, loại căn hiện có, thẻ dấu ấn/tiện ích, thư viện, video YouTube, tiến độ và SEO.
+- Biên tập 204 trường nội dung của landing page: tiêu đề, đoạn văn, ảnh/alt, loại căn hiện có, thẻ dấu ấn/tiện ích, thư viện, video YouTube, tiến độ và SEO.
 - Chọn theo 17 section thực tế trên trang (16 section cũ + mục tin tức bổ sung), gom tiêu đề, nội dung, ảnh, thẻ và thư viện vào đúng khu vực. SEO chung và popup căn hộ là thiết lập riêng.
 - Lưu bản nháp riêng, xem trước có xác thực/noindex, xuất bản một phiên bản hoàn chỉnh.
 - Module Bài viết: trình soạn trực quan tự host bằng Tiptap, H2/H3, đậm/nghiêng/gạch chân, danh sách, căn lề, trích dẫn, liên kết, ảnh/chú thích, bảng, hoàn tác/làm lại.
