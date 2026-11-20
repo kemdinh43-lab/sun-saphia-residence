@@ -390,5 +390,23 @@
     "file": "sun-saphia-tower-height.webp",
     "source": "User supplied Sun-Saphia-Residence-Cao-114m-2.jpg",
     "bytes": 195530
+  },
+  {
+    "file": "sun-saphia-waves-rotated-1280.mp4",
+    "source": "User supplied 2439510-hd_1920_1080_30fps.mp4",
+    "processing": "Frame rotated 180 degrees; forward playback; silent optimized background",
+    "bytes": 7128189
+  },
+  {
+    "file": "sun-saphia-waves-rotated-768.mp4",
+    "source": "User supplied 2439510-hd_1920_1080_30fps.mp4",
+    "processing": "Frame rotated 180 degrees; forward playback; silent optimized background",
+    "bytes": 3291632
+  },
+  {
+    "file": "sun-saphia-waves-poster.webp",
+    "source": "User supplied 2439510-hd_1920_1080_30fps.mp4",
+    "processing": "Frame rotated 180 degrees; forward playback; silent optimized background",
+    "bytes": 83070
   }
 ]

@@ -136,3 +136,5 @@ Integration test chạy Worker riêng ở port 8790, D1/R2 riêng dưới `.wran
 Tài liệu Cloudflare: https://developers.cloudflare.com/workers/static-assets/ · https://developers.cloudflare.com/d1/ · https://developers.cloudflare.com/r2/
 
 Bộ ảnh Sun Saphia do người dùng cung cấp gồm 15 phối cảnh tòa nhà, nội thất, tầm nhìn và tiện ích; đã tối ưu WebP (~3,3 MB tổng), thay ảnh mẫu tại các section tương ứng và vẫn chỉnh được qua CMS.
+
+Section giới thiệu dùng video sóng do người dùng cung cấp, xoay khung hình 180° và phát theo thời gian bình thường. Video nền tự tải khi section xuất hiện, dừng ngoài màn hình, có poster khi giảm chuyển động hoặc tiết kiệm dữ liệu; lớp phủ trắng giữ chữ rõ ràng.

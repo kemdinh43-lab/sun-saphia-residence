@@ -114,7 +114,7 @@
     "label": "Đường dẫn ảnh",
     "section": "Ảnh toàn cảnh",
     "type": "image",
-    "default": "assets/sun-saphia-aerial-day.webp",
+    "default": "assets/sun-saphia-tower-height.webp",
     "maxLength": 1000,
     "sectionId": "2",
     "group": "Hình ảnh 1"
@@ -124,7 +124,7 @@
     "label": "Mô tả ảnh (alt)",
     "section": "Ảnh toàn cảnh",
     "type": "text",
-    "default": "Phối cảnh tổng thể Sun Saphia Residence",
+    "default": "Tòa tháp Sun Saphia Residence cao 114 m, 30 tầng",
     "maxLength": 300,
     "sectionId": "2",
     "group": "Hình ảnh 1"
