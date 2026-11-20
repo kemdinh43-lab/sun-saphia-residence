@@ -408,5 +408,65 @@
     "source": "User supplied 2439510-hd_1920_1080_30fps.mp4",
     "processing": "Frame rotated 180 degrees; forward playback; silent optimized background",
     "bytes": 83070
+  },
+  {
+    "file": "sun-saphia-living-sea-grade.webp",
+    "source": "User supplied approved photo-grade: /Users/thanhtung/Downloads/SunSaphia_2K_PhotoGrade_5_Images/01_Living_SeaView_2K.webp",
+    "processing": "Original supplied WebP copied without recompression or color changes",
+    "bytes": 408250
+  },
+  {
+    "file": "sun-saphia-balcony-sea-grade.webp",
+    "source": "User supplied approved photo-grade: /Users/thanhtung/Downloads/SunSaphia_2K_PhotoGrade_5_Images/02_Balcony_SeaView_2K.webp",
+    "processing": "Original supplied WebP copied without recompression or color changes",
+    "bytes": 524922
+  },
+  {
+    "file": "sun-saphia-bedroom-city-grade.webp",
+    "source": "User supplied approved photo-grade: /Users/thanhtung/Downloads/SunSaphia_2K_PhotoGrade_5_Images/03_Bedroom_CityView_2K.webp",
+    "processing": "Original supplied WebP copied without recompression or color changes",
+    "bytes": 591998
+  },
+  {
+    "file": "sun-saphia-balcony-mountains-grade.webp",
+    "source": "User supplied approved photo-grade: /Users/thanhtung/Downloads/SunSaphia_2K_PhotoGrade_5_Images/04_Balcony_RiverView_2K.webp",
+    "processing": "Original supplied WebP copied without recompression or color changes",
+    "bytes": 518336
+  },
+  {
+    "file": "sun-saphia-bedroom-river-grade.webp",
+    "source": "User supplied approved photo-grade: /Users/thanhtung/Downloads/SunSaphia_2K_PhotoGrade_5_Images/05_Bedroom_RiverView_2K.webp",
+    "processing": "Original supplied WebP copied without recompression or color changes",
+    "bytes": 408158
+  },
+  {
+    "file": "sun-saphia-gym-grade.webp",
+    "source": "User supplied approved photo-grade: /Users/thanhtung/Downloads/SunSaphia_Website_Grade_5_Images/SunSaphia_Gym_Web.webp",
+    "processing": "Original supplied WebP copied without recompression or color changes",
+    "bytes": 168790
+  },
+  {
+    "file": "sun-saphia-indoor-pool-grade.webp",
+    "source": "User supplied approved photo-grade: /Users/thanhtung/Downloads/SunSaphia_Website_Grade_5_Images/SunSaphia_IndoorPool_Web.webp",
+    "processing": "Original supplied WebP copied without recompression or color changes",
+    "bytes": 244392
+  },
+  {
+    "file": "sun-saphia-living-interior-grade.webp",
+    "source": "User supplied approved photo-grade: /Users/thanhtung/Downloads/SunSaphia_Website_Grade_5_Images/SunSaphia_LivingRoom_Web.webp",
+    "processing": "Original supplied WebP copied without recompression or color changes",
+    "bytes": 128456
+  },
+  {
+    "file": "sun-saphia-tower-height-grade.webp",
+    "source": "User supplied approved photo-grade: /Users/thanhtung/Downloads/SunSaphia_Website_Grade_5_Images/SunSaphia_Tower114m_Web.webp",
+    "processing": "Original supplied WebP copied without recompression or color changes",
+    "bytes": 239100
+  },
+  {
+    "file": "sun-saphia-yoga-grade.webp",
+    "source": "User supplied approved photo-grade: /Users/thanhtung/Downloads/SunSaphia_Website_Grade_5_Images/SunSaphia_Yoga_Web.webp",
+    "processing": "Original supplied WebP copied without recompression or color changes",
+    "bytes": 509498
   }
 ]

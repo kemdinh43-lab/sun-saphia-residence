@@ -16,12 +16,12 @@ const featureCards = [
  [
   "TÒA THÁP 114 M",
   "Công trình gồm 30 tầng nổi, 2 tầng hầm, mang đến các lựa chọn căn hộ tại nhiều tầng và hướng nhìn.",
-  "assets/sun-saphia-tower-height.webp"
+  "assets/sun-saphia-tower-height-grade.webp"
  ],
  [
   "TRẦN CAO 3,5 M",
   "Tạo cảm giác rộng mở, thoáng đãng và tăng khả năng đón ánh sáng tự nhiên.",
-  "assets/sun-saphia-living-sea.webp"
+  "assets/sun-saphia-living-sea-grade.webp"
  ],
  [
   "782 SẢN PHẨM",
@@ -31,22 +31,22 @@ const featureCards = [
  [
   "CHĂM SÓC SỨC KHỎE",
   "Bể bơi hướng biển, phòng gym, yoga và pilates.",
-  "assets/sun-saphia-gym.webp"
+  "assets/sun-saphia-gym-grade.webp"
  ],
  [
   "CĂN HỘ STUDIO",
   "Diện tích 30 m², với các lựa chọn hướng thành phố, cánh bên hoặc mặt trước hướng biển tùy mã căn.",
-  "assets/sun-saphia-bedroom-city.webp"
+  "assets/sun-saphia-bedroom-city-grade.webp"
  ],
  [
   "CĂN HỘ 1BR+",
   "Diện tích 50–51 m², với không gian sinh hoạt linh hoạt cho cặp đôi hoặc gia đình nhỏ.",
-  "assets/sun-saphia-living-interior.webp"
+  "assets/sun-saphia-living-interior-grade.webp"
  ],
  [
   "CĂN HỘ 2BR",
   "Diện tích 60–70 m², với hai phòng ngủ và không gian sinh hoạt chung.",
-  "assets/sun-saphia-bedroom-river.webp"
+  "assets/sun-saphia-bedroom-river-grade.webp"
  ],
  [
   "BỘ SƯU TẬP ĐẶC BIỆT",
@@ -56,7 +56,7 @@ const featureCards = [
  [
   "BÀN GIAO DỰ KIẾN",
   "Dự kiến tháng 11/2028 theo tiêu chuẩn hoàn thiện cơ bản.",
-  "assets/sun-saphia-living-interior.webp"
+  "assets/sun-saphia-living-interior-grade.webp"
  ]
 ];
 const amenityCards = [
@@ -68,34 +68,34 @@ const amenityCards = [
  [
   "PHÒNG GYM",
   "Phối cảnh phòng gym phục vụ nhu cầu rèn luyện sức khỏe mỗi ngày.",
-  "assets/sun-saphia-gym.webp"
+  "assets/sun-saphia-gym-grade.webp"
  ],
  [
   "KHÔNG GIAN YOGA",
   "Phối cảnh phòng yoga với ánh sáng tự nhiên và không gian thư giãn.",
-  "assets/sun-saphia-yoga.webp"
+  "assets/sun-saphia-yoga-grade.webp"
  ],
  [
   "BỂ BƠI TRONG NHÀ",
   "Phối cảnh không gian bể bơi trong nhà, kết hợp cây xanh và khu ghế nghỉ.",
-  "assets/sun-saphia-indoor-pool.webp"
+  "assets/sun-saphia-indoor-pool-grade.webp"
  ],
  [
   "GÓC NHÌN BIỂN TỪ CĂN HỘ",
   "Phối cảnh tầm nhìn từ ban công hướng biển. Hướng nhìn thay đổi theo tầng và vị trí căn hộ.",
-  "assets/sun-saphia-balcony-sea.webp"
+  "assets/sun-saphia-balcony-sea-grade.webp"
  ],
  [
   "GÓC NHÌN NGŨ HÀNH SƠN",
   "Phối cảnh tầm nhìn từ ban công về Ngũ Hành Sơn và cảnh quan xung quanh.",
-  "assets/sun-saphia-balcony-mountains.webp"
+  "assets/sun-saphia-balcony-mountains-grade.webp"
  ]
 ];
 const galleryCards = [
  [
   "PHÒNG GYM",
   "Hình ảnh phối cảnh minh họa.",
-  "assets/sun-saphia-gym.webp"
+  "assets/sun-saphia-gym-grade.webp"
  ],
  [
   "BỂ BƠI HƯỚNG BIỂN",
@@ -105,42 +105,42 @@ const galleryCards = [
  [
   "BỂ BƠI TRONG NHÀ",
   "Hình ảnh phối cảnh minh họa.",
-  "assets/sun-saphia-indoor-pool.webp"
+  "assets/sun-saphia-indoor-pool-grade.webp"
  ],
  [
   "KHÔNG GIAN YOGA",
   "Hình ảnh phối cảnh minh họa.",
-  "assets/sun-saphia-yoga.webp"
+  "assets/sun-saphia-yoga-grade.webp"
  ],
  [
   "PHÒNG KHÁCH HƯỚNG BIỂN",
   "Hình ảnh phối cảnh minh họa.",
-  "assets/sun-saphia-living-sea.webp"
+  "assets/sun-saphia-living-sea-grade.webp"
  ],
  [
   "BAN CÔNG HƯỚNG BIỂN",
   "Hình ảnh phối cảnh minh họa.",
-  "assets/sun-saphia-balcony-sea.webp"
+  "assets/sun-saphia-balcony-sea-grade.webp"
  ],
  [
   "GÓC NHÌN NGŨ HÀNH SƠN",
   "Hình ảnh phối cảnh minh họa.",
-  "assets/sun-saphia-balcony-mountains.webp"
+  "assets/sun-saphia-balcony-mountains-grade.webp"
  ],
  [
   "NỘI THẤT CĂN HỘ",
   "Hình ảnh phối cảnh minh họa.",
-  "assets/sun-saphia-living-interior.webp"
+  "assets/sun-saphia-living-interior-grade.webp"
  ],
  [
   "PHÒNG NGỦ HƯỚNG THÀNH PHỐ",
   "Hình ảnh phối cảnh minh họa.",
-  "assets/sun-saphia-bedroom-city.webp"
+  "assets/sun-saphia-bedroom-city-grade.webp"
  ],
  [
   "PHÒNG NGỦ HƯỚNG SÔNG",
   "Hình ảnh phối cảnh minh họa.",
-  "assets/sun-saphia-bedroom-river.webp"
+  "assets/sun-saphia-bedroom-river-grade.webp"
  ]
 ];
 const points = {

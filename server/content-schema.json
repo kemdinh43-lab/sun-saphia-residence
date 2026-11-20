@@ -114,7 +114,7 @@
     "label": "Đường dẫn ảnh",
     "section": "Ảnh toàn cảnh",
     "type": "image",
-    "default": "assets/sun-saphia-tower-height.webp",
+    "default": "assets/sun-saphia-tower-height-grade.webp",
     "maxLength": 1000,
     "sectionId": "2",
     "group": "Hình ảnh 1"
@@ -354,7 +354,7 @@
     "label": "Đường dẫn ảnh",
     "section": "Vị trí",
     "type": "image",
-    "default": "assets/sun-saphia-balcony-sea.webp",
+    "default": "assets/sun-saphia-balcony-sea-grade.webp",
     "maxLength": 1000,
     "sectionId": "6",
     "group": "Hình ảnh 1"
@@ -384,7 +384,7 @@
     "label": "Đường dẫn ảnh",
     "section": "Phong cách sống",
     "type": "image",
-    "default": "assets/sun-saphia-bedroom-city.webp",
+    "default": "assets/sun-saphia-bedroom-city-grade.webp",
     "maxLength": 1000,
     "sectionId": "7",
     "group": "Hình ảnh 1"
@@ -404,7 +404,7 @@
     "label": "Đường dẫn ảnh",
     "section": "Phong cách sống",
     "type": "image",
-    "default": "assets/sun-saphia-living-sea.webp",
+    "default": "assets/sun-saphia-living-sea-grade.webp",
     "maxLength": 1000,
     "sectionId": "7",
     "group": "Hình ảnh 2"
@@ -544,7 +544,7 @@
     "label": "Đường dẫn ảnh",
     "section": "Giá trị sở hữu",
     "type": "image",
-    "default": "assets/sun-saphia-living-interior.webp",
+    "default": "assets/sun-saphia-living-interior-grade.webp",
     "maxLength": 1000,
     "sectionId": "9",
     "group": "Hình ảnh 1"
@@ -634,7 +634,7 @@
     "label": "Đường dẫn ảnh",
     "section": "Không gian thư giãn",
     "type": "image",
-    "default": "assets/sun-saphia-yoga.webp",
+    "default": "assets/sun-saphia-yoga-grade.webp",
     "maxLength": 1000,
     "sectionId": "11",
     "group": "Hình ảnh 1"
@@ -654,7 +654,7 @@
     "label": "Đường dẫn ảnh",
     "section": "Không gian thư giãn",
     "type": "image",
-    "default": "assets/sun-saphia-indoor-pool.webp",
+    "default": "assets/sun-saphia-indoor-pool-grade.webp",
     "maxLength": 1000,
     "sectionId": "11",
     "group": "Hình ảnh 2"
@@ -1064,7 +1064,7 @@
     "label": "Ảnh",
     "section": "Thẻ dấu ấn",
     "type": "image",
-    "default": "assets/sun-saphia-tower-height.webp",
+    "default": "assets/sun-saphia-tower-height-grade.webp",
     "maxLength": 1500,
     "sectionId": "4",
     "group": "Thẻ nội dung 3"
@@ -1094,7 +1094,7 @@
     "label": "Ảnh",
     "section": "Thẻ dấu ấn",
     "type": "image",
-    "default": "assets/sun-saphia-living-sea.webp",
+    "default": "assets/sun-saphia-living-sea-grade.webp",
     "maxLength": 1500,
     "sectionId": "4",
     "group": "Thẻ nội dung 4"
@@ -1154,7 +1154,7 @@
     "label": "Ảnh",
     "section": "Thẻ dấu ấn",
     "type": "image",
-    "default": "assets/sun-saphia-gym.webp",
+    "default": "assets/sun-saphia-gym-grade.webp",
     "maxLength": 1500,
     "sectionId": "4",
     "group": "Thẻ nội dung 6"
@@ -1184,7 +1184,7 @@
     "label": "Ảnh",
     "section": "Thẻ dấu ấn",
     "type": "image",
-    "default": "assets/sun-saphia-bedroom-city.webp",
+    "default": "assets/sun-saphia-bedroom-city-grade.webp",
     "maxLength": 1500,
     "sectionId": "4",
     "group": "Thẻ nội dung 7"
@@ -1214,7 +1214,7 @@
     "label": "Ảnh",
     "section": "Thẻ dấu ấn",
     "type": "image",
-    "default": "assets/sun-saphia-living-interior.webp",
+    "default": "assets/sun-saphia-living-interior-grade.webp",
     "maxLength": 1500,
     "sectionId": "4",
     "group": "Thẻ nội dung 8"
@@ -1244,7 +1244,7 @@
     "label": "Ảnh",
     "section": "Thẻ dấu ấn",
     "type": "image",
-    "default": "assets/sun-saphia-bedroom-river.webp",
+    "default": "assets/sun-saphia-bedroom-river-grade.webp",
     "maxLength": 1500,
     "sectionId": "4",
     "group": "Thẻ nội dung 9"
@@ -1304,7 +1304,7 @@
     "label": "Ảnh",
     "section": "Thẻ dấu ấn",
     "type": "image",
-    "default": "assets/sun-saphia-living-interior.webp",
+    "default": "assets/sun-saphia-living-interior-grade.webp",
     "maxLength": 1500,
     "sectionId": "4",
     "group": "Thẻ nội dung 11"
@@ -1364,7 +1364,7 @@
     "label": "Ảnh",
     "section": "Thẻ tiện ích",
     "type": "image",
-    "default": "assets/sun-saphia-gym.webp",
+    "default": "assets/sun-saphia-gym-grade.webp",
     "maxLength": 1500,
     "sectionId": "12",
     "group": "Thẻ nội dung 2"
@@ -1394,7 +1394,7 @@
     "label": "Ảnh",
     "section": "Thẻ tiện ích",
     "type": "image",
-    "default": "assets/sun-saphia-yoga.webp",
+    "default": "assets/sun-saphia-yoga-grade.webp",
     "maxLength": 1500,
     "sectionId": "12",
     "group": "Thẻ nội dung 3"
@@ -1424,7 +1424,7 @@
     "label": "Ảnh",
     "section": "Thẻ tiện ích",
     "type": "image",
-    "default": "assets/sun-saphia-indoor-pool.webp",
+    "default": "assets/sun-saphia-indoor-pool-grade.webp",
     "maxLength": 1500,
     "sectionId": "12",
     "group": "Thẻ nội dung 4"
@@ -1454,7 +1454,7 @@
     "label": "Ảnh",
     "section": "Thẻ tiện ích",
     "type": "image",
-    "default": "assets/sun-saphia-balcony-sea.webp",
+    "default": "assets/sun-saphia-balcony-sea-grade.webp",
     "maxLength": 1500,
     "sectionId": "12",
     "group": "Thẻ nội dung 5"
@@ -1484,7 +1484,7 @@
     "label": "Ảnh",
     "section": "Thẻ tiện ích",
     "type": "image",
-    "default": "assets/sun-saphia-balcony-mountains.webp",
+    "default": "assets/sun-saphia-balcony-mountains-grade.webp",
     "maxLength": 1500,
     "sectionId": "12",
     "group": "Thẻ nội dung 6"
@@ -1514,7 +1514,7 @@
     "label": "Ảnh",
     "section": "Thư viện hình ảnh",
     "type": "image",
-    "default": "assets/sun-saphia-gym.webp",
+    "default": "assets/sun-saphia-gym-grade.webp",
     "maxLength": 1500,
     "sectionId": "13",
     "group": "Ảnh thư viện 1"
@@ -1574,7 +1574,7 @@
     "label": "Ảnh",
     "section": "Thư viện hình ảnh",
     "type": "image",
-    "default": "assets/sun-saphia-indoor-pool.webp",
+    "default": "assets/sun-saphia-indoor-pool-grade.webp",
     "maxLength": 1500,
     "sectionId": "13",
     "group": "Ảnh thư viện 3"
@@ -1604,7 +1604,7 @@
     "label": "Ảnh",
     "section": "Thư viện hình ảnh",
     "type": "image",
-    "default": "assets/sun-saphia-yoga.webp",
+    "default": "assets/sun-saphia-yoga-grade.webp",
     "maxLength": 1500,
     "sectionId": "13",
     "group": "Ảnh thư viện 4"
@@ -1634,7 +1634,7 @@
     "label": "Ảnh",
     "section": "Thư viện hình ảnh",
     "type": "image",
-    "default": "assets/sun-saphia-living-sea.webp",
+    "default": "assets/sun-saphia-living-sea-grade.webp",
     "maxLength": 1500,
     "sectionId": "13",
     "group": "Ảnh thư viện 5"
@@ -1664,7 +1664,7 @@
     "label": "Ảnh",
     "section": "Thư viện hình ảnh",
     "type": "image",
-    "default": "assets/sun-saphia-balcony-sea.webp",
+    "default": "assets/sun-saphia-balcony-sea-grade.webp",
     "maxLength": 1500,
     "sectionId": "13",
     "group": "Ảnh thư viện 6"
@@ -1694,7 +1694,7 @@
     "label": "Ảnh",
     "section": "Thư viện hình ảnh",
     "type": "image",
-    "default": "assets/sun-saphia-balcony-mountains.webp",
+    "default": "assets/sun-saphia-balcony-mountains-grade.webp",
     "maxLength": 1500,
     "sectionId": "13",
     "group": "Ảnh thư viện 7"
@@ -1724,7 +1724,7 @@
     "label": "Ảnh",
     "section": "Thư viện hình ảnh",
     "type": "image",
-    "default": "assets/sun-saphia-living-interior.webp",
+    "default": "assets/sun-saphia-living-interior-grade.webp",
     "maxLength": 1500,
     "sectionId": "13",
     "group": "Ảnh thư viện 8"
@@ -1754,7 +1754,7 @@
     "label": "Ảnh",
     "section": "Thư viện hình ảnh",
     "type": "image",
-    "default": "assets/sun-saphia-bedroom-city.webp",
+    "default": "assets/sun-saphia-bedroom-city-grade.webp",
     "maxLength": 1500,
     "sectionId": "13",
     "group": "Ảnh thư viện 9"
@@ -1784,7 +1784,7 @@
     "label": "Ảnh",
     "section": "Thư viện hình ảnh",
     "type": "image",
-    "default": "assets/sun-saphia-bedroom-river.webp",
+    "default": "assets/sun-saphia-bedroom-river-grade.webp",
     "maxLength": 1500,
     "sectionId": "13",
     "group": "Ảnh thư viện 10"
