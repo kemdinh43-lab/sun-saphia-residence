@@ -468,5 +468,35 @@
     "source": "User supplied approved photo-grade: /Users/thanhtung/Downloads/SunSaphia_Website_Grade_5_Images/SunSaphia_Yoga_Web.webp",
     "processing": "Original supplied WebP copied without recompression or color changes",
     "bytes": 509498
+  },
+  {
+    "file": "sun-saphia-aerial-day-natural-v2.webp",
+    "source": "User supplied natural grade V2: /Users/thanhtung/Downloads/SunSaphia_Natural_Grade_5_PNG_WebP_V2/S01_Aerial_Daylight_Website.webp",
+    "processing": "Original supplied WebP copied without recompression or color changes",
+    "bytes": 436384
+  },
+  {
+    "file": "sun-saphia-podium-natural-v2.webp",
+    "source": "User supplied natural grade V2: /Users/thanhtung/Downloads/SunSaphia_Natural_Grade_5_PNG_WebP_V2/S02_Podium_Twilight_Website.webp",
+    "processing": "Original supplied WebP copied without recompression or color changes",
+    "bytes": 374604
+  },
+  {
+    "file": "sun-saphia-tower-bluehour-natural-v2.webp",
+    "source": "User supplied natural grade V2: /Users/thanhtung/Downloads/SunSaphia_Natural_Grade_5_PNG_WebP_V2/S03_Tower_BlueHour_Website.webp",
+    "processing": "Original supplied WebP copied without recompression or color changes",
+    "bytes": 382748
+  },
+  {
+    "file": "sun-saphia-tower-night-natural-v2.webp",
+    "source": "User supplied natural grade V2: /Users/thanhtung/Downloads/SunSaphia_Natural_Grade_5_PNG_WebP_V2/S04_Tower_Night_Website.webp",
+    "processing": "Original supplied WebP copied without recompression or color changes",
+    "bytes": 320540
+  },
+  {
+    "file": "sun-saphia-aerial-night-natural-v2.webp",
+    "source": "User supplied natural grade V2: /Users/thanhtung/Downloads/SunSaphia_Natural_Grade_5_PNG_WebP_V2/S05_Aerial_Night_Website.webp",
+    "processing": "Original supplied WebP copied without recompression or color changes",
+    "bytes": 351142
   }
 ]

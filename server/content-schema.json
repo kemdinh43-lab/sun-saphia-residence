@@ -44,7 +44,7 @@
     "label": "Đường dẫn ảnh",
     "section": "Hero",
     "type": "image",
-    "default": "assets/sun-saphia-hero-panorama-1916.webp",
+    "default": "assets/sun-saphia-aerial-day-natural-v2.webp",
     "maxLength": 1000,
     "sectionId": "0",
     "group": "Hình ảnh 1"
@@ -164,7 +164,7 @@
     "label": "Đường dẫn ảnh",
     "section": "Kiến trúc",
     "type": "image",
-    "default": "assets/sun-saphia-tower-day.webp",
+    "default": "assets/sun-saphia-tower-bluehour-natural-v2.webp",
     "maxLength": 1000,
     "sectionId": "3",
     "group": "Hình ảnh 1"
@@ -184,7 +184,7 @@
     "label": "Đường dẫn ảnh",
     "section": "Kiến trúc",
     "type": "image",
-    "default": "assets/sun-saphia-podium.webp",
+    "default": "assets/sun-saphia-podium-natural-v2.webp",
     "maxLength": 1000,
     "sectionId": "3",
     "group": "Hình ảnh 2"
@@ -204,7 +204,7 @@
     "label": "Đường dẫn ảnh",
     "section": "Kiến trúc",
     "type": "image",
-    "default": "assets/sun-saphia-tower-night.webp",
+    "default": "assets/sun-saphia-tower-night-natural-v2.webp",
     "maxLength": 1000,
     "sectionId": "3",
     "group": "Hình ảnh 3"
@@ -264,7 +264,7 @@
     "label": "Đường dẫn ảnh",
     "section": "Phim dự án",
     "type": "image",
-    "default": "assets/sun-saphia-hero-panorama-1440.webp",
+    "default": "assets/sun-saphia-aerial-day-natural-v2.webp",
     "maxLength": 1000,
     "sectionId": "5",
     "group": "Hình ảnh 1"
@@ -794,7 +794,7 @@
     "label": "Đường dẫn ảnh",
     "section": "Thông tin dự án",
     "type": "image",
-    "default": "assets/sun-saphia-podium.webp",
+    "default": "assets/sun-saphia-podium-natural-v2.webp",
     "maxLength": 1000,
     "sectionId": "14",
     "group": "Hình ảnh 1"
@@ -814,7 +814,7 @@
     "label": "Đường dẫn ảnh",
     "section": "Thông tin dự án",
     "type": "image",
-    "default": "assets/sun-saphia-tower-day.webp",
+    "default": "assets/sun-saphia-tower-bluehour-natural-v2.webp",
     "maxLength": 1000,
     "sectionId": "14",
     "group": "Hình ảnh 2"
@@ -834,7 +834,7 @@
     "label": "Đường dẫn ảnh",
     "section": "Thông tin dự án",
     "type": "image",
-    "default": "assets/sun-saphia-aerial-night.webp",
+    "default": "assets/sun-saphia-aerial-night-natural-v2.webp",
     "maxLength": 1000,
     "sectionId": "14",
     "group": "Hình ảnh 3"
@@ -1004,7 +1004,7 @@
     "label": "Ảnh",
     "section": "Thẻ dấu ấn",
     "type": "image",
-    "default": "assets/sun-saphia-aerial-day.webp",
+    "default": "assets/sun-saphia-aerial-day-natural-v2.webp",
     "maxLength": 1500,
     "sectionId": "4",
     "group": "Thẻ nội dung 1"
@@ -1034,7 +1034,7 @@
     "label": "Ảnh",
     "section": "Thẻ dấu ấn",
     "type": "image",
-    "default": "assets/sun-saphia-tower-day.webp",
+    "default": "assets/sun-saphia-tower-bluehour-natural-v2.webp",
     "maxLength": 1500,
     "sectionId": "4",
     "group": "Thẻ nội dung 2"
@@ -1124,7 +1124,7 @@
     "label": "Ảnh",
     "section": "Thẻ dấu ấn",
     "type": "image",
-    "default": "assets/sun-saphia-aerial-night.webp",
+    "default": "assets/sun-saphia-aerial-night-natural-v2.webp",
     "maxLength": 1500,
     "sectionId": "4",
     "group": "Thẻ nội dung 5"
@@ -1274,7 +1274,7 @@
     "label": "Ảnh",
     "section": "Thẻ dấu ấn",
     "type": "image",
-    "default": "assets/sun-saphia-podium.webp",
+    "default": "assets/sun-saphia-podium-natural-v2.webp",
     "maxLength": 1500,
     "sectionId": "4",
     "group": "Thẻ nội dung 10"

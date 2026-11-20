@@ -6,12 +6,12 @@ const featureCards = [
  [
   "VỊ TRÍ VEN BIỂN",
   "Nằm tại giao lộ Nguyễn Đức Thuận – Trường Sa, gần bãi tắm Sơn Thủy và công viên công cộng phía trước.",
-  "assets/sun-saphia-aerial-day.webp"
+  "assets/sun-saphia-aerial-day-natural-v2.webp"
  ],
  [
   "KIẾN TRÚC APSARA",
   "Mặt đứng với những đường cong lấy cảm hứng từ vũ điệu và di sản Chăm Pa.",
-  "assets/sun-saphia-tower-day.webp"
+  "assets/sun-saphia-tower-bluehour-natural-v2.webp"
  ],
  [
   "TÒA THÁP 114 M",
@@ -26,7 +26,7 @@ const featureCards = [
  [
   "782 SẢN PHẨM",
   "Bao gồm Studio, 1BR+, 2BR, shophouse khối đế, duplex và penthouse.",
-  "assets/sun-saphia-aerial-night.webp"
+  "assets/sun-saphia-aerial-night-natural-v2.webp"
  ],
  [
   "CHĂM SÓC SỨC KHỎE",
@@ -51,7 +51,7 @@ const featureCards = [
  [
   "BỘ SƯU TẬP ĐẶC BIỆT",
   "Duplex, penthouse và shophouse khối đế bổ sung lựa chọn về không gian và công năng.",
-  "assets/sun-saphia-podium.webp"
+  "assets/sun-saphia-podium-natural-v2.webp"
  ],
  [
   "BÀN GIAO DỰ KIẾN",
