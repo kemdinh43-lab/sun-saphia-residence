@@ -9,6 +9,8 @@ test('Content accepts the existing site and rejects unsafe image/video sources',
   assert.throws(() => validateContent({ ...defaults, unauthorized: 'value' }));
   assert.equal(videoId('https://youtu.be/dU6ceuNIdXI'), 'dU6ceuNIdXI');
   assert.equal(videoId('https://www.youtube.com/watch?v=dU6ceuNIdXI'), 'dU6ceuNIdXI');
+  assert.throws(() => validateContent({ ...defaults, 'advisor.phone': 'javascript:alert(1)' }));
+  assert.equal(validateContent({ ...defaults, 'advisor.phone': '0818188885' })['advisor.phone'], '0818188885');
 });
 test('Embedded content cannot break out of its JSON script', () => {
   const attack = '</script><script>alert("x")</script>';

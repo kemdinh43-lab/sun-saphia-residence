@@ -36,10 +36,11 @@ test('Worker: authentication, private drafts, preview, atomic publication, media
     let content=await (await request('/api/admin/content')).json();assert(content.schema.length>100);const original={...content.values};
     const baseline=await (await request('/')).text();assert(baseline.includes('Sun Saphia Residence'));
     const key=content.schema.find(field=>field.section==='Hero'&&field.type==='text').key;
-    const marker='BẢN NHÁP KIỂM TRA '+crypto.randomUUID();const changed={...original,[key]:marker,'seo.title':'Tiêu đề thử nghiệm'};
+    const marker='BẢN NHÁP KIỂM TRA '+crypto.randomUUID();const changed={...original,[key]:marker,'seo.title':'Tiêu đề thử nghiệm','advisor.phone':'0901234567'};
     const save=await request('/api/admin/draft','PUT',{values:changed,version:content.version});assert.equal(save.status,200);const saved=await save.json();
     assert(!(await (await request('/')).text()).includes(marker),'Draft must never leak into public HTML');
     const preview=await request('/preview');assert.equal(preview.status,200);assert(preview.headers.get('x-robots-tag').includes('noindex'));assert(preview.headers.get('cache-control').includes('no-store'));assert((await preview.text()).includes(marker));
+    const phonePreview=await (await request('/preview')).text();assert(phonePreview.includes('href="tel:+84901234567"'));assert(phonePreview.includes('href="https://zalo.me/0901234567"'));
     assert.equal((await request('/api/admin/draft','PUT',{values:original,version:content.version})).status,409,'Stale editor cannot overwrite a newer draft');
     assert.equal((await request('/api/admin/publish','POST',{draftId:saved.draftId,version:content.version})).status,409,'Stale version cannot publish');
     assert.equal((await request('/api/admin/publish','POST',saved)).status,200);

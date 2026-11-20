@@ -27,6 +27,7 @@ export function validateContent(input) {
     output[field.key] = value.trim();
     if (field.type === 'image' && !imageUrl(output[field.key])) throw new HttpError(400, `${field.label}: dùng ảnh đã tải lên hoặc URL HTTPS hợp lệ.`);
     if (field.type === 'youtube' && !videoId(output[field.key])) throw new HttpError(400, 'Link YouTube không hợp lệ.');
+    if (field.key === 'advisor.phone' && !/^0[0-9]{9}$/.test(output[field.key])) throw new HttpError(400, 'Số điện thoại / Zalo cần có 10 chữ số, bắt đầu bằng 0.');
   }
   if (!output['seo.title'] || !output['seo.description']) throw new HttpError(400, 'Vui lòng nhập tiêu đề và mô tả SEO.');
   if (Object.keys(input).some(key => !Object.hasOwn(output, key))) throw new HttpError(400, 'Có trường nội dung không được hỗ trợ.');
@@ -87,6 +88,8 @@ export async function renderPage(request, env, values, preview = false, postCard
     .on('#landing-posts', { element(el) { el.setInnerContent(postCards,{html:true}); } })
     .on('body', { element(el) { if (preview) { el.setAttribute('data-preview', 'true'); el.prepend('<div class="cms-preview-bar">Bản nháp riêng tư · <a href="/admin/">Về trang quản trị</a></div>', { html: true }); } } })
     .on('[data-cms]', { element(el) { const value = values[el.getAttribute('data-cms')]; if (typeof value === 'string') el.setInnerContent(value); } })
+    .on('[data-cms-phone]', { element(el) { const phone = values[el.getAttribute('data-cms-phone')]; if (/^0[0-9]{9}$/.test(phone || '')) el.setAttribute('href', 'tel:+84' + phone.slice(1)); } })
+    .on('[data-cms-zalo]', { element(el) { const phone = values[el.getAttribute('data-cms-zalo')]; if (/^0[0-9]{9}$/.test(phone || '')) el.setAttribute('href', 'https://zalo.me/' + phone); } })
     .on('[data-cms-image]', { element(el) {
       const key = el.getAttribute('data-cms-image'), src = values[key + '.src'];
       if (src) { if (src !== el.getAttribute('src')) el.removeAttribute('srcset'); el.setAttribute('src', src); }

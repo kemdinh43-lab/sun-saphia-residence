@@ -278,5 +278,37 @@
     "file": "6694306bd284a8bb49ff7499_Patterns3.svg",
     "url": "https://c.animaapp.com/d71ZXbeKRZZ7f1I0QiDROw/assets/6694306bd284a8bb49ff7499_Patterns3.svg",
     "bytes": 388881
+  },
+  {
+    "file": "sun-saphia-tvc-1600.mp4",
+    "source": "User-provided public Drive folder; Sun-Saphia-Teaser2-10.17.mov",
+    "url": "https://drive.google.com/file/d/12kV3zSMYyySHQLLfUQuozJ6HEC9hqFbB/view",
+    "processing": "H.264/AAC MP4, faststart; original 30-second duration retained",
+    "bytes": 8946539
+  },
+  {
+    "file": "sun-saphia-tvc-960.mp4",
+    "source": "User-provided public Drive folder; Sun-Saphia-Teaser2-10.17.mov",
+    "url": "https://drive.google.com/file/d/12kV3zSMYyySHQLLfUQuozJ6HEC9hqFbB/view",
+    "processing": "H.264/AAC MP4, faststart; original 30-second duration retained",
+    "bytes": 3032852
+  },
+  {
+    "file": "pham-thanh-hieu-front.webp",
+    "source": "User-supplied portrait photograph of Phạm Thanh Hiếu",
+    "processing": "Resized and WebP compressed; no generative retouching",
+    "bytes": 52966
+  },
+  {
+    "file": "pham-thanh-hieu-seated.webp",
+    "source": "User-supplied portrait photograph of Phạm Thanh Hiếu",
+    "processing": "Resized and WebP compressed; no generative retouching",
+    "bytes": 52072
+  },
+  {
+    "file": "pham-thanh-hieu-portrait.webp",
+    "source": "User-supplied portrait photograph of Phạm Thanh Hiếu",
+    "processing": "Resized and WebP compressed; no generative retouching",
+    "bytes": 44558
   }
 ]

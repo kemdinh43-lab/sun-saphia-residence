@@ -10,10 +10,16 @@ Landing page HTML/CSS/JS cùng dashboard quản trị, Cloudflare Worker, D1 và
 - Chưa kích hoạt R2. Sửa nội dung, viết bài, xuất bản và quản lý yêu cầu tư vấn dùng D1; tải ảnh mới đang tạm tắt.
 - Thông tin đăng nhập được bàn giao riêng, không nằm trong repository hoặc gói source.
 
+## Hero TVC và chuyên viên tư vấn
+
+Hero phát bản teaser 30 giây do người dùng cung cấp, mặc định không tiếng. Hai MP4 H.264/AAC được host cùng Static Assets: desktop 1600px khoảng 8,5 MB, mobile 960px khoảng 2,9 MB; không cần R2. Có ảnh dự phòng, điều khiển phát/tạm dừng và âm thanh; không tự tải khi bật giảm chuyển động, tiết kiệm dữ liệu hoặc mạng 2G. Video dừng khi ra khỏi khung nhìn/ẩn tab. Video hero hiện được cập nhật cùng mã nguồn, không phải qua upload của dashboard.
+
+Trong mục Chuyên viên & đăng ký tư vấn, quản trị được tên, vai trò, giới thiệu, ba ảnh/alt và số điện thoại/Zalo của Phạm Thanh Hiếu. Liên kết gọi/Zalo được render từ số hợp lệ ở máy chủ.
+
 ## Những gì đã có
 
 - Đăng nhập một tài khoản quản trị; mật khẩu băm PBKDF2 có salt, cookie HttpOnly, phiên 8 giờ và giới hạn thử đăng nhập.
-- Biên tập 199 trường nội dung của landing page: tiêu đề, đoạn văn, ảnh/alt, loại căn hiện có, thẻ dấu ấn/tiện ích, thư viện, video YouTube, tiến độ và SEO.
+- Biên tập 209 trường nội dung của landing page: tiêu đề, đoạn văn, ảnh/alt, loại căn hiện có, thẻ dấu ấn/tiện ích, thư viện, video YouTube, tiến độ và SEO.
 - Chọn theo 17 section thực tế trên trang (16 section cũ + mục tin tức bổ sung), gom tiêu đề, nội dung, ảnh, thẻ và thư viện vào đúng khu vực. SEO chung và popup căn hộ là thiết lập riêng.
 - Lưu bản nháp riêng, xem trước có xác thực/noindex, xuất bản một phiên bản hoàn chỉnh.
 - Module Bài viết: trình soạn trực quan tự host bằng Tiptap, H2/H3, đậm/nghiêng/gạch chân, danh sách, căn lề, trích dẫn, liên kết, ảnh/chú thích, bảng, hoàn tác/làm lại.

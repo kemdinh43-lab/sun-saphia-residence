@@ -4,7 +4,7 @@
     "title": "Hero · Mở đầu",
     "anchor": "cms-section-0",
     "imageKey": "section.0.image.0.src",
-    "description": "Tên dự án, địa điểm, thông điệp mở đầu và ảnh nền hero."
+    "description": "Tiêu đề, nội dung mở đầu và ảnh dự phòng cho TVC. Video được tối ưu và cập nhật cùng mã nguồn."
   },
   {
     "id": "1",
@@ -113,10 +113,10 @@
   },
   {
     "id": "15",
-    "title": "Đăng ký tư vấn",
+    "title": "Chuyên viên & đăng ký tư vấn",
     "anchor": "Contact-us",
     "imageKey": null,
-    "description": "Tiêu đề và nội dung giới thiệu của biểu mẫu đăng ký tư vấn."
+    "description": "Ảnh, tên, giới thiệu chuyên viên, số gọi/Zalo và nội dung biểu mẫu đăng ký."
   },
   {
     "id": "seo",

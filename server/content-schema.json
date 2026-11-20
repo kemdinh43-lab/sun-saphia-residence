@@ -1988,5 +1988,105 @@
     "type": "text",
     "default": "CÂU CHUYỆN SUN SAPHIA",
     "maxLength": 300
+  },
+  {
+    "key": "advisor.name",
+    "label": "Tên chuyên viên",
+    "type": "text",
+    "default": "Phạm Thanh Hiếu",
+    "maxLength": 100,
+    "section": "Đăng ký tư vấn",
+    "sectionId": "15",
+    "group": "Chuyên viên tư vấn"
+  },
+  {
+    "key": "advisor.role",
+    "label": "Vai trò",
+    "type": "text",
+    "default": "Chuyên viên tư vấn Sun Saphia Residence",
+    "maxLength": 200,
+    "section": "Đăng ký tư vấn",
+    "sectionId": "15",
+    "group": "Chuyên viên tư vấn"
+  },
+  {
+    "key": "advisor.summary",
+    "label": "Nội dung giới thiệu",
+    "type": "text",
+    "default": "Trao đổi trực tiếp để nhận thông tin mặt bằng, lựa chọn căn hộ, bảng giá và chính sách cập nhật theo nhu cầu của bạn.",
+    "maxLength": 1000,
+    "section": "Đăng ký tư vấn",
+    "sectionId": "15",
+    "group": "Chuyên viên tư vấn"
+  },
+  {
+    "key": "advisor.phone",
+    "label": "Số điện thoại / Zalo",
+    "type": "text",
+    "default": "0818188885",
+    "maxLength": 20,
+    "section": "Đăng ký tư vấn",
+    "sectionId": "15",
+    "group": "Chuyên viên tư vấn"
+  },
+  {
+    "key": "advisor.image.0.src",
+    "label": "Ảnh chuyên viên 1",
+    "type": "image",
+    "default": "assets/pham-thanh-hieu-front.webp",
+    "maxLength": 1000,
+    "section": "Đăng ký tư vấn",
+    "sectionId": "15",
+    "group": "Chuyên viên tư vấn"
+  },
+  {
+    "key": "advisor.image.0.alt",
+    "label": "Mô tả ảnh 1",
+    "type": "text",
+    "default": "Phạm Thanh Hiếu — chuyên viên tư vấn Sun Saphia Residence",
+    "maxLength": 300,
+    "section": "Đăng ký tư vấn",
+    "sectionId": "15",
+    "group": "Chuyên viên tư vấn"
+  },
+  {
+    "key": "advisor.image.1.src",
+    "label": "Ảnh chuyên viên 2",
+    "type": "image",
+    "default": "assets/pham-thanh-hieu-seated.webp",
+    "maxLength": 1000,
+    "section": "Đăng ký tư vấn",
+    "sectionId": "15",
+    "group": "Chuyên viên tư vấn"
+  },
+  {
+    "key": "advisor.image.1.alt",
+    "label": "Mô tả ảnh 2",
+    "type": "text",
+    "default": "Phạm Thanh Hiếu trong trang phục công sở",
+    "maxLength": 300,
+    "section": "Đăng ký tư vấn",
+    "sectionId": "15",
+    "group": "Chuyên viên tư vấn"
+  },
+  {
+    "key": "advisor.image.2.src",
+    "label": "Ảnh chuyên viên 3",
+    "type": "image",
+    "default": "assets/pham-thanh-hieu-portrait.webp",
+    "maxLength": 1000,
+    "section": "Đăng ký tư vấn",
+    "sectionId": "15",
+    "group": "Chuyên viên tư vấn"
+  },
+  {
+    "key": "advisor.image.2.alt",
+    "label": "Mô tả ảnh 3",
+    "type": "text",
+    "default": "Chân dung Phạm Thanh Hiếu",
+    "maxLength": 300,
+    "section": "Đăng ký tư vấn",
+    "sectionId": "15",
+    "group": "Chuyên viên tư vấn"
   }
 ]
